@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Default">
+      <UniqueIdentifier>{1636697a-de46-48a4-a9da-ca80c209c0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{4454e246-8ba3-4ebf-90e2-95363eb281ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Graphics">
+      <UniqueIdentifier>{e1fa9ff8-6ac7-447d-8bc1-83c12511a41f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Window">
+      <UniqueIdentifier>{8fc1749e-ece0-405e-9431-8610afff0449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\ImGuiDrawer">
+      <UniqueIdentifier>{44d57301-746d-4d6f-a4e2-88ea2e903ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Defines">
+      <UniqueIdentifier>{89896436-cef8-4c1a-bd6d-85cecb38af0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\SceneManager">
+      <UniqueIdentifier>{1f8a3a33-761b-41d4-b6d7-cfe791427ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Singleton">
+      <UniqueIdentifier>{ba506df4-c598-45cd-80fa-50cb84d490ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\ImGui">
+      <UniqueIdentifier>{ae23430c-7baf-46f8-92d5-7453c2ff6426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{def24e58-6b33-4229-9768-5243cbb658ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Singleton\Input">
+      <UniqueIdentifier>{4f87496b-ee4e-4811-9fd9-52b670f958b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\SceneManager\Scenes">
+      <UniqueIdentifier>{029499d5-a453-48d5-835a-ac35d31df26b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Renderer">
+      <UniqueIdentifier>{752770b9-a3f9-401a-b8c6-afdd1526747f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Renderer\Shaders">
+      <UniqueIdentifier>{e76f784a-9b60-4523-9b86-0cdf29a4fe14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Meshes">
+      <UniqueIdentifier>{f21ec1e6-d833-4740-8307-8ac43ba20abc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>App\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>App\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>App\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>App\Singleton\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Types.cpp">
+      <Filter>Defines</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Defines</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGuiDrawer.cpp">
+      <Filter>App\ImGuiDrawer</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>App\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="AppConsole.cpp" />
+    <ClCompile Include="Containers.cpp" />
+    <ClCompile Include="EngineStatics.cpp" />
+    <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="PrimitiveComponent.cpp" />
+    <ClCompile Include="SceneComponent.cpp" />
+    <ClCompile Include="AppConsole.cpp">
+      <Filter>App\ImGuiDrawer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorComponent.cpp" />
+    <ClCompile Include="CubeComponent.cpp" />
+    <ClCompile Include="SceneSerializer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="FEditorViewportClient.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="LocationGizmoActor.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="ArrowComponent.cpp" />
+    <ClCompile Include="SphereComponent.cpp" />
+    <ClCompile Include="RotationGizmoActor.cpp" />
+    <ClCompile Include="RingComponent.cpp" />
+    <ClCompile Include="ScaleGizmoActor.cpp" />
+    <ClCompile Include="HammerComponent.cpp" />
+    <ClCompile Include="TriangleComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>App\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>App\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>App\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>App\Singleton\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiDrawer.h">
+      <Filter>App\ImGuiDrawer</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_dx11.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_win32.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>App\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="AppConsole.h" />
+    <ClInclude Include="Containers.h" />
+    <ClInclude Include="EngineStatics.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="ObjectFactory.h" />
+    <ClInclude Include="PrimitiveComponent.h" />
+    <ClInclude Include="SceneComponent.h" />
+    <ClInclude Include="AppConsole.h">
+      <Filter>App\ImGuiDrawer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorComponent.h" />
+    <ClInclude Include="CubeComponent.h" />
+    <ClInclude Include="SceneSerializer.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="FEditorViewportClient.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Macro.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="ArrowComponent.h" />
+    <ClInclude Include="LocationGizmoActor.h" />
+    <ClInclude Include="SphereComponent.h" />
+    <ClInclude Include="RotationGizmoActor.h" />
+    <ClInclude Include="RingComponent.h" />
+    <ClInclude Include="ScaleGizmoActor.h" />
+    <ClInclude Include="HammerComponent.h" />
+    <ClInclude Include="TriangleComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ShaderW0.hlsl">
+      <Filter>App\Renderer\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="ShaderGrid.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Containers.inl" />
+  </ItemGroup>
+</Project>
