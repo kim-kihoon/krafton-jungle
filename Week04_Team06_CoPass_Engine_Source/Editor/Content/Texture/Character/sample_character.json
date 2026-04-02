@@ -1,0 +1,63 @@
+{
+  "frames": {
+    "mario_1.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 177,
+        "h": 288
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 8,
+        "w": 177,
+        "h": 288
+      },
+      "sourceSize": {
+        "w": 198,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "peach.png": {
+      "frame": {
+        "x": 0,
+        "y": 288,
+        "w": 172,
+        "h": 285
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 172,
+        "h": 285
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 285
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "sample_character.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 177,
+      "h": 573
+    },
+    "scale": 1
+  }
+}

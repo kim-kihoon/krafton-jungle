@@ -1,0 +1,71 @@
+{
+  "frames": {
+    "effect_00.png": {
+      "frame": { "x": 0, "y": 0, "w": 341, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 341, "h": 341 },
+      "sourceSize": { "w": 341, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    "effect_01.png": {
+      "frame": { "x": 341, "y": 0, "w": 341, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 341, "h": 341 },
+      "sourceSize": { "w": 341, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    "effect_02.png": {
+      "frame": { "x": 682, "y": 0, "w": 342, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 342, "h": 341 },
+      "sourceSize": { "w": 342, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+
+    "effect_03.png": {
+      "frame": { "x": 0, "y": 341, "w": 341, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 341, "h": 341 },
+      "sourceSize": { "w": 341, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    "effect_04.png": {
+      "frame": { "x": 341, "y": 341, "w": 341, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 341, "h": 341 },
+      "sourceSize": { "w": 341, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    "effect_05.png": {
+      "frame": { "x": 682, "y": 341, "w": 342, "h": 341 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 342, "h": 341 },
+      "sourceSize": { "w": 342, "h": 341 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+
+    "effect_06.png": {
+      "frame": { "x": 0, "y": 682, "w": 341, "h": 342 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 341, "h": 342 },
+      "sourceSize": { "w": 341, "h": 342 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    }
+  },
+
+  "meta": {
+    "app": "ChatGPT",
+    "version": "1.0",
+    "image": "sample_effect.png",
+    "format": "RGBA8888",
+    "size": { "w": 1024, "h": 1024 },
+    "scale": 1
+  }
+}

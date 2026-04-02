@@ -1,0 +1,37 @@
+# Exported by Open CASCADE Technology [dev.opencascade.org]
+newmtl Texture_0
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_face_01_d.png
+newmtl Texture_1
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_iris_01_d.png
+newmtl Texture_00
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_body_01_d.png
+newmtl Texture_10
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_cloth_02_d.png
+newmtl Texture_2
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_hair_01_d.png
+newmtl Texture_01
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.800000
+Ks 0.484529 0.484529 0.484529
+Ns 1000.000000
+map_Kd t_actor_laevat_cloth_01_d.png

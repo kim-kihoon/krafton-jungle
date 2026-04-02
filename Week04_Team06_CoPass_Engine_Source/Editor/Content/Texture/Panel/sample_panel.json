@@ -1,0 +1,39 @@
+{
+  "frames": {
+    "glass.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 730,
+        "h": 1093
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 730,
+        "h": 1093
+      },
+      "sourceSize": {
+        "w": 730,
+        "h": 1093
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "sample_panel.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 730,
+      "h": 1093
+    },
+    "scale": 1
+  }
+}
