@@ -1,0 +1,38 @@
+﻿# Visual Studio 관련
+.vs/
+out/
+build/
+x64/
+Debug/
+Release/
+*.user
+*.aps
+*.suo
+*.sln
+*.vcxproj
+*.filters
+
+# CMake 관련
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json.user
+cmake_install.cmake
+install_manifest.txt
+
+# 컴파일 결과물
+*.exe
+*.pdb
+*.lib
+*.dll
+
+# 데이터 압축 파일 (압축 푼 폴더만 유지 권장)
+*.zip
+*.7z
+*.rar
+
+# 로그 및 임시 파일
+*.log
+*.tmp
+
+# 에이전트 명령 파일
+GEMINI_TODO.md

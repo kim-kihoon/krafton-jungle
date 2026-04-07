@@ -1,0 +1,40 @@
+# Unreal Engine Style .clang-format
+BasedOnStyle: LLVM
+Language: Cpp
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Braces (Allman style - UE Standard)
+BreakBeforeBraces: Allman
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# Pointer and Reference Alignment (Left - UE Standard)
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Access Modifiers (Same level as class keyword)
+AccessModifierOffset: -4
+
+# Spaces
+SpaceAfterControlStatementKeyword: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpaceAfterCStyleCast: false
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# Line Length
+ColumnLimit: 120
+
+# Standard
+Standard: Latest

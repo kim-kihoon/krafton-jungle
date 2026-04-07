@@ -1,0 +1,8 @@
+# 모든 텍스트 파일은 자동으로 처리
+* text=auto
+
+# 소스 파일들은 명시적으로 CRLF로 변환하여 체크아웃하도록 강제
+*.cpp text eol=crlf
+*.h text eol=crlf
+*.hpp text eol=crlf
+*.ino text eol=crlf
