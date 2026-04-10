@@ -1,0 +1,147 @@
+#include "SceneComponent.h"
+#include "Object/Class.h"
+#include "Serializer/Archive.h"
+
+IMPLEMENT_RTTI(USceneComponent, UActorComponent)
+
+void USceneComponent::SetRelativeTransform(const FTransform& InTransform)
+{
+	RelativeTransform = InTransform;
+	MarkTransformDirty();
+}
+
+void USceneComponent::SetRelativeLocation(const FVector& InLocation)
+{
+	RelativeTransform.SetTranslation(InLocation);
+	MarkTransformDirty();
+}
+
+void USceneComponent::AttachTo(USceneComponent* InParent)
+{
+	if (AttachParent == InParent)
+	{
+		return;
+	}
+
+	DetachFromParent();
+
+	AttachParent = InParent;
+	if (AttachParent)
+	{
+		AttachParent->AttachChildren.push_back(this);
+	}
+
+	MarkTransformDirty();
+}
+
+void USceneComponent::DetachFromParent()
+{
+	if (AttachParent == nullptr)
+	{
+		return;
+	}
+
+	auto& Siblings = AttachParent->AttachChildren;
+	std::erase(Siblings, this);
+	AttachParent = nullptr;
+
+	MarkTransformDirty();
+}
+
+const FMatrix& USceneComponent::GetWorldTransform() const
+{
+	if (bWorldTransformDirty)
+	{
+		UpdateWorldTransform();
+	}
+	return CachedWorldTransform;
+}
+
+void USceneComponent::Serialize(FArchive& Ar)
+{
+	UActorComponent::Serialize(Ar);
+
+	if (Ar.IsSaving())
+	{
+		uint32 AttachParentUUID = AttachParent ? AttachParent->UUID : 0;
+		FVector Location = RelativeTransform.GetTranslation();
+		FVector Rotation = RelativeTransform.Rotator().Euler();
+		FVector Scale = RelativeTransform.GetScale3D();
+
+		Ar.Serialize("AttachParentUUID", AttachParentUUID);
+		Ar.Serialize("Location", Location);
+		Ar.Serialize("Rotation", Rotation);
+		Ar.Serialize("Scale", Scale);
+	}
+	else
+	{
+		FTransform Transform = RelativeTransform;
+
+		if (Ar.Contains("Location"))
+		{
+			FVector Location;
+			Ar.Serialize("Location", Location);
+			Transform.SetTranslation(Location);
+		}
+		if (Ar.Contains("Rotation"))
+		{
+			FVector Rotation;
+			Ar.Serialize("Rotation", Rotation);
+			Transform.SetRotation(FRotator::MakeFromEuler(Rotation));
+		}
+		if (Ar.Contains("Scale"))
+		{
+			FVector Scale;
+			Ar.Serialize("Scale", Scale);
+			Transform.SetScale3D(Scale);
+		}
+
+		SetRelativeTransform(Transform);
+	}
+}
+
+void USceneComponent::FixupReferences(const FDuplicateionContext& Context)
+{
+	UActorComponent::FixupReferences(Context);
+
+	if (this->AttachParent)
+	{
+		this->AttachParent = static_cast<USceneComponent*>(Context.GetMappedObject(this->AttachParent));
+	}
+
+	for (int32 i = 0; i < AttachChildren.size(); i++)
+	{
+		this->AttachChildren[i] = static_cast<USceneComponent*>(Context.GetMappedObject(this->AttachChildren[i]));
+	}
+
+	// 참조가 변경되었으므로 트랜스폼을 다시 계산하도록 마킹
+	MarkTransformDirty();
+}
+
+FVector USceneComponent::GetWorldLocation() const
+{
+	return GetWorldTransform().GetTranslation();
+}
+
+void USceneComponent::MarkTransformDirty()
+{
+	bWorldTransformDirty = true;
+
+	for (USceneComponent* Child : AttachChildren)
+	{
+		if (Child)
+		{
+			Child->MarkTransformDirty();
+		}
+	}
+}
+
+void USceneComponent::UpdateWorldTransform() const
+{
+	CachedWorldTransform = RelativeTransform.ToMatrixWithScale();
+	if (AttachParent)
+	{
+		CachedWorldTransform = CachedWorldTransform * AttachParent->GetWorldTransform();
+	}
+	bWorldTransformDirty = false;
+}

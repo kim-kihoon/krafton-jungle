@@ -1,0 +1,136 @@
+{
+  "Materials": [
+    "Assets/Materials/M_BlueColor.json",
+    "Assets/Materials/M_Water.json",
+    "Assets/Materials/M_Gizmos.json",
+    "Assets/Materials/M_GreenColor.json",
+    "Assets/Materials/M_Wireframe.json",
+    "Assets/Materials/M_RedColor.json",
+    "Assets/Materials/M_Sky.json",
+    "Assets/Materials/M_TintYellow.json"
+  ],
+  "NextUUID": 102,
+  "PerspectiveCamera": {
+    "FOV": 60.0,
+    "FarClip": 10000.0,
+    "Location": [
+      -4.448925018310547,
+      -9.1513090133667,
+      3.119180679321289
+    ],
+    "NearClip": 0.0010000000474974513,
+    "Rotation": [
+      -16.000099182128906,
+      -297.9969787597656,
+      0.0
+    ]
+  },
+  "Primitives": {
+    "0": {
+      "Class": "ACameraActor",
+      "Components": [
+        {
+          "Class": "UCameraComponent",
+          "Location": [
+            -5.0,
+            0.0,
+            2.0
+          ],
+          "Rotation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "UUID": 5
+        },
+        {
+          "Billboard": true,
+          "Class": "UUUIDBillboardComponent",
+          "Location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Rotation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Text": "Text",
+          "TextColor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "UUID": 6
+        }
+      ],
+      "RootComponentUUID": 5,
+      "UUID": 4
+    },
+    "1": {
+      "Class": "ABillboardActor",
+      "Components": [
+        {
+          "Class": "UBillboardComponent",
+          "Location": [
+            0.0,
+            -5.630029678344727,
+            0.0
+          ],
+          "Rotation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "UUID": 32
+        },
+        {
+          "Billboard": true,
+          "Class": "UUUIDBillboardComponent",
+          "Location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Rotation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Text": "Text",
+          "TextColor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "UUID": 33
+        }
+      ],
+      "RootComponentUUID": 32,
+      "UUID": 31
+    }
+  }
+}
