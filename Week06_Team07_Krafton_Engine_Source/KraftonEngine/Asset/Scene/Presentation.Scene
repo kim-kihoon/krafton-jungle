@@ -1,0 +1,1008 @@
+{
+  "Actors" : [{
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "8",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UTextRenderComponent",
+            "Properties" : {
+              "Font" : "Default",
+              "Font Size" : 1.000000,
+              "Location" : [0.000000, 0.000000, 1.300000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Text" : "UUID : 6",
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "mat0",
+            "UVScroll" : false
+          },
+          "Element 1" : {
+            "Path" : "mat1",
+            "UVScroll" : false
+          },
+          "Element 10" : {
+            "Path" : "mat10",
+            "UVScroll" : false
+          },
+          "Element 11" : {
+            "Path" : "mat11",
+            "UVScroll" : false
+          },
+          "Element 12" : {
+            "Path" : "mat12",
+            "UVScroll" : false
+          },
+          "Element 13" : {
+            "Path" : "mat13",
+            "UVScroll" : false
+          },
+          "Element 14" : {
+            "Path" : "mat14",
+            "UVScroll" : false
+          },
+          "Element 15" : {
+            "Path" : "mat15",
+            "UVScroll" : false
+          },
+          "Element 16" : {
+            "Path" : "mat16",
+            "UVScroll" : false
+          },
+          "Element 17" : {
+            "Path" : "mat17",
+            "UVScroll" : false
+          },
+          "Element 18" : {
+            "Path" : "mat18",
+            "UVScroll" : false
+          },
+          "Element 19" : {
+            "Path" : "mat19",
+            "UVScroll" : false
+          },
+          "Element 2" : {
+            "Path" : "mat2",
+            "UVScroll" : false
+          },
+          "Element 20" : {
+            "Path" : "mat20",
+            "UVScroll" : false
+          },
+          "Element 21" : {
+            "Path" : "mat21",
+            "UVScroll" : false
+          },
+          "Element 3" : {
+            "Path" : "mat3",
+            "UVScroll" : false
+          },
+          "Element 4" : {
+            "Path" : "mat4",
+            "UVScroll" : false
+          },
+          "Element 5" : {
+            "Path" : "mat5",
+            "UVScroll" : false
+          },
+          "Element 6" : {
+            "Path" : "mat6",
+            "UVScroll" : false
+          },
+          "Element 7" : {
+            "Path" : "mat7",
+            "UVScroll" : false
+          },
+          "Element 8" : {
+            "Path" : "mat8",
+            "UVScroll" : false
+          },
+          "Element 9" : {
+            "Path" : "mat9",
+            "UVScroll" : false
+          },
+          "Location" : [-0.020042, -0.321359, 0.000000],
+          "Rotation" : [0.074615, 90.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AMeshDecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UTextRenderComponent",
+            "Properties" : {
+              "Font" : "Default",
+              "Font Size" : 1.000000,
+              "Location" : [0.000000, 0.000000, 1.300000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Text" : "UUID : 71",
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "SpotLight",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UMeshDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Location" : [-1.497502, -50.170925, 5.678879],
+          "Material" : {
+            "Path" : "Asset/MeshCache/MatID_1.mbin",
+            "UVScroll" : false
+          },
+          "Opacity" : 1.000000,
+          "Opacity Rate" : 1.000000,
+          "Rotation" : [0.000000, 0.000000, -89.780449],
+          "Scale" : [1.000000, 4.454046, 4.149449],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AFireBallActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "URotatingMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "Pivot Translation" : [2.000000, -34.530998, 15.367000],
+            "Rotation In Local Space" : true,
+            "Rotation Rate" : [0.000000, 0.000000, 90.000000],
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "53",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UFireBallComponent",
+            "Properties" : {
+              "Color" : [0.000000, 0.000000, 1.000000, 0.000000],
+              "Intensity" : 25.100000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Radius" : 48.400002,
+              "Radius FallOff" : 10.000000,
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "BasicShapeMaterial",
+            "UVScroll" : false
+          },
+          "Location" : [0.339486, -30.796947, 14.591094],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AFireBallActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "URotatingMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "Pivot Translation" : [-13.056000, -37.007999, 13.000000],
+            "Rotation In Local Space" : true,
+            "Rotation Rate" : [0.000000, 0.000000, 90.000000],
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "60",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UFireBallComponent",
+            "Properties" : {
+              "Color" : [0.807843, 0.000000, 0.000000, 0.000000],
+              "Intensity" : 15.200000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Radius" : 50.299999,
+              "Radius FallOff" : 10.100000,
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "BasicShapeMaterial",
+            "UVScroll" : false
+          },
+          "Location" : [-8.399218, -35.053185, 13.266411],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [30.271252, -39.932949, 14.084400],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 17.077026, 17.857738],
+          "Texture" : "Genji_Dragon",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [4.321813, -24.675289, 23.564222],
+          "Rotation" : [0.000000, 0.000000, -89.332802],
+          "Scale" : [1.000000, 10.000000, 10.000000],
+          "Texture" : "Diva",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AFireBallActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "URotatingMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "Pivot Translation" : [10.100000, -33.431000, 13.945000],
+            "Rotation In Local Space" : true,
+            "Rotation Rate" : [0.000000, 0.000000, 90.000000],
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "72",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UFireBallComponent",
+            "Properties" : {
+              "Color" : [0.388235, 0.078431, 0.329412, 0.000000],
+              "Intensity" : 19.700001,
+              "Location" : [0.087589, 0.000000, 0.000000],
+              "Radius" : 48.099998,
+              "Radius FallOff" : 10.000000,
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "BasicShapeMaterial",
+            "UVScroll" : false
+          },
+          "Location" : [10.416507, -28.824867, 13.945491],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "UTriangularMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "BounceHeight" : 10.500000,
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "76",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UTextRenderComponent",
+            "Properties" : {
+              "Font" : "Default",
+              "Font Size" : 1.000000,
+              "Location" : [0.000000, 0.000000, 1.300000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Text" : "UUID : 488",
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "m_0",
+            "UVScroll" : false
+          },
+          "Location" : [0.422779, -34.034737, 3.383955],
+          "Rotation" : [38.299164, 87.938354, -48.374054],
+          "Scale" : [3.200000, 3.800000, 2.900000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "UTriangularMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "BounceHeight" : 3.000000,
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "83",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UTextRenderComponent",
+            "Properties" : {
+              "Font" : "Default",
+              "Font Size" : 1.000000,
+              "Location" : [0.000000, 0.000000, 1.300000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Text" : "UUID : 488",
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "m_0",
+            "UVScroll" : false
+          },
+          "Location" : [9.281007, -32.225502, 3.383955],
+          "Rotation" : [38.299164, 87.938354, -5.070557],
+          "Scale" : [3.200000, 3.800000, 2.900000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [{
+          "ClassName" : "UTriangularMovementComponent",
+          "Properties" : {
+            "Auto Register Updated" : true,
+            "BounceHeight" : 6.400000,
+            "bTickEnable" : true
+          }
+        }],
+      "PrimitiveKey" : "87",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UTextRenderComponent",
+            "Properties" : {
+              "Font" : "Default",
+              "Font Size" : 1.000000,
+              "Location" : [0.000000, 0.000000, 1.300000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Text" : "UUID : 488",
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "m_0",
+            "UVScroll" : false
+          },
+          "Location" : [-9.286839, -34.034737, 3.383955],
+          "Rotation" : [38.299072, 87.938232, -77.988991],
+          "Scale" : [3.200000, 3.800000, 2.900000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AExponentialHeightFogActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "VolumetricCloud",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UHeightFogComponent",
+        "Properties" : {
+          "FogCutoffDistance" : 0.000000,
+          "FogDensity" : 0.092000,
+          "FogHeightFalloff" : 0.200000,
+          "FogInscatteringColor" : [0.450000, 0.550000, 0.700000, 1.000000],
+          "FogMaxOpacity" : 1.000000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "StartDistance" : 0.000000,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-18.182453, -49.934803, 13.466129],
+          "Rotation" : [0.000000, 0.000000, -89.332794],
+          "Scale" : [1.000000, 10.000000, 10.000000],
+          "Texture" : "dva_nanocola",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [17.841700, -49.934803, 13.466129],
+          "Rotation" : [0.000000, 0.000000, -89.332794],
+          "Scale" : [1.000000, 10.000000, 10.000000],
+          "Texture" : "dva_nanocola",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-30.150507, -38.963070, 13.466129],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 20.000000, 20.000000],
+          "Texture" : "Laevatain_Splash_Art",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [0.000000, -50.407883, 13.845814],
+          "Rotation" : [0.000000, 0.000000, -90.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "Pachimari",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [29.738001, -19.907000, 10.915692],
+          "Rotation" : [0.000000, 0.000000, 1.478043],
+          "Scale" : [1.000000, 15.000000, 15.000000],
+          "Texture" : "Diva",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [10.047724, -50.030003, 9.529395],
+          "Rotation" : [0.000000, 11.851334, -90.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "Dva_PowerUp!",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-30.944454, -24.414515, 11.425583],
+          "Rotation" : [0.000000, 0.000000, -180.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "Lucio_InConcert",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-29.965145, -19.524817, 11.387444],
+          "Rotation" : [10.573593, 0.000000, -180.000000],
+          "Scale" : [7.000000, 7.000000, 7.000000],
+          "Texture" : "Roadhog_Wanted",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-31.651583, -14.914927, 9.533720],
+          "Rotation" : [0.000000, 0.000000, -180.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "McCree_Wanted",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-25.289312, -17.315039, 9.840350],
+          "Rotation" : [0.000000, 0.000000, -180.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "Tracer_Paint",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADecalActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UArrowComponent",
+            "Properties" : {
+              "Visible" : false
+            }
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Texture" : "DecalActor",
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UDecalComponent",
+        "Properties" : {
+          "Fade" : false,
+          "Fade Inner" : 0.200000,
+          "Fade Outer" : 0.600000,
+          "Location" : [-31.812456, -17.611217, 4.919953],
+          "Rotation" : [5.133865, 0.000000, -180.000000],
+          "Scale" : [10.000000, 10.000000, 10.000000],
+          "Texture" : "Boop!",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }],
+  "ClassName" : "UWorld",
+  "ContextHandle" : "Default",
+  "ContextName" : "Default",
+  "Name" : "Presentation",
+  "PerspectiveCamera" : {
+    "FOV" : 1.570795,
+    "FarClip" : 100.000000,
+    "Location" : [-14.021207, -16.796227, 11.437696],
+    "NearClip" : 0.100000,
+    "Rotation" : [0.000000, -5.070022, -166.641983]
+  },
+  "Primitives" : {
+    "53" : {
+      "Location" : [0.339486, -35.730877, 15.366512],
+      "ObjStaticMeshAsset" : "Data/BasicShape/Sphere.OBJ",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "60" : {
+      "Location" : [-9.293743, -35.053185, 14.826392],
+      "ObjStaticMeshAsset" : "Data/BasicShape/Sphere.OBJ",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "72" : {
+      "Location" : [10.416507, -35.730877, 13.945491],
+      "ObjStaticMeshAsset" : "Data/BasicShape/Sphere.OBJ",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "76" : {
+      "Location" : [0.422779, -34.034737, 3.383955],
+      "ObjStaticMeshAsset" : "Data/Creeper/Creeper.obj",
+      "Rotation" : [0.000000, 90.000000, -86.655167],
+      "Scale" : [3.200000, 3.800000, 2.900000],
+      "Type" : "StaticMeshComp"
+    },
+    "8" : {
+      "Location" : [-0.020042, -0.321359, 0.000000],
+      "ObjStaticMeshAsset" : "Data/Karaoke/Give me Food.x.obj",
+      "Rotation" : [0.000000, 89.972015, -0.074615],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "83" : {
+      "Location" : [9.281007, -32.225502, 3.383955],
+      "ObjStaticMeshAsset" : "Data/Creeper/Creeper.obj",
+      "Rotation" : [0.000000, 90.000000, -43.351673],
+      "Scale" : [3.200000, 3.800000, 2.900000],
+      "Type" : "StaticMeshComp"
+    },
+    "87" : {
+      "Location" : [-9.286839, -34.034737, 3.383955],
+      "ObjStaticMeshAsset" : "Data/Creeper/Creeper.obj",
+      "Rotation" : [0.000000, 90.000000, -116.270020],
+      "Scale" : [3.200001, 3.800001, 2.900001],
+      "Type" : "StaticMeshComp"
+    }
+  },
+  "Version" : 2,
+  "WorldType" : "Editor"
+}

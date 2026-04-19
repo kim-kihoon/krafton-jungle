@@ -1,0 +1,59 @@
+{
+  "Actors" : [{
+      "ClassName" : "AFireBallActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "6",
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UStaticMeshComponent",
+            "Properties" : {
+              "Element 0" : {
+                "Path" : "BasicShapeMaterial",
+                "UVScroll" : false
+              },
+              "Location" : [0.000000, 0.000000, 10.000000],
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UFireBallComponent",
+        "Properties" : {
+          "Color" : [0.000000, 0.000000, 0.000000, 0.000000],
+          "Intensity" : 10.000000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "Radius" : 10.000000,
+          "Radius FallOff" : 10.000000,
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }],
+  "ClassName" : "UWorld",
+  "ContextHandle" : "Default",
+  "ContextName" : "Default",
+  "Name" : "Fireball",
+  "PerspectiveCamera" : {
+    "FOV" : 1.570795,
+    "FarClip" : 100.000000,
+    "Location" : [-9.639688, 0.993390, 9.398716],
+    "NearClip" : 0.100000,
+    "Rotation" : [0.000000, 10.074492, -1.927261]
+  },
+  "Primitives" : {
+    "6" : {
+      "Location" : [0.000000, 0.000000, 10.000000],
+      "ObjStaticMeshAsset" : "Data/BasicShape/Sphere.OBJ",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    }
+  },
+  "Version" : 2,
+  "WorldType" : "Editor"
+}
