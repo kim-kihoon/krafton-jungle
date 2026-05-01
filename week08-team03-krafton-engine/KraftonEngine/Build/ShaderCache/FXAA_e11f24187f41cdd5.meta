@@ -1,0 +1,7 @@
+version=1
+source=Shaders/PostProcess/FXAA.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/Functions.hlsli
+include=Common/SystemResources.hlsli
+include=Common/SystemSamplers.hlsli
+include=Common/VertexLayouts.hlsli

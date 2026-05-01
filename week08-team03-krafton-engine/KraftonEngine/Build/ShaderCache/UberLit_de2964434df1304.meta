@@ -1,0 +1,9 @@
+version=1
+source=Shaders/Geometry/UberLit.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/ForwardLightData.hlsli
+include=Common/ForwardLighting.hlsli
+include=Common/Functions.hlsli
+include=Common/ShadowFunctions.hlsli
+include=Common/SystemSamplers.hlsli
+include=Common/VertexLayouts.hlsli

@@ -1,0 +1,4 @@
+version=1
+source=Shaders/Editor/Editor.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/VertexLayouts.hlsli

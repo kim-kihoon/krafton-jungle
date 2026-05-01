@@ -1,0 +1,6 @@
+version=1
+source=Shaders/PostProcess/GaussianBlur.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/Functions.hlsli
+include=Common/SystemSamplers.hlsli
+include=Common/VertexLayouts.hlsli

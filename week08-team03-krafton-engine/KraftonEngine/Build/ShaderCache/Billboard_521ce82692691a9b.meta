@@ -1,0 +1,6 @@
+version=1
+source=Shaders/UI/Billboard.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/Functions.hlsli
+include=Common/SystemSamplers.hlsli
+include=Common/VertexLayouts.hlsli

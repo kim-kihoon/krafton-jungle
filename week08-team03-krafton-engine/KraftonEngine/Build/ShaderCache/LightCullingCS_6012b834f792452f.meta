@@ -1,0 +1,4 @@
+version=1
+source=Shaders/LightCullingCS.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/ForwardLightData.hlsli

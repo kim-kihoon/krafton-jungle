@@ -1,0 +1,5 @@
+version=1
+source=Shaders/Geometry/Primitive.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/Functions.hlsli
+include=Common/VertexLayouts.hlsli

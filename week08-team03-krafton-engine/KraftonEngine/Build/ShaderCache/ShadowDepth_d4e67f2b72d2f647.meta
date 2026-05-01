@@ -1,0 +1,3 @@
+version=1
+source=Shaders/Geometry/ShadowDepth.hlsl
+include=Common/ConstantBuffers.hlsli

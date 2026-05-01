@@ -1,0 +1,6 @@
+version=1
+source=Shaders/PostProcess/HeightFog.hlsl
+include=Common/ConstantBuffers.hlsli
+include=Common/Functions.hlsli
+include=Common/SystemResources.hlsli
+include=Common/VertexLayouts.hlsli
