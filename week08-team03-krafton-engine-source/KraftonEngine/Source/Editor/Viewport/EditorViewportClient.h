@@ -1,0 +1,131 @@
+﻿#pragma once
+
+#include "Viewport/ViewportClient.h"
+#include "Render/Types/RenderTypes.h"
+#include "Render/Types/ViewTypes.h"
+#include "Math/Vector.h"
+#include "Math/Rotator.h"
+
+#include "UI/SWindow.h"
+#include <string>
+#include "Core/RayTypes.h"
+#include "Core/CollisionTypes.h"
+class UWorld;
+class UCameraComponent;
+class UGizmoComponent;
+class ULightComponent;
+class ULightComponentBase;
+class FEditorSettings;
+class FWindowsWindow;
+class FSelectionManager;
+class FViewport;
+class FOverlayStatSystem;
+
+class FEditorViewportClient : public FViewportClient
+{
+public:
+	void Initialize(FWindowsWindow* InWindow);
+	void SetOverlayStatSystem(FOverlayStatSystem* InOverlayStatSystem) { OverlayStatSystem = InOverlayStatSystem; }
+	// World는 더 이상 저장하지 않는다 — GetWorld()는 GEngine->GetWorld()를 경유하여
+	// ActiveWorldHandle을 따르므로 PIE 전환 시 자동으로 올바른 월드를 반환한다.
+	UWorld* GetWorld() const;
+	void SetGizmo(UGizmoComponent* InGizmo) { Gizmo = InGizmo; }
+	void SetSettings(const FEditorSettings* InSettings) { Settings = InSettings; }
+	void SetSelectionManager(FSelectionManager* InSelectionManager) { SelectionManager = InSelectionManager; }
+	UGizmoComponent* GetGizmo() { return Gizmo; }
+
+	// 뷰포트별 렌더 옵션
+	FViewportRenderOptions& GetRenderOptions() { return RenderOptions; }
+	const FViewportRenderOptions& GetRenderOptions() const { return RenderOptions; }
+
+	// 뷰포트 타입 전환 (Perspective / Ortho 방향)
+	void SetViewportType(ELevelViewportType NewType);
+	void SetViewportSize(float InWidth, float InHeight);
+
+	// Camera lifecycle
+	void CreateCamera();
+	void DestroyCamera();
+	void ResetCamera();
+	UCameraComponent* GetCamera() const { return Camera; }
+
+	void Tick(float DeltaTime);
+	void OnLightComponentChanged(ULightComponentBase* LightComponent);
+
+	// 활성 상태 — 활성 뷰포트만 입력 처리
+	void SetActive(bool bInActive) { bIsActive = bInActive; }
+	bool IsActive() const { return bIsActive; }
+
+	// FViewport 소유
+	void SetViewport(FViewport* InViewport) { Viewport = InViewport; }
+	FViewport* GetViewport() const { return Viewport; }
+
+	// 뷰포트 스크린 좌표 (ImGui screen space)
+	const FRect& GetViewportScreenRect() const { return ViewportScreenRect; }
+
+	// 마우스가 뷰포트 안에 있으면 뷰포트 로컬 좌표 반환 (시각화용)
+	bool GetCursorViewportPosition(uint32& OutX, uint32& OutY) const;
+
+	// SWindow 레이아웃 연결 — SSplitter 리프 노드
+	void SetLayoutWindow(SWindow* InWindow) { LayoutWindow = InWindow; }
+	SWindow* GetLayoutWindow() const { return LayoutWindow; }
+
+	// SWindow Rect → ViewportScreenRect 갱신 + FViewport 리사이즈 요청
+	void UpdateLayoutRect();
+
+	// ImDrawList에 자신의 SRV를 SWindow Rect 위치에 렌더 (활성 테두리 포함)
+	void RenderViewportImage(bool bIsActiveViewport);
+
+private:
+	void TickEditorShortcuts();
+	void TickLightCameraOverride();
+	ULightComponent* GetSelectedLight() const;
+	void EnterLightCameraOverride(ULightComponent* LightComponent);
+	void ExitLightCameraOverride();
+	void SyncLightCameraOverride();
+	void TickInput(float DeltaTime);
+	void TickInteraction(float DeltaTime);
+	void HandleDragStart(const FRay& Ray); //픽킹 시작
+
+	struct FCameraOverrideSnapshot
+	{
+		bool bValid = false;
+		FVector Location = FVector(0.0f, 0.0f, 0.0f);
+		FVector FocusPoint = FVector(0.0f, 0.0f, 0.0f);
+		FVector Forward = FVector(1.0f, 0.0f, 0.0f);
+		FVector Right = FVector(0.0f, 1.0f, 0.0f);
+		FVector Up = FVector(0.0f, 0.0f, 1.0f);
+		FRotator Rotation;
+		float FOV = 3.14159265358979f / 3.0f;
+		float NearZ = 0.1f;
+		float FarZ = 1000.0f;
+		float OrthoWidth = 10.0f;
+		bool bIsOrthographic = false;
+		bool bWasGizmoEnabled = true;
+		ELevelViewportType ViewportType = ELevelViewportType::Perspective;
+	};
+
+	void SaveCameraOverrideSnapshot();
+	void RestoreCameraOverrideSnapshot();
+
+private:
+	FViewport* Viewport = nullptr;
+	SWindow* LayoutWindow = nullptr;
+	FWindowsWindow* Window = nullptr;
+	FOverlayStatSystem* OverlayStatSystem = nullptr;
+	UCameraComponent* Camera = nullptr;
+	UGizmoComponent* Gizmo = nullptr;
+	const FEditorSettings* Settings = nullptr;
+	FSelectionManager* SelectionManager = nullptr;
+	FViewportRenderOptions RenderOptions;
+
+	float WindowWidth = 1920.f;
+	float WindowHeight = 1080.f;
+
+	bool bIsActive = false;
+	bool bLightCameraOverrideActive = false;
+	uint32 LastPointLightPreviewFaceIndex = 0;
+	ULightComponent* PreviewLightComponent = nullptr;
+	FCameraOverrideSnapshot CameraOverrideSnapshot;
+	// 뷰포트 슬롯의 스크린 좌표 (ImGui screen space = 윈도우 클라이언트 좌표)
+	FRect ViewportScreenRect;
+};
