@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/Shoes/Shoes_Inst_0.matinst",
+        "OverridedParams" : [{
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.473998, 0.617060, 0.877637]
+          }],
+        "Parent" : "shoes"
+      }

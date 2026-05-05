@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Book_Inst_10.matinst",
+        "OverridedParams" : [{
+            "Name" : "Shininess",
+            "Type" : "Float",
+            "Value" : 100.000000
+          }],
+        "Parent" : "standardSurface2"
+      }

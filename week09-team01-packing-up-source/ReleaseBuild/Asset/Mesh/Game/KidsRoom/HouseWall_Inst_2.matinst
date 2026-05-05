@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/HouseWall_Inst_2.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset\\Texture\\rough_linen_diff_1k.jpg"
+          }],
+        "Parent" : "Material.004"
+      }

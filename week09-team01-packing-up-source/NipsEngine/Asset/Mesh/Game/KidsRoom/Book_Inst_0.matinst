@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Book_Inst_0.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset\\Texture\\wood_shutter_disp_1k.png"
+          }],
+        "Parent" : "standardSurface2"
+      }

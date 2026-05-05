@@ -1,0 +1,4 @@
+# Made in Blockbench 3.1.1
+newmtl Chocolate_atlas
+map_Kd chocolate_atlas.png 
+newmtl none

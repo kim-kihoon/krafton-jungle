@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/Chocolate/chocolate_Inst_0.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset\\Texture\\chocolate_atlas.png"
+          }],
+        "Parent" : "Chocolate_atlas"
+      }

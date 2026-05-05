@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Book_Inst_3.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/Dice/Dice_Diffuse.png"
+          }],
+        "Parent" : "standardSurface2"
+      }

@@ -1,0 +1,8 @@
+{
+    "Name": "TestMaterial",
+    "Shader": "Shaders/UberLit.hlsl",
+    "LightingModel": "Phong",
+    "Params": [
+        { "Name": "BaseColor", "Type": "Vector3", "Value": [1.0, 1.0, 1.0] }
+    ]
+}

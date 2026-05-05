@@ -1,0 +1,30 @@
+{
+        "MaterialDomain" : "Decal",
+        "Name" : "DecalMat",
+        "Params" : [{
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.565401, 0.565401, 0.565401]
+          }, {
+            "Name" : "Opacity",
+            "Type" : "Float",
+            "Value" : 1.000000
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.000000, 0.000000, 0.000000]
+          }, {
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Texture/stainpink.png"
+          }, {
+            "Name" : "bHasNormalMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "NormalMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }],
+        "Shader" : "Shaders/UberLit.hlsl"
+      }

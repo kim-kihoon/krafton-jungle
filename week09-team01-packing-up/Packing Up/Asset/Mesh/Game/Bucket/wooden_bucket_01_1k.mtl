@@ -1,0 +1,11 @@
+# Blender 5.1.0 MTL File: 'wooden_bucket_01_1k.blend'
+# www.blender.org
+
+newmtl wooden_bucket_01
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd wooden_bucket_01_diff_1k.jpg
