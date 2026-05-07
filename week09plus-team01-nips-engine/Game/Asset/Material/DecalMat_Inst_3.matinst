@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Material/DecalMat_Inst_3.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Texture/stain1.png"
+          }],
+        "Parent" : "DecalMat"
+      }

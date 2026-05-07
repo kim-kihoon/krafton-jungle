@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/HouseWall_Inst_0.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/apple_mid/Freshly_Bitten_Apple_tgzpdhlpa_Mid_2K_BaseColor.jpg"
+          }],
+        "Parent" : "Material.004"
+      }

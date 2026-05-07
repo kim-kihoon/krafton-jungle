@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/crumpledPaper/crumpledPaper_Inst_1.matinst",
+        "OverridedParams" : [{
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.839151, 0.995781, 0.596628]
+          }],
+        "Parent" : "papersheets"
+      }

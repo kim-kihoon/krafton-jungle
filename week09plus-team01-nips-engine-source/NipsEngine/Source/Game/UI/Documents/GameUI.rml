@@ -1,0 +1,267 @@
+<rml>
+<head>
+	<title>Game UI</title>
+	<style>
+{{GAME_UI_RCSS}}
+	</style>
+</head>
+<body>
+	<div id="start-menu">
+		<img id="title-background" src="Asset/Texture/TitleBackground.png" />
+		<img id="title-vignette" src="Asset/Texture/TitleVignette.png" />
+		<div id="game-title">
+			<img id="title-image" src="Asset/Texture/Title.png" />
+		</div>
+		<div id="title-menu">
+			<div class="title-menu-row"><img id="start-button" class="title-menu-button" src="Asset/Texture/TitleStartButton.png" /></div>
+			<div class="title-menu-row"><img id="settings-button" class="title-menu-button" src="Asset/Texture/TitleSettingsButton.png" /></div>
+			<div class="title-menu-row"><img id="credits-button" class="title-menu-button" src="Asset/Texture/TitleCreditsButton.png" /></div>
+			<div class="title-menu-row"><img id="score-button" class="title-menu-button" src="Asset/Texture/TitleScoreButton.png" /></div>
+			<div class="title-menu-row"><img id="exit-button" class="title-menu-button" src="Asset/Texture/TitleExitButton.png" /></div>
+		</div>
+	</div>
+
+	<div id="prologue-layer"></div>
+
+	<div id="settings-layer">
+		<div id="settings-panel">
+			<div id="settings-title">SETTINGS</div>
+			<div id="settings-mouse-row" class="settings-row">
+				<span class="settings-label">Mouse Sensitivity</span>
+				<span id="settings-mouse-slider" class="settings-slider">
+					<span id="settings-mouse-fill" class="settings-slider-fill"></span>
+					<span id="settings-mouse-knob" class="settings-slider-knob"></span>
+				</span>
+				<span id="settings-mouse-value" class="settings-value">100%</span>
+			</div>
+			<div id="settings-bgm-row" class="settings-row">
+				<span class="settings-label">BGM Volume</span>
+				<span id="settings-bgm-slider" class="settings-slider">
+					<span id="settings-bgm-fill" class="settings-slider-fill"></span>
+					<span id="settings-bgm-knob" class="settings-slider-knob"></span>
+				</span>
+				<span id="settings-bgm-value" class="settings-value">100%</span>
+			</div>
+			<div id="settings-sfx-row" class="settings-row">
+				<span class="settings-label">SFX Volume</span>
+				<span id="settings-sfx-slider" class="settings-slider">
+					<span id="settings-sfx-fill" class="settings-slider-fill"></span>
+					<span id="settings-sfx-knob" class="settings-slider-knob"></span>
+				</span>
+				<span id="settings-sfx-value" class="settings-value">100%</span>
+			</div>
+			<div id="settings-close-button" class="pause-button">Back</div>
+		</div>
+	</div>
+
+	<div id="credits-layer">
+		<div id="credits-panel">
+			<div id="credits-title">CREDITS</div>
+			<div id="credits-row-1" class="credits-row">
+				<span class="credits-name">Yoonji Nam</span>
+				<span class="credits-role">Lead Developer</span>
+			</div>
+			<div id="credits-row-2" class="credits-row">
+				<span class="credits-name">Hyeongil Jeon</span>
+				<span class="credits-role">First Developer</span>
+			</div>
+			<div id="credits-row-3" class="credits-row">
+				<span class="credits-name">Seyoung Park</span>
+				<span class="credits-role">Master Developer</span>
+			</div>
+			<div id="credits-row-4" class="credits-row">
+				<span class="credits-name">Kihoon Kim</span>
+				<span class="credits-role">Best Developer</span>
+			</div>
+			<div id="credits-close-button" class="pause-button">Back</div>
+		</div>
+	</div>
+
+	<div id="scoreboard-layer">
+		<div id="scoreboard-panel">
+			<div id="scoreboard-title">SCOREBOARD</div>
+			<div id="scoreboard-empty">No saved scores.</div>
+			<div id="scoreboard-row-1" class="scoreboard-row">
+				<span id="scoreboard-rank-1" class="scoreboard-rank">1</span>
+				<span id="scoreboard-id-1" class="scoreboard-id"></span>
+				<span id="scoreboard-score-1" class="scoreboard-score"></span>
+				<span id="scoreboard-detail-1" class="scoreboard-detail"></span>
+				<span id="scoreboard-date-1" class="scoreboard-date"></span>
+			</div>
+			<div id="scoreboard-row-2" class="scoreboard-row">
+				<span id="scoreboard-rank-2" class="scoreboard-rank">2</span>
+				<span id="scoreboard-id-2" class="scoreboard-id"></span>
+				<span id="scoreboard-score-2" class="scoreboard-score"></span>
+				<span id="scoreboard-detail-2" class="scoreboard-detail"></span>
+				<span id="scoreboard-date-2" class="scoreboard-date"></span>
+			</div>
+			<div id="scoreboard-row-3" class="scoreboard-row">
+				<span id="scoreboard-rank-3" class="scoreboard-rank">3</span>
+				<span id="scoreboard-id-3" class="scoreboard-id"></span>
+				<span id="scoreboard-score-3" class="scoreboard-score"></span>
+				<span id="scoreboard-detail-3" class="scoreboard-detail"></span>
+				<span id="scoreboard-date-3" class="scoreboard-date"></span>
+			</div>
+			<div id="scoreboard-row-4" class="scoreboard-row">
+				<span id="scoreboard-rank-4" class="scoreboard-rank">4</span>
+				<span id="scoreboard-id-4" class="scoreboard-id"></span>
+				<span id="scoreboard-score-4" class="scoreboard-score"></span>
+				<span id="scoreboard-detail-4" class="scoreboard-detail"></span>
+				<span id="scoreboard-date-4" class="scoreboard-date"></span>
+			</div>
+			<div id="scoreboard-row-5" class="scoreboard-row">
+				<span id="scoreboard-rank-5" class="scoreboard-rank">5</span>
+				<span id="scoreboard-id-5" class="scoreboard-id"></span>
+				<span id="scoreboard-score-5" class="scoreboard-score"></span>
+				<span id="scoreboard-detail-5" class="scoreboard-detail"></span>
+				<span id="scoreboard-date-5" class="scoreboard-date"></span>
+			</div>
+			<div id="scoreboard-close-button" class="pause-button">Back</div>
+		</div>
+	</div>
+
+	<div id="hud-panel">
+		<div id="progress-track"></div>
+		<div id="progress-fill"></div>
+		<div id="progress-value">0%</div>
+	</div>
+
+	<div id="elapsed-time-panel">
+		<div id="elapsed-time-label">남은 시간</div>
+		<div id="elapsed-time-value">0m 00s</div>
+	</div>
+
+	<div id="mission-panel">
+		<div id="mission-title">임무</div>
+		<div id="mission-separator"></div>
+		<div id="mission-tool-row" class="mission-row">
+			<span id="mission-tool-check" class="mission-check"></span>
+			<span class="mission-text">청소도구 잡기</span>
+			<span class="mission-strike"></span>
+		</div>
+		<div id="mission-keep-row" class="mission-row">
+			<span id="mission-keep-check" class="mission-check"></span>
+			<span class="mission-text">중요한 물건 상자에 보관하기</span>
+			<span class="mission-strike"></span>
+		</div>
+		<div id="mission-trash-row" class="mission-row">
+			<span id="mission-trash-check" class="mission-check"></span>
+			<span class="mission-text">쓰레기 버리기</span>
+			<span class="mission-strike"></span>
+		</div>
+		<div id="mission-dust-row" class="mission-row">
+			<span id="mission-dust-check" class="mission-check"></span>
+			<span class="mission-text">먼지 청소하기</span>
+			<span class="mission-strike"></span>
+		</div>
+	</div>
+
+	<div id="item-status">
+		<div id="current-item-label">보관한 물건</div>
+		<div id="current-item-name">없음</div>
+	</div>
+
+	<div id="crosshair-dot"></div>
+
+	<div id="interaction-hint">
+		<span id="interaction-secondary-key" class="interaction-key">
+			<img class="interaction-key-bg" src="Asset/Texture/InteractionKeyCap.png" />
+			<span id="interaction-secondary-key-label" class="interaction-key-label">Q</span>
+		</span>
+		<span id="interaction-secondary-text" class="interaction-hint-text">살펴보기</span>
+		<span id="interaction-key" class="interaction-key">
+			<img class="interaction-key-bg" src="Asset/Texture/InteractionKeyCap.png" />
+			<span id="interaction-key-label" class="interaction-key-label">E</span>
+		</span>
+		<span id="interaction-hint-text" class="interaction-hint-text"></span>
+	</div>
+
+	<div id="item-inspect-panel">
+		<div id="item-inspect-content">
+			<div id="item-inspect-image-frame">
+				<img id="item-inspect-image" />
+				<div id="item-inspect-image-placeholder"></div>
+			</div>
+			<div id="item-inspect-text">
+				<div id="item-inspect-title"></div>
+				<div id="item-inspect-separator"></div>
+				<div id="item-inspect-desc"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="pause-layer">
+		<div id="pause-panel">
+			<div id="pause-title">MENU</div>
+			<div id="pause-items-row" class="stat-row">Items: <span id="pause-item-count" class="stat-value">0</span></div>
+			<div id="pause-time-row" class="stat-row">남은 시간: <span id="pause-time" class="stat-value">0m 00s</span></div>
+			<div id="pause-progress-row" class="stat-row">Progress: <span id="pause-progress" class="stat-value">0%</span></div>
+			<div id="retry-button" class="pause-button">Resume</div>
+			<div id="pause-settings-button" class="pause-button">Settings</div>
+			<div id="pause-title-button" class="pause-button">Exit to Title</div>
+			<div id="pause-exit-button" class="pause-button">Exit to Desktop</div>
+		</div>
+	</div>
+
+	<div id="ending-panel">
+		<div id="ending-visual-frame">
+			<img id="ending-visual-image" src="Asset/Texture/TitleBackground.png" />
+		</div>
+		<div id="ending-black-fade"></div>
+		<div id="ending-credits">
+			<div id="ending-credit-title">Developers</div>
+			<div id="ending-credit-separator"></div>
+			<div class="ending-credit-row"><span class="ending-credit-name">Yoonji Nam</span><span class="ending-credit-role">Lead Developer</span></div>
+			<div class="ending-credit-row"><span class="ending-credit-name">Hyeongil Jeon</span><span class="ending-credit-role">First Developer</span></div>
+			<div class="ending-credit-row"><span class="ending-credit-name">Seyoung Park</span><span class="ending-credit-role">Master Developer</span></div>
+			<div class="ending-credit-row"><span class="ending-credit-name">Kihoon Kim</span><span class="ending-credit-role">Best Developer</span></div>
+		</div>
+		<div id="the-end">THE END</div>
+		<div id="ending-score-panel">
+			<div id="ending-score-separator"></div>
+			<div id="ending-score-title">SCORE</div>
+			<div class="ending-score-row"><span class="ending-score-label">Cleanliness</span><span id="ending-clean-score" class="ending-score-value">0</span></div>
+			<div class="ending-score-row"><span class="ending-score-label">Time Bonus</span><span id="ending-time-score" class="ending-score-value">0</span></div>
+			<div class="ending-score-row"><span class="ending-score-label">Given Item</span><span id="ending-item-score" class="ending-score-value">0</span></div>
+			<div class="ending-score-row"><span class="ending-score-label">Mission Bonus</span><span id="ending-mission-score" class="ending-score-value">0</span></div>
+			<div id="ending-score-total-row"><span class="ending-score-label">Total</span><span id="ending-total-score" class="ending-score-value">0</span></div>
+		</div>
+		<div id="ending-buttons">
+			<div id="save-score-button" class="pause-button">Save Score</div>
+			<div id="exit-to-main-button" class="pause-button">Exit to Main Menu</div>
+		</div>
+		<div id="score-name-modal">
+			<div id="score-name-panel">
+				<div id="score-name-title">ENTER ID</div>
+				<div id="score-name-value">_</div>
+				<div id="score-name-rule">A-Z a-z / 10 letters max</div>
+				<div id="score-save-message"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="debug-menu-layer">
+		<div id="debug-menu-panel">
+			<div id="debug-menu-title">DEBUG: JUMP TO ENDING</div>
+			<div id="debug-jump-bad" class="pause-button">Bad Ending</div>
+			<div id="debug-jump-normal" class="pause-button">Normal Ending</div>
+			<div id="debug-jump-good" class="pause-button">Good Ending</div>
+			<div id="debug-menu-close" class="pause-button">Cancel</div>
+		</div>
+	</div>
+
+	<div id="dialogue-panel">
+		<div id="dialogue-speaker"></div>
+		<div id="dialogue-text"></div>
+		<div id="dialogue-hint">[SPACE] &gt;</div>
+	</div>
+
+	<div id="title-intro-layer">
+		<img id="title-intro-icon" src="Asset/Texture/EngineLogoIcon.png" />
+	</div>
+
+	<div id="screen-fade-layer"></div>
+
+	<img id="game-cursor" src="Asset/Texture/CursorDefault.png" />
+</body>
+</rml>

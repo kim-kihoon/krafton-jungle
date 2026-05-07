@@ -1,0 +1,17 @@
+{
+        "Name" : "Asset/Mesh/Game/Box/Cardboard_Box_Inst_1.matinst",
+        "OverridedParams" : [{
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [0.081006, 0.274262, 0.271815]
+          }, {
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [1.000000, 1.000000, 1.000000]
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.729958, 0.989745, 1.000000]
+          }],
+        "Parent" : "Box_4"
+      }

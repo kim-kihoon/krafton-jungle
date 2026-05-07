@@ -1,0 +1,4 @@
+#include "RmlUiDocumentsResource.h"
+
+IDR_GAME_UI_RML RCDATA "Source\\Game\\UI\\Documents\\GameUI.rml"
+IDR_GAME_UI_RCSS RCDATA "Source\\Game\\UI\\Documents\\GameUI.rcss"

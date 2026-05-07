@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Floor_Tiled_Inst_1.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Texture/wood_planks.png"
+          }],
+        "Parent" : "wood_planks_tiled"
+      }
