@@ -465,5 +465,3 @@ vcpkg_installed/
 NipsEngine/Asset/Mesh/I_*/
 
 NipsEngine/Asset/Mesh/Bin/**
-/NipsEngine/Source/Engine/Camera/PlayerCameraManager.h
-/NipsEngine/Source/Editor/UI/Bezier.cpp
