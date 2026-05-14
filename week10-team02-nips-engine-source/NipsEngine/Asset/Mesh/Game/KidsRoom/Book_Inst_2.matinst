@@ -1,0 +1,9 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Book_Inst_2.matinst",
+        "OverridedParams" : [{
+            "Name" : "SpecularMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/Lumine/脸.png"
+          }],
+        "Parent" : "standardSurface2"
+      }

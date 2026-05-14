@@ -1,0 +1,13 @@
+{
+        "Name" : "Asset/Fbx/Hip_Hop_Dancing/FUegdMat.matinst",
+        "OverridedParams" : [{
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Fbx/Hip_Hop_Dancing/Hip_Hop_Dancing.fbm/tex-04c4c74508.jpg"
+          }, {
+            "Name" : "bHasDiffuseMap",
+            "Type" : "Bool",
+            "Value" : true
+          }],
+        "Parent" : "DefaultWhite"
+      }

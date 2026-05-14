@@ -1,0 +1,63 @@
+{
+        "LightingModel" : "Phong",
+        "MaterialDomain" : "Surface",
+        "Name" : "UnrealMaterial.254",
+        "Params" : [{
+            "Name" : "ScrollUV",
+            "Type" : "Vector2",
+            "Value" : [0.000000, 0.000000]
+          }, {
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [0.500000, 0.500000, 0.500000]
+          }, {
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.219526, 0.219526, 0.219526]
+          }, {
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.000000, 0.000000, 0.000000]
+          }, {
+            "Name" : "Shininess",
+            "Type" : "Float",
+            "Value" : 250.000000
+          }, {
+            "Name" : "SpecularMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "Opacity",
+            "Type" : "Float",
+            "Value" : 1.000000
+          }, {
+            "Name" : "NormalMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "BumpMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "bHasDiffuseMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasSpecularMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasNormalMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasBumpMap",
+            "Type" : "Bool",
+            "Value" : false
+          }],
+        "Shader" : "Shaders/UberLit.hlsl"
+      }

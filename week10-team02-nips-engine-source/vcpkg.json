@@ -1,0 +1,9 @@
+{
+  "builtin-baseline": "4ff4b6bb22fad8afcc0e88ca6970c423bf3f7bfd",
+  "dependencies": [
+    "luajit",
+    "miniaudio",
+    "joltphysics",
+    "rmlui"
+  ]
+}

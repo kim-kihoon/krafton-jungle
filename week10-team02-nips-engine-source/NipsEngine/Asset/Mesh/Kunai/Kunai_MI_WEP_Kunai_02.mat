@@ -1,0 +1,51 @@
+{
+        "LightingModel" : "Phong",
+        "MaterialDomain" : "Surface",
+        "Name" : "MI_WEP_Kunai_02",
+        "Params" : [{
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.588000, 0.588000, 0.588000]
+          }, {
+            "Name" : "ScrollUV",
+            "Type" : "Vector2",
+            "Value" : [0.000000, 0.000000]
+          }, {
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [0.900000, 0.900000, 0.900000]
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.000000, 0.000000, 0.000000]
+          }, {
+            "Name" : "bHasDiffuseMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "Shininess",
+            "Type" : "Float",
+            "Value" : 2.000000
+          }, {
+            "Name" : "Opacity",
+            "Type" : "Float",
+            "Value" : 1.000000
+          }, {
+            "Name" : "bHasSpecularMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasNormalMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasBumpMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "NormalMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }],
+        "Shader" : "Shaders/UberLit.hlsl"
+      }

@@ -1,0 +1,63 @@
+{
+        "LightingModel" : "Phong",
+        "MaterialDomain" : "Surface",
+        "Name" : "01_-_Default",
+        "Params" : [{
+            "Name" : "ScrollUV",
+            "Type" : "Vector2",
+            "Value" : [0.000000, 0.000000]
+          }, {
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [1.000000, 1.000000, 1.000000]
+          }, {
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.800000, 0.800000, 0.800000]
+          }, {
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/Game/SeaShell/scoica_06.jpg"
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.000000, 0.000000, 0.000000]
+          }, {
+            "Name" : "Shininess",
+            "Type" : "Float",
+            "Value" : 242.514633
+          }, {
+            "Name" : "SpecularMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "Opacity",
+            "Type" : "Float",
+            "Value" : 1.000000
+          }, {
+            "Name" : "NormalMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/Game/SeaShell/scoica_06_NRM.jpg"
+          }, {
+            "Name" : "BumpMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "bHasDiffuseMap",
+            "Type" : "Bool",
+            "Value" : true
+          }, {
+            "Name" : "bHasSpecularMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasNormalMap",
+            "Type" : "Bool",
+            "Value" : true
+          }, {
+            "Name" : "bHasBumpMap",
+            "Type" : "Bool",
+            "Value" : false
+          }],
+        "Shader" : "Shaders/UberLit.hlsl"
+      }

@@ -1,0 +1,240 @@
+{
+  "items": [
+    {
+      "id": "old_fairy_tale_book",
+      "name": "낡은 동화책",
+      "type": "StoryItem",
+      "desc": [
+        "바다 생물들이 그려진 동화책이다.",
+        "페이지 가장자리가 닳아 있다.",
+        "몇 번이고 펼쳐 본 흔적이 남아 있다."
+      ],
+      "keptDesc": "몇 번이고 펼쳐 본 흔적이 마음에 걸려 보관하기로 했다.",
+      "discardedDesc": "낡은 동화책은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Book_ItemDetail.png",
+      "endingRole": "Normal",
+      "storyFlags": [
+        "found_old_book"
+      ],
+      "pickSoundId": "pick-item-book",
+      "dropSoundId": "drop-item-book"
+    },
+    {
+      "id": "chocolate_bar",
+      "name": "뜯어져 있는 초콜릿",
+      "type": "StoryItem",
+      "desc": [
+        "포장이 뜯어진 초콜릿 바다."
+      ],
+      "keptDesc": "포장이 뜯어진 초콜릿 바는 마음이 걸려 보관하기로 했다.",
+      "discardedDesc": "뜯어져 있는 초콜릿은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/chocolate_ItemDetail.png",
+      "endingRole": "Bad",
+      "storyFlags": [
+        "found_chocolate"
+      ],
+      "pickSoundId": "pick-item-5",
+      "dropSoundId": "drop-item-5"
+    },
+    {
+      "id": "medicine_bottle",
+      "name": "빈 약병",
+      "type": "StoryItem",
+      "desc": [
+        "꽤나 많은 양의 약병이다.",
+        "각각 복용 시간이 적혀 있다.",
+        "오랫동안 사용한 흔적이 남아 있다."
+      ],
+      "keptDesc": "빈 약병을 따로 보관하기로 했다.",
+      "discardedDesc": "빈 약병은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Medicine_ItemDetail.png",
+      "endingRole": "Bad",
+      "storyFlags": [
+        "found_medicine_bottle"
+      ],
+      "pickSoundId": "pick-item-medicine",
+      "dropSoundId": "drop-item-1"
+    },
+    {
+      "id": "shell",
+      "name": "조개 껍데기",
+      "type": "StoryItem",
+      "desc": [
+        "바다에서 주운 것 같은 조개 껍데기다.",
+        "표면이 매끄럽게 닳아 있다.",
+        "한쪽에 쪽지가 끼워져 있다.",
+        "\"엄마에게\"라고 적혀 있다."
+      ],
+      "keptDesc": "조개 껍데기를 따로 보관하기로 했다.",
+      "discardedDesc": "조개 껍데기는 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Shell_ItemDetail.png",
+      "endingRole": "Good",
+      "storyFlags": [
+        "found_shell"
+      ],
+      "pickSoundId": "pick-item-shell",
+      "dropSoundId": "drop-item-1",
+      "firstFoundSoundId": "found-secret-item"
+    },
+    {
+      "id": "globe",
+      "name": "지구본",
+      "type": "DummyItem",
+      "desc": [
+        "먼지가 쌓인 지구본이다."
+      ],
+      "keptDesc": "지구본을 따로 보관하기로 했다.",
+      "discardedDesc": "지구본은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Globe_ItemDetail.png",
+      "endingRole": "Normal",
+      "storyFlags": [
+        "found_globe"
+      ],
+      "pickSoundId": "pick-item-2",
+      "dropSoundId": "drop-item-4"
+    },
+    {
+      "id": "painting",
+      "name": "어린아이의 그림",
+      "type": "DummyItem",
+      "desc": [
+        "크레파스로 그린 것 같은 그림이다.",
+        "색이 조금 흐려졌다."
+      ],
+      "keptDesc": "어린아이의 그림을 따로 보관하기로 했다.",
+      "discardedDesc": "어린아이의 그림은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Painting_ItemDetail.png",
+      "endingRole": "Normal",
+      "storyFlags": [
+        "found_painting"
+      ],
+      "pickSoundId": "pick-item-paper",
+      "dropSoundId": "drop-item-paper"
+    },
+    {
+      "id": "shoes",
+      "name": "신발",
+      "type": "DummyItem",
+      "desc": [
+        "한쪽에 모래가 묻어 있는 신발이다."
+      ],
+      "keptDesc": "신발을 따로 보관하기로 했다.",
+      "discardedDesc": "신발은 버릴 물건 상자 안으로 들어갔다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Shoes_ItemDetail.png",
+      "endingRole": "Normal",
+      "storyFlags": [
+        "found_shoes"
+      ],
+      "pickSoundId": "pick-item-3",
+      "dropSoundId": "drop-item-5"
+    },
+    {
+      "id": "crumpled_paper",
+      "name": "구겨진 종이",
+      "type": "DummyItem",
+      "desc": [
+        "구겨진 종이다.",
+        "방 한구석에 아무렇게나 버려진 평범한 쓰레기처럼 보인다."
+      ],
+      "keptDesc": "구겨진 종이를 보관하기로 했다.",
+      "discardedDesc": "구겨진 종이를 버릴 물건 상자에 넣었다.",
+      "canClassify": true,
+      "iconPath": "Asset/Texture/ItemDetail/Paper_ItemDetail.png",
+      "endingRole": "Bad",
+      "storyFlags": [
+        "found_crumpled_paper"
+      ],
+      "pickSoundId": "pick-item-trash",
+      "dropSoundId": "pick-item-trash"
+    },
+    {
+      "id": "moving_box",
+      "name": "이사 박스",
+      "type": "DummyItem",
+      "foundDesc": "짐을 담기 위한 평범한 이사 박스다.",
+      "canClassify": false,
+      "canInspect": false,
+      "pickSoundId": "pick-item-5",
+      "dropSoundId": "drop-item-5"
+    },
+    {
+      "id": "jar",
+      "name": "항아리",
+      "type": "DummyItem",
+      "foundDesc": "방 안에 놓여 있던 작은 항아리다.",
+      "canClassify": false,
+      "canInspect": false,
+      "pickSoundId": "pick-item-3",
+      "dropSoundId": "drop-item-1"
+    },
+    {
+      "id": "paper_roll",
+      "name": "종이 두루마리",
+      "type": "DummyItem",
+      "foundDesc": "박스 안에 들어 있던 종이 두루마리다.",
+      "canClassify": false,
+      "canInspect": false,
+      "pickSoundId": "pick-item-paper",
+      "dropSoundId": "drop-item-5"
+    },
+    {
+      "id": "bucket",
+      "name": "물통",
+      "type": "DummyItem",
+      "foundDesc": "청소에 쓰이는 평범한 물통이다.",
+      "canClassify": false,
+      "canInspect": false,
+      "pickSoundId": "pick-item-2",
+      "dropSoundId": "drop-item-4"
+    },
+    {
+      "id": "mop",
+      "name": "대걸레",
+      "type": "CleaningTool",
+      "foundDesc": "바닥을 닦는 데 쓰는 대걸레다.",
+      "canClassify": false,
+      "animationSetId": "mop_cleaning",
+      "effectId": "wet_wipe",
+      "cleaningPower": 0.05,
+      "cleaningRadius": 1.5,
+      "pickSoundId": "pick-item-5",
+      "dropSoundId": "drop-item-1",
+      "holdDistance": 2.5,
+      "holdCameraLocalOffset": [0.0, 0.1, -0.1],
+      "useStrokeCameraLocalDirection": [0.0, -1.0, 1.0],
+      "handleCameraLocalDirection": [0.0, 1.0, 1.0],
+      "viewModelLocalRotationDegrees": [50.0, -15.0, 0.0],
+      "useBobAmplitude": 0.18,
+      "useBobSpeed": 9.0,
+      "useReturnSpeed": 14.0
+    },
+    {
+      "id": "sponge",
+      "name": "스펀지",
+      "type": "CleaningTool",
+      "foundDesc": "얼룩을 닦는 데 쓰는 스펀지다.",
+      "canClassify": false,
+      "animationSetId": "sponge_cleaning",
+      "effectId": "wet_wipe",
+      "cleaningPower": 0.1,
+      "cleaningRadius": 0.7,
+      "pickSoundId": "sponge-2",
+      "dropSoundId": "drop-item-5",
+      "holdDistance": 3.0,
+      "holdCameraLocalOffset": [0.0, 0.2, -0.2],
+      "useStrokeCameraLocalDirection": [0.0, -1.0, 1.0],
+      "handleCameraLocalDirection": [0.0, 1.0, 1.0],
+      "viewModelLocalRotationDegrees": [10.0, -10.0, 0.0],
+      "useBobAmplitude": 0.18,
+      "useBobSpeed": 9.0,
+      "useReturnSpeed": 14.0
+    }
+  ]
+}

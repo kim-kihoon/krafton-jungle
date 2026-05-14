@@ -1,0 +1,63 @@
+{
+        "LightingModel" : "Phong",
+        "MaterialDomain" : "Surface",
+        "Name" : "Wooden_stool_texture",
+        "Params" : [{
+            "Name" : "ScrollUV",
+            "Type" : "Vector2",
+            "Value" : [0.000000, 0.000000]
+          }, {
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [0.500000, 0.500000, 0.500000]
+          }, {
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [0.640000, 0.640000, 0.640000]
+          }, {
+            "Name" : "DiffuseMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/WoodenStool/Textures/wooden_stool_texture(F).png"
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.000000, 0.000000, 0.000000]
+          }, {
+            "Name" : "Shininess",
+            "Type" : "Float",
+            "Value" : 96.078430
+          }, {
+            "Name" : "SpecularMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "Opacity",
+            "Type" : "Float",
+            "Value" : 1.000000
+          }, {
+            "Name" : "NormalMap",
+            "Type" : "Texture",
+            "Value" : "Asset/Mesh/WoodenStool/Textures/wooden_stool_texture(F)_NRM.jpg"
+          }, {
+            "Name" : "BumpMap",
+            "Type" : "Texture",
+            "Value" : ""
+          }, {
+            "Name" : "bHasDiffuseMap",
+            "Type" : "Bool",
+            "Value" : true
+          }, {
+            "Name" : "bHasSpecularMap",
+            "Type" : "Bool",
+            "Value" : false
+          }, {
+            "Name" : "bHasNormalMap",
+            "Type" : "Bool",
+            "Value" : true
+          }, {
+            "Name" : "bHasBumpMap",
+            "Type" : "Bool",
+            "Value" : false
+          }],
+        "Shader" : "Shaders/UberLit.hlsl"
+      }

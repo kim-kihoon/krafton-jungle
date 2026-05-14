@@ -1,0 +1,17 @@
+{
+        "Name" : "Asset/Mesh/Game/KidsRoom/Book_Inst_8.matinst",
+        "OverridedParams" : [{
+            "Name" : "SpecularColor",
+            "Type" : "Vector3",
+            "Value" : [1.000000, 1.000000, 1.000000]
+          }, {
+            "Name" : "BaseColor",
+            "Type" : "Vector3",
+            "Value" : [1.000000, 1.000000, 1.000000]
+          }, {
+            "Name" : "EmissiveColor",
+            "Type" : "Vector3",
+            "Value" : [0.901298, 0.628692, 1.000000]
+          }],
+        "Parent" : "standardSurface2"
+      }
