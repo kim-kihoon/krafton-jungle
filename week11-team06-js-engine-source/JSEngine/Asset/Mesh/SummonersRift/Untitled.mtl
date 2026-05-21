@@ -1,0 +1,1022 @@
+# Blender 5.1.0 MTL File: 'Untitled.blend'
+# www.blender.org
+
+newmtl polySurfaceMapGeoMesh139SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh145SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_c.dds
+
+newmtl polySurfaceMapGeoMesh147SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_h_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh148SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_g_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh149SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh151SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_f_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh154SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_i_alpha_3dcuv_atlas_color.dds
+map_d _chunk_jungle_east_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh157SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_g_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh158SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_c1.dds
+
+newmtl polySurfaceMapGeoMesh160SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh161SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh162SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh163SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh167SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh168SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_a_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh170SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_b_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh172SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh173SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh174SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh175SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_a1.dds
+
+newmtl polySurfaceMapGeoMesh176SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh177SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh178SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh179SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh180SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh181SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh183SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh184SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh185SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_east_island_c_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh186SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_a1.dds
+
+newmtl polySurfaceMapGeoMesh188SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_b_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh189SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_b_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh190SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_b_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh191SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpita.dds
+
+newmtl polySurfaceMapGeoMesh193SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpitb.dds
+
+newmtl polySurfaceMapGeoMesh194SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_c3.dds
+
+newmtl polySurfaceMapGeoMesh195SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpita.dds
+
+newmtl polySurfaceMapGeoMesh196SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh198SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh199SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpitb.dds
+
+newmtl polySurfaceMapGeoMesh19SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_y.dds
+
+newmtl polySurfaceMapGeoMesh200SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpitb.dds
+
+newmtl polySurfaceMapGeoMesh201SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh203SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh204SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh205SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh208SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh209SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_d2.dds
+
+newmtl polySurfaceMapGeoMesh20SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_s.dds
+
+newmtl polySurfaceMapGeoMesh210SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh211SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpita.dds
+
+newmtl polySurfaceMapGeoMesh212SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_c_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh213SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh214SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_c_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh215SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh216SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_c3.dds
+
+newmtl polySurfaceMapGeoMesh217SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_e_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh218SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd jungle_east_island_a.dds
+
+newmtl polySurfaceMapGeoMesh219SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_b1.dds
+
+newmtl polySurfaceMapGeoMesh21SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_x.dds
+
+newmtl polySurfaceMapGeoMesh220SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd south_island_f_dragonpita.dds
+
+newmtl polySurfaceMapGeoMesh221SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh222SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh223SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_d_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh224SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_a1.dds
+
+newmtl polySurfaceMapGeoMesh225SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_c3.dds
+
+newmtl polySurfaceMapGeoMesh227SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_a1.dds
+
+newmtl polySurfaceMapGeoMesh228SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh229SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_h_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh230SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_h_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh231SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh232SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_g_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh234SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_c3.dds
+
+newmtl polySurfaceMapGeoMesh237SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_j_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh239SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_l_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh240SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_l_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh242SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_i_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh243SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_j_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh244SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_l_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh245SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh247SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh248SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh249SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh250SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_l_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh251SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_j_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh252SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh253SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_j_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh255SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd _chunk_jungle_south_island_k_alpha_3dcuv_atlas_color.dds
+
+newmtl polySurfaceMapGeoMesh256SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_a1.dds
+
+newmtl polySurfaceMapGeoMesh258SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_southeast_a1.dds
+
+newmtl polySurfaceMapGeoMesh25SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_r.dds
+
+newmtl polySurfaceMapGeoMesh260SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_south_f1.dds
+
+newmtl polySurfaceMapGeoMesh266SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_south_e1.dds
+
+newmtl polySurfaceMapGeoMesh267SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_south_e1.dds
+
+newmtl polySurfaceMapGeoMesh271SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_south_e1.dds
+
+newmtl polySurfaceMapGeoMesh28SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_m.dds
+
+newmtl polySurfaceMapGeoMesh2SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_n.dds
+
+newmtl polySurfaceMapGeoMesh30_1SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_w.dds
+
+newmtl polySurfaceMapGeoMesh30_2SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_w.dds
+
+newmtl polySurfaceMapGeoMesh41SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd periph_east_g.dds
+
+newmtl polySurfaceMapGeoMesh5SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_o.dds
+
+newmtl polySurfaceMapGeoMesh9SG.001
+Ns 90.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd grnd_terrain_t.dds

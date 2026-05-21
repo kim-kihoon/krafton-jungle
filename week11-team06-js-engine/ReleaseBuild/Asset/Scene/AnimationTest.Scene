@@ -1,0 +1,239 @@
+{
+  "Actors" : [{
+      "ClassName" : "APlayerStart",
+      "Components" : [{
+          "AttachSocket" : "StateElapsedTime",
+          "ClassName" : "USceneComponent",
+          "Editor Only" : false,
+          "Enable Tick" : true,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "USceneComponent_1",
+          "PersistentGuid" : "EB2BE7B7-2A6D45BD-BA61B0E5-E2E532DF",
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Tags" : [],
+          "Type" : "USceneComponent",
+          "UUID" : 1001
+        }, {
+          "AttachSocket" : "Name_None",
+          "Cast Decal" : true,
+          "ClassName" : "UBillboardComponent",
+          "Editor Only" : true,
+          "Enable Cull" : true,
+          "Enable Tick" : true,
+          "GenerateOverlapEvents" : false,
+          "Height" : 1.000000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "UBillboardComponent_1",
+          "ParentUUID" : 1001,
+          "Particle" : "Resources/Editor/Icons/PlayerStart_64x.PNG",
+          "PersistentGuid" : "61FD13C3-3A484DAD-817B6917-01BA2BEB",
+          "PlayRate" : 30.000000,
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Tags" : [],
+          "Type" : "UBillboardComponent",
+          "UUID" : 1002,
+          "Visible" : true,
+          "Width" : 1.000000,
+          "bInheritOwnerScale" : false,
+          "bLoop" : true
+        }],
+      "EditorOnly" : false,
+      "Name" : "PlayerStart_AnimationTest",
+      "Properties" : {
+
+      },
+      "RootComponent" : 1001,
+      "Tags" : [],
+      "UUID" : 101,
+      "Visible" : true
+    }, {
+      "ClassName" : "ADirectionalLightActor",
+      "Components" : [{
+          "AttachSocket" : "StateElapsedTime",
+          "CastShadows" : true,
+          "ClassName" : "UDirectionalLightComponent",
+          "Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "ConstantBias" : 0.003000,
+          "Editor Only" : false,
+          "Enable Tick" : true,
+          "Intensity" : 1.500000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "UDirectionalLightComponent_1",
+          "PersistentGuid" : "012060FD-A0144481-948BFC74-9BD392B0",
+          "Properties" : {
+
+          },
+          "Rotation" : [-0.000000, 48.175247, -0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "ShadowMapType" : 0,
+          "ShadowResolutionScale" : 2048,
+          "ShadowSharpen" : 0.500000,
+          "SlopeScaledBias" : 0.120000,
+          "Tags" : [],
+          "Type" : "UDirectionalLightComponent",
+          "UUID" : 1004
+        }, {
+          "AttachSocket" : "Name_None",
+          "Cast Decal" : true,
+          "ClassName" : "UBillboardComponent",
+          "Editor Only" : true,
+          "Enable Cull" : true,
+          "Enable Tick" : true,
+          "GenerateOverlapEvents" : false,
+          "Height" : 1.000000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "UBillboardComponent_1",
+          "ParentUUID" : 1004,
+          "Particle" : "Resources/Editor/Icons/DirectionalLight_64x.png",
+          "PersistentGuid" : "32DCCE61-60F3402B-8477BEEF-02F85560",
+          "PlayRate" : 30.000000,
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Tags" : [],
+          "Type" : "UBillboardComponent",
+          "UUID" : 1005,
+          "Visible" : true,
+          "Width" : 1.000000,
+          "bInheritOwnerScale" : false,
+          "bLoop" : true
+        }],
+      "EditorOnly" : false,
+      "Name" : "DirectionalLight_AnimationTest",
+      "Properties" : {
+
+      },
+      "RootComponent" : 1004,
+      "Tags" : [],
+      "UUID" : 102,
+      "Visible" : true
+    }, {
+      "ClassName" : "AAmbientLightActor",
+      "Components" : [{
+          "AttachSocket" : "StateElapsedTime",
+          "CastShadows" : true,
+          "ClassName" : "UAmbientLightComponent",
+          "Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "ConstantBias" : 0.003000,
+          "Editor Only" : false,
+          "Enable Tick" : true,
+          "Intensity" : 0.750000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "UAmbientLightComponent_1",
+          "PersistentGuid" : "4FEA104D-C57B4051-A5103660-1FD8F57E",
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "ShadowMapType" : 0,
+          "ShadowResolutionScale" : 2048,
+          "ShadowSharpen" : 0.500000,
+          "SlopeScaledBias" : 0.120000,
+          "Tags" : [],
+          "Type" : "UAmbientLightComponent",
+          "UUID" : 1007
+        }, {
+          "AttachSocket" : "Name_None",
+          "Cast Decal" : true,
+          "ClassName" : "UBillboardComponent",
+          "Editor Only" : true,
+          "Enable Cull" : true,
+          "Enable Tick" : true,
+          "GenerateOverlapEvents" : false,
+          "Height" : 1.000000,
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "ObjectName" : "UBillboardComponent_1",
+          "ParentUUID" : 1007,
+          "Particle" : "Resources/Editor/Icons/SkyLight_64x.png",
+          "PersistentGuid" : "36E8F2B6-DE5D4D88-881D2097-23714387",
+          "PlayRate" : 30.000000,
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Tags" : [],
+          "Type" : "UBillboardComponent",
+          "UUID" : 1008,
+          "Visible" : true,
+          "Width" : 1.000000,
+          "bInheritOwnerScale" : false,
+          "bLoop" : true
+        }],
+      "EditorOnly" : false,
+      "Name" : "AmbientLight_AnimationTest",
+      "Properties" : {
+
+      },
+      "RootComponent" : 1007,
+      "Tags" : [],
+      "UUID" : 103,
+      "Visible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "Components" : [{
+          "AttachSocket" : "StateElapsedTime",
+          "Cast Decal" : true,
+          "ClassName" : "UStaticMeshComponent",
+          "Editor Only" : false,
+          "Enable Cull" : true,
+          "Enable Tick" : true,
+          "GenerateOverlapEvents" : false,
+          "Location" : [-41.534534, -21.796028, 2.550328],
+          "Materials" : ["Asset/Material/Auto/Untitled_Mat_0.mat", "Asset/Material/Auto/Untitled_Mat_1.mat", "Asset/Material/Auto/Untitled_Mat_2.mat", "Asset/Material/Auto/Untitled_Mat_3.mat", "Asset/Material/Auto/Untitled_Mat_4.mat", "Asset/Material/Auto/Untitled_Mat_5.mat", "Asset/Material/Auto/Untitled_Mat_6.mat", "Asset/Material/Auto/Untitled_Mat_7.mat", "Asset/Material/Auto/Untitled_Mat_8.mat", "Asset/Material/Auto/Untitled_Mat_9.mat", "Asset/Material/Auto/Untitled_Mat_10.mat", "Asset/Material/Auto/Untitled_Mat_11.mat", "Asset/Material/Auto/Untitled_Mat_12.mat", "Asset/Material/Auto/Untitled_Mat_13.mat", "Asset/Material/Auto/Untitled_Mat_14.mat", "Asset/Material/Auto/Untitled_Mat_15.mat", "Asset/Material/Auto/Untitled_Mat_16.mat", "Asset/Material/Auto/Untitled_Mat_17.mat", "Asset/Material/Auto/Untitled_Mat_18.mat", "Asset/Material/Auto/Untitled_Mat_19.mat", "Asset/Material/Auto/Untitled_Mat_20.mat", "Asset/Material/Auto/Untitled_Mat_21.mat", "Asset/Material/Auto/Untitled_Mat_22.mat", "Asset/Material/Auto/Untitled_Mat_23.mat", "Asset/Material/Auto/Untitled_Mat_24.mat", "Asset/Material/Auto/Untitled_Mat_25.mat", "Asset/Material/Auto/Untitled_Mat_26.mat", "Asset/Material/Auto/Untitled_Mat_27.mat", "Asset/Material/Auto/Untitled_Mat_28.mat", "Asset/Material/Auto/Untitled_Mat_29.mat", "Asset/Material/Auto/Untitled_Mat_30.mat", "Asset/Material/Auto/Untitled_Mat_31.mat", "Asset/Material/Auto/Untitled_Mat_40.mat", "Asset/Material/Auto/Untitled_Mat_32.mat", "Asset/Material/Auto/Untitled_Mat_33.mat", "Asset/Material/Auto/Untitled_Mat_34.mat", "Asset/Material/Auto/Untitled_Mat_35.mat", "Asset/Material/Auto/Untitled_Mat_36.mat", "Asset/Material/Auto/Untitled_Mat_37.mat", "Asset/Material/Auto/Untitled_Mat_38.mat", "Asset/Material/Auto/Untitled_Mat_39.mat", "Asset/Material/Auto/Untitled_Mat_96.mat", "Asset/Material/Auto/Untitled_Mat_48.mat", "Asset/Material/Auto/Untitled_Mat_41.mat", "Asset/Material/Auto/Untitled_Mat_42.mat", "Asset/Material/Auto/Untitled_Mat_43.mat", "Asset/Material/Auto/Untitled_Mat_44.mat", "Asset/Material/Auto/Untitled_Mat_45.mat", "Asset/Material/Auto/Untitled_Mat_46.mat", "Asset/Material/Auto/Untitled_Mat_47.mat", "Asset/Material/Auto/Untitled_Mat_59.mat", "Asset/Material/Auto/Untitled_Mat_49.mat", "Asset/Material/Auto/Untitled_Mat_50.mat", "Asset/Material/Auto/Untitled_Mat_51.mat", "Asset/Material/Auto/Untitled_Mat_52.mat", "Asset/Material/Auto/Untitled_Mat_53.mat", "Asset/Material/Auto/Untitled_Mat_54.mat", "Asset/Material/Auto/Untitled_Mat_55.mat", "Asset/Material/Auto/Untitled_Mat_56.mat", "Asset/Material/Auto/Untitled_Mat_57.mat", "Asset/Material/Auto/Untitled_Mat_58.mat", "Asset/Material/Auto/Untitled_Mat_60.mat", "Asset/Material/Auto/Untitled_Mat_61.mat", "Asset/Material/Auto/Untitled_Mat_62.mat", "Asset/Material/Auto/Untitled_Mat_63.mat", "Asset/Material/Auto/Untitled_Mat_64.mat", "Asset/Material/Auto/Untitled_Mat_65.mat", "Asset/Material/Auto/Untitled_Mat_66.mat", "Asset/Material/Auto/Untitled_Mat_67.mat", "Asset/Material/Auto/Untitled_Mat_68.mat", "Asset/Material/Auto/Untitled_Mat_69.mat", "Asset/Material/Auto/Untitled_Mat_70.mat", "Asset/Material/Auto/Untitled_Mat_71.mat", "Asset/Material/Auto/Untitled_Mat_72.mat", "Asset/Material/Auto/Untitled_Mat_73.mat", "Asset/Material/Auto/Untitled_Mat_74.mat", "Asset/Material/Auto/Untitled_Mat_75.mat", "Asset/Material/Auto/Untitled_Mat_76.mat", "Asset/Material/Auto/Untitled_Mat_77.mat", "Asset/Material/Auto/Untitled_Mat_78.mat", "Asset/Material/Auto/Untitled_Mat_79.mat", "Asset/Material/Auto/Untitled_Mat_80.mat", "Asset/Material/Auto/Untitled_Mat_81.mat", "Asset/Material/Auto/Untitled_Mat_82.mat", "Asset/Material/Auto/Untitled_Mat_90.mat", "Asset/Material/Auto/Untitled_Mat_83.mat", "Asset/Material/Auto/Untitled_Mat_84.mat", "Asset/Material/Auto/Untitled_Mat_85.mat", "Asset/Material/Auto/Untitled_Mat_86.mat", "Asset/Material/Auto/Untitled_Mat_87.mat", "Asset/Material/Auto/Untitled_Mat_88.mat", "Asset/Material/Auto/Untitled_Mat_89.mat", "Asset/Material/Auto/Untitled_Mat_91.mat", "Asset/Material/Auto/Untitled_Mat_92.mat", "Asset/Material/Auto/Untitled_Mat_93.mat", "Asset/Material/Auto/Untitled_Mat_94.mat", "Asset/Material/Auto/Untitled_Mat_95.mat", "Asset/Material/Auto/Untitled_Mat_97.mat", "Asset/Material/Auto/Untitled_Mat_98.mat", "Asset/Material/Auto/Untitled_Mat_100.mat", "Asset/Material/Auto/Untitled_Mat_101.mat"],
+          "ObjStaticMeshAsset" : "Asset/Mesh/SummonersRift/Untitled.obj",
+          "ObjectName" : "UStaticMeshComponent_1",
+          "PersistentGuid" : "C6389818-B9904C12-88A13640-3CE810D2",
+          "Properties" : {
+
+          },
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [200.000000, 200.000000, 200.000000],
+          "Scroll U" : 0.000000,
+          "Scroll V" : 0.000000,
+          "Tags" : [],
+          "Type" : "UStaticMeshComponent",
+          "UUID" : 2159,
+          "Visible" : true
+        }],
+      "EditorOnly" : false,
+      "Name" : "AStaticMeshActor_2",
+      "Properties" : {
+
+      },
+      "RootComponent" : 2159,
+      "Tags" : [],
+      "UUID" : 2158,
+      "Visible" : true
+    }],
+  "ClassName" : "UWorld",
+  "Name" : "AnimationTest",
+  "NextUUID" : 2963,
+  "PerspectiveCamera" : {
+    "FOV" : 60.000000,
+    "FarClip" : 1000.000000,
+    "Location" : [-39.966171, 128.571457, 122.451012],
+    "NearClip" : 0.100000,
+    "Rotation" : [44.904812, -6.021667, -96.008362]
+  },
+  "Version" : 6,
+  "WorldSettings" : {
+    "DefaultPawnClass" : "AAnimLuaTestPawn",
+    "DefaultPawnPrefabPath" : "",
+    "GameModeClass" : "AGameModeBase",
+    "OverrideGameMode" : true,
+    "PlayerControllerClass" : "APlayerController"
+  },
+  "WorldType" : "Editor"
+}

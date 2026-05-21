@@ -1,0 +1,225 @@
+[EditorEngine] Editor boot started.
+[AudioSystem] Sound registry loaded. Count=0
+[AudioSystem] Initialized. Backend=MiniAudio Attempt=default
+Complete Load Resources!
+[RmlUi] D3D11 render interface initialized.
+[RmlUi] Loaded font file: C:/Windows/Fonts/malgun.ttf
+[RmlUi] Font family alias: Malgun Gothic -> Malgun Gothic
+[RmlUi] Registered GDI font face request: C:/Windows/Fonts/malgun.ttf Family=Malgun Gothic
+[RmlUi] Font file missing: Asset/UIFont/Nexon/NEXONLv1GothicRegular.ttf -> C:/Users/jungle/Desktop/짬통 (언제든 지워질 애들만)/W11_6팀_김태현김호준김기훈/ReleaseBuild/Asset/UIFont/Nexon/NEXONLv1GothicRegular.ttf
+[RmlUi] Registered GDI font face request: Asset/UIFont/Nexon/NEXONLv1GothicRegular.ttf Family=Nexon Lv1 Gothic
+[RmlUi] Font file missing: Asset/UIFont/Nexon/NEXONLv1GothicBold.ttf -> C:/Users/jungle/Desktop/짬통 (언제든 지워질 애들만)/W11_6팀_김태현김호준김기훈/ReleaseBuild/Asset/UIFont/Nexon/NEXONLv1GothicBold.ttf
+[RmlUi] Registered GDI font face request: Asset/UIFont/Nexon/NEXONLv1GothicBold.ttf Family=Nexon Lv1 Gothic
+[RmlUi] Initialized RmlUi core: custom
+[FbxMaterialLoadService] Loaded 2 materials from disk cache: Asset/SkeletalMesh/Quinn/MF_Unarmed_Jog_Fwd.FBX
+[SkeletalMeshLoad] Source=ImportedBinary | Path=Asset/SkeletalMesh/Quinn/MF_Unarmed_Jog_Fwd_skeletalmesh_root.bin
+[SkeletonLoad] Loaded | Path=Asset/SkeletalMesh/Quinn/MF_Unarmed_Jog_Fwd_skeleton_root.bin | Root=root | Bones=89 | Sockets=0
+[SkeletalMeshLoad] Loaded | Path=Asset/SkeletalMesh/Quinn/MF_Unarmed_Jog_Fwd_skeletalmesh_root.bin | Vertices=63160 | Indices=381828 | Bones=89 | Sections=6
+[AnimationSequenceLoad] Source=AnimAsset | Path=Asset/SkeletalMesh/Quinn/Animation/MM_Idle_anim_Unreal_Take.anim | Name=Unreal Take | Notifies=0 | Duration=7.567
+[AnimationSequenceLoad] Source=AnimAsset | Path=Asset/SkeletalMesh/Quinn/Animation/MF_Unarmed_Jog_Fwd_anim_Unreal_Take.anim | Name=Unreal Take | Notifies=0 | Duration=1.767
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[EditorNotification] Level loaded
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[EditorRenderPerf] Viewport=0 Time=0.0217s Opaque=6 Lights=0 ShadowRequests=1 VisiblePrimitives=5
+[EditorPipelinePerf] Total=27.51ms Stats=0.00ms Reset=0.00ms BeginFrame=0.01ms Viewports=21.99ms BackBuffer=0.00ms RenderUI=4.29ms EndFrame=1.20ms State=0 FocusedWorld=000001D6486BEBD0
+[EditorFramePerf] Frame=30.60ms State=Editing->Editing PostPIEFrame=-1 Update=0.00ms PlayReq=0.00ms InputSetup=0.01ms InputRoute=0.14ms Panel=2.52ms World=0.01ms Render=27.91ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene=C:/Users/jungle/Desktop/짬통 (언제든 지워질 애들만)/W11_6팀_김태현김호준김기훈/ReleaseBuild/Asset/Scene/BlendingTest.Scene | StateElapsedTime:Editor*
+[GPUFramePerf] Total=13.39ms Top=EditorFrameGPU TopMs=6.86 TopPass=RenderPass.Shadow 2.28ms | RenderPass.VSMConversion 2.15ms | RenderPass.Opaque 0.59ms Samples=22 State=0 FocusedWorld=000001D6486BEBD0
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=3.49ms Prep=0.50ms WorldCleanup=0.21ms RestoreWorld=0.00ms ViewportRestore=0.59ms RmlUnload=0.00ms LuaReset=2.19ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=6.29ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=3.75ms InputSetup=0.00ms InputRoute=1.14ms Panel=0.00ms World=0.01ms Render=0.86ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.29ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.03ms Panel=0.00ms World=0.00ms Render=1.25ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.81ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=1.80ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.42ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=0.40ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.19ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=1.18ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.33ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.32ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.20ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.18ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.13ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=4.10ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.40ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.01ms Render=1.36ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.99ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=1.97ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.01ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=1.99ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.62ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=1.60ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.60ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.58ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.73ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.72ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.45ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.17ms Panel=0.00ms World=0.00ms Render=1.28ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.44ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.43ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.82ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=4.80ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=6.03ms Prep=0.50ms WorldCleanup=0.18ms RestoreWorld=0.00ms ViewportRestore=3.29ms RmlUnload=0.00ms LuaReset=2.05ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=8.37ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=6.25ms InputSetup=0.00ms InputRoute=0.77ms Panel=0.00ms World=0.01ms Render=1.03ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.87ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=4.85ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.45ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=5.43ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.48ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.46ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=8.30ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=8.29ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.83ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.10ms Panel=0.00ms World=0.01ms Render=0.71ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.62ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.05ms Panel=0.00ms World=0.00ms Render=0.57ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.80ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=0.78ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.49ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.00ms Render=2.46ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.19ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.17ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.23ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.00ms Render=5.20ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.34ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.01ms Render=2.31ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.77ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=0.75ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.77ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.75ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.73ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.72ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.78ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.76ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.11ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=3.09ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=4.39ms Prep=0.55ms WorldCleanup=0.61ms RestoreWorld=0.00ms ViewportRestore=0.69ms RmlUnload=0.00ms LuaReset=2.53ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=7.97ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=4.67ms InputSetup=0.00ms InputRoute=1.27ms Panel=0.00ms World=0.01ms Render=1.65ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.60ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.58ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.13ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.11ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.29ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.26ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.90ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.89ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.56ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.03ms Panel=0.00ms World=0.00ms Render=2.52ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.43ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.42ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.39ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.37ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.90ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.05ms Panel=0.00ms World=0.01ms Render=4.84ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.15ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.12ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.31ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.29ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.40ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.38ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.63ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.62ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.28ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.26ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.50ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.49ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.86ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.00ms Render=2.83ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.65ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.64ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=4.81ms Prep=0.55ms WorldCleanup=0.18ms RestoreWorld=0.00ms ViewportRestore=1.85ms RmlUnload=0.00ms LuaReset=2.22ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=8.08ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=5.03ms InputSetup=0.00ms InputRoute=1.07ms Panel=0.00ms World=0.01ms Render=1.45ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.13ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.11ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.34ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=6.32ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.17ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.05ms Panel=0.00ms World=0.01ms Render=2.11ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.63ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.62ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.66ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.03ms Panel=0.00ms World=0.00ms Render=0.62ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.69ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.10ms Panel=0.00ms World=0.00ms Render=0.58ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.04ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.07ms Panel=0.00ms World=0.00ms Render=2.97ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.16ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=4.14ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.31ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.29ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.38ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.07ms Panel=0.00ms World=0.00ms Render=2.30ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.57ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=3.55ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.71ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.69ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.71ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.69ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.59ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.57ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.66ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.06ms Panel=0.00ms World=0.00ms Render=2.59ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.55ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.03ms Panel=0.00ms World=0.00ms Render=2.52ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=3.50ms Prep=0.49ms WorldCleanup=0.17ms RestoreWorld=0.00ms ViewportRestore=0.64ms RmlUnload=0.00ms LuaReset=2.20ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=7.07ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=3.71ms InputSetup=0.00ms InputRoute=1.16ms Panel=0.00ms World=0.01ms Render=1.85ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.47ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=6.45ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=7.32ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.01ms Render=7.29ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.55ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.01ms Render=5.52ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.05ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=6.03ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.45ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=0.43ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.21ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=1.20ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.36ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.34ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.75ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=3.73ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.15ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.13ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.39ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=3.37ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.44ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.42ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.72ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=2.69ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.88ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.28ms Panel=0.00ms World=0.00ms Render=1.59ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.93ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.92ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.87ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.85ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.75ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.04ms Panel=0.00ms World=0.00ms Render=1.70ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=3.98ms Prep=0.48ms WorldCleanup=0.31ms RestoreWorld=0.00ms ViewportRestore=1.00ms RmlUnload=0.00ms LuaReset=2.18ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=7.15ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=4.21ms InputSetup=0.00ms InputRoute=1.13ms Panel=0.01ms World=0.01ms Render=1.43ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.07ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.05ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.63ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=5.61ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.80ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.78ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=8.11ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.05ms Panel=0.00ms World=0.01ms Render=8.05ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.44ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=0.42ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.22ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=1.21ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.36ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.34ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.40ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.75ms Panel=0.00ms World=0.00ms Render=1.64ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=10.50ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.06ms Panel=0.00ms World=0.00ms Render=10.43ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.03ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.01ms Render=2.00ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.31ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.29ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.76ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.74ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.59ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=5.57ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.95ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.93ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=4.76ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=4.74ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.66ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.65ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[AnimSM] State change: <None> -> Entry (BlendTime=0.000)
+[GameMode] Spawned PlayerController class: APlayerController
+[GameMode] Spawned DefaultPawnClass: ADefaultPawn
+[GameMode] PlayerController possessed pawn: ADefaultPawn
+[PlayerCameraManager] SetViewTarget. Target=ADefaultPawn Camera=UCameraComponent_1
+[PlayerController] BeginPlay. Possessed=ADefaultPawn
+[AnimSM] State change: Entry -> Run (BlendTime=5.000)
+[Lua] [Lua] Lua 5.1 / LuaJIT 2.1.ROLLING
+[PIEPerf] Stop Total=3.52ms Prep=0.48ms WorldCleanup=0.22ms RestoreWorld=0.00ms ViewportRestore=0.65ms RmlUnload=0.00ms LuaReset=2.17ms RemainingWorlds=1 Active=StateElapsedTime RmlDocs=0
+[EditorFramePerf] PIE stop detected. Tracing next 180 editor frames.
+[EditorFramePerf] Frame=7.39ms State=Playing->Editing PostPIEFrame=0 Update=0.00ms PlayReq=3.74ms InputSetup=0.00ms InputRoute=0.72ms Panel=0.00ms World=0.00ms Render=2.57ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.88ms State=Editing->Editing PostPIEFrame=1 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=5.86ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=6.83ms State=Editing->Editing PostPIEFrame=2 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=6.81ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=9.01ms State=Editing->Editing PostPIEFrame=3 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=8.99ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.76ms State=Editing->Editing PostPIEFrame=4 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.01ms Render=0.74ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=0.46ms State=Editing->Editing PostPIEFrame=5 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.03ms Panel=0.00ms World=0.01ms Render=0.42ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=1.11ms State=Editing->Editing PostPIEFrame=6 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=1.10ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=3.95ms State=Editing->Editing PostPIEFrame=7 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=3.93ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.19ms State=Editing->Editing PostPIEFrame=8 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.07ms Panel=0.00ms World=0.00ms Render=2.12ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.50ms State=Editing->Editing PostPIEFrame=9 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.48ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.20ms State=Editing->Editing PostPIEFrame=10 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.00ms Render=2.18ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.42ms State=Editing->Editing PostPIEFrame=11 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.40ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.69ms State=Editing->Editing PostPIEFrame=30 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.67ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=5.26ms State=Editing->Editing PostPIEFrame=60 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=5.23ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.71ms State=Editing->Editing PostPIEFrame=90 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.70ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.65ms State=Editing->Editing PostPIEFrame=120 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.02ms Panel=0.00ms World=0.00ms Render=2.62ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorFramePerf] Frame=2.47ms State=Editing->Editing PostPIEFrame=150 Update=0.00ms PlayReq=0.00ms InputSetup=0.00ms InputRoute=0.01ms Panel=0.00ms World=0.00ms Render=2.45ms Worlds=1 PIEWorlds=0 PausedWorlds=0 Active=StateElapsedTime PendingScene=0 RmlDocs=0 VisibleRml=0 Scene= | StateElapsedTime:Editor*
+[EditorNotification] Undo history cleared
+[EditorNotification] Level saved
+[RmlUi] Shutdown RmlUi core.
