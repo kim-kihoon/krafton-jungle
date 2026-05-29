@@ -1,0 +1,22 @@
+{
+  "BlendState" : "Additive",
+  "DepthStencilState" : "DepthReadOnly",
+  "Origin" : "Particle",
+  "Parameters" : {
+    "HasDiffuseTexture" : 0.000000,
+    "ParticleMaterialColor" : [0.000000, 0.000000, 0.000000, 0.000000],
+    "_ParticleMaterialPad" : [0.000000, 0.000000, 0.000000]
+  },
+  "Particle" : {
+    "SubUVColumns" : 1,
+    "SubUVRows" : 1,
+    "UseSubUV" : false
+  },
+  "PathFileName" : "Asset/Particle/Materials/M_Beam.mat",
+  "RasterizerState" : "SolidNoCull",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Particle/ParticleBeam.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Particle/Textures/T_Beam.png"
+  }
+}

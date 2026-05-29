@@ -1,0 +1,45 @@
+[DirectoryWatcher] Watching: C:/krafton-jungle/week12-team02-coconut-engine/Asset/Script/ (prefix="", id=2)
+[PhysX] Initialized successfully (Scene=000001DDD7FDE520)
+[PhysX] Initialized successfully (Scene=000001DDD80E5100)
+SkeletalMesh load failed: SkeletalMesh binary file does not exist. Path=Asset/Mesh/Manny/Meshes/SKM_Manny_Simple_SkeletalMesh.uasset
+AnimInstanceAsset load failed: package open failed. Path=Asset/Mesh/Manny/Anims/CharacterAnimInstance.uasset
+SkeletalMeshComponent AnimInstanceAsset load failed: Asset/Mesh/Manny/Anims/CharacterAnimInstance.uasset
+StaticMesh package is stale. Package=Asset/Mesh/BasicShape/Cube_StaticMesh.uasset MissingSource=true
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Plane_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Cylinder_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Cube_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Ramp_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Ramp_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_QuarterCylinder_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Cube_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_QuarterCylinder_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_QuarterCylinder_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_QuarterCylinder_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Ramp_StaticMesh.uasset
+StaticMesh load failed: StaticMesh binary file does not exist. Path=Asset/Mesh/DemoScene/SM_Ramp_StaticMesh.uasset
+Failed to load texture: C:\krafton-jungle\week12-team02-coconut-engine\Asset\Particle\Textures\T_Fire_F2.PNG
+StaticMesh package is stale. Package=Asset/Mesh/Apple/apple_mid_StaticMesh.uasset MissingSource=true
+========== Startup Profile ==========
+  WindowsApplication::Init       :     24.4 ms
+  UClass::BindAll                :      0.0 ms
+  UClass::RegisterStaticObjects  :      0.0 ms
+    D3DDevice::CreateHW          :    130.7 ms
+    ShaderManager::Init          :    163.6 ms
+    SystemResources::Create      :      0.2 ms
+    TileCulling::Init            :     82.8 ms
+    ClusteredCuller::Init        :     94.8 ms
+    RenderPassPipeline::Init     :      0.0 ms
+    DrawCommandBuilder::Create   :      0.3 ms
+  Renderer::Create               :    473.6 ms
+  MeshBufferManager::Init        :      0.8 ms
+  ResourceManager::LoadFromFile  :     27.3 ms
+  RenderPipeline::Create         :      0.0 ms
+  MeshManager::ScanMeshAssets    :     96.7 ms
+  MaterialManager::ScanAssets    :      0.9 ms
+  EditorMainPanel::Create        :     19.3 ms
+  Editor::LoadStartLevel         :    113.7 ms
+  EditorRenderPipeline::Create   :      0.0 ms
+  Engine::Init                   :   1649.1 ms
+  Engine::BeginPlay              :      0.0 ms
+  Total                          :   1649.2 ms
+======================================

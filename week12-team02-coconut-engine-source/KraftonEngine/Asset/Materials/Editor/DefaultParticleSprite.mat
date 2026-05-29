@@ -1,0 +1,24 @@
+{
+  "BlendState" : "Additive",
+  "DepthStencilState" : "",
+  "Origin" : "Editor",
+  "Parameters" : {
+    "AlphaPower" : 0.000000,
+    "AlphaSource" : 0.000000,
+    "AlphaThreshold" : 0.000000,
+    "ColorIntensity" : 0.000000,
+    "EmitterOrigin" : [0.000000, 0.000000, 0.000000],
+    "ScreenAlignment" : 0,
+    "SubUVCols" : 0,
+    "SubUVRows" : 0,
+    "_Pad" : 0.000000,
+    "_Pad1" : 0.000000
+  },
+  "PathFileName" : "Asset/Materials/Editor/DefaultParticleSprite.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Particle/ParticleSprite.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Editor/Icons/S_AmbientLight_256x.png"
+  }
+}

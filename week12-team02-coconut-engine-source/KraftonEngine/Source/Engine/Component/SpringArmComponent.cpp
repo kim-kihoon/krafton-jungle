@@ -1,0 +1,143 @@
+﻿#include "Component/SpringArmComponent.h"
+#include "Object/ObjectFactory.h"
+#include "Serialization/Archive.h"
+#include "GameFramework/AActor.h"
+#include "GameFramework/World.h"
+#include "Core/CollisionTypes.h"
+#include "Math/Rotator.h"
+#include <algorithm>
+#include <cmath>
+
+void USpringArmComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	bHasPreviousState = false;
+	bHasFixedWorldRot = false;
+}
+
+void USpringArmComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction& ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// SpringArm 은 부모가 있어야 의미가 있음. 부모 없으면 spring 동작은 skip 하고
+	// SceneComponent 기본 transform 합성에 맡긴다.
+	if (!ParentComponent)
+	{
+		return;
+	}
+
+	// (1) 부모 World transform 추출. Pawn 의 위치/회전이 desired attach point.
+	const FMatrix& ParentWorld = ParentComponent->GetWorldMatrix();
+	const FVector ParentWorldLoc = ParentComponent->GetWorldLocation();
+	const FQuat ParentWorldRot = ParentWorld.ToQuat().GetNormalized();
+
+	FQuat DesiredAttachRot = ParentWorldRot;
+	if (!bInheritParentRotation)
+	{
+		if (!bHasFixedWorldRot)
+		{
+			FixedWorldRot = GetWorldMatrix().ToQuat().GetNormalized();
+			bHasFixedWorldRot = true;
+		}
+		DesiredAttachRot = FixedWorldRot;
+	}
+
+	// (2) Desired attach point — 부모 위치 + 선택된 arm 회전 기준 TargetOffset 적용.
+	const FVector DesiredAttachLoc = ParentWorldLoc + DesiredAttachRot.RotateVector(TargetOffset);
+
+	// (3) Lag 적용 — 첫 Tick 은 desired 로 초기화 (아직 비교할 prev 없음).
+	if (!bHasPreviousState)
+	{
+		LaggedAttachRot = DesiredAttachRot;
+		LaggedAttachLoc = DesiredAttachLoc;
+		bHasPreviousState = true;
+	}
+	else
+	{
+		if (bEnableCameraRotationLag && CameraRotationLagSpeed > 0.0f)
+		{
+			const float Alpha = std::min(DeltaTime * CameraRotationLagSpeed, 1.0f);
+			LaggedAttachRot = FQuat::Slerp(LaggedAttachRot, DesiredAttachRot, Alpha).GetNormalized();
+		}
+		else
+		{
+			LaggedAttachRot = DesiredAttachRot;
+		}
+
+		if (bEnableCameraLag && CameraLagSpeed > 0.0f)
+		{
+			const float Alpha = std::min(DeltaTime * CameraLagSpeed, 1.0f);
+			FVector NewLoc = LaggedAttachLoc + (DesiredAttachLoc - LaggedAttachLoc) * Alpha;
+
+			// 너무 멀어지면 클램프 — 빠른 텔레포트/리스폰 직후 카메라가 한참 뒤따라오는 현상 방지.
+			if (CameraLagMaxDistance > 0.0f)
+			{
+				const float DistSq = FVector::DistSquared(DesiredAttachLoc, NewLoc);
+				const float MaxSq = CameraLagMaxDistance * CameraLagMaxDistance;
+				if (DistSq > MaxSq)
+				{
+					const FVector Diff = DesiredAttachLoc - NewLoc;
+					NewLoc = DesiredAttachLoc - Diff.Normalized() * CameraLagMaxDistance;
+				}
+			}
+			LaggedAttachLoc = NewLoc;
+		}
+		else
+		{
+			LaggedAttachLoc = DesiredAttachLoc;
+		}
+	}
+
+	// (4) ArmEnd 계산 — SpringArm 의 World 위치 (자식 카메라가 여기 부착됨).
+	//     LaggedAttach 에서 Local -X 방향으로 TargetArmLength 만큼 + SocketOffset.
+	const FVector ArmDirWorld = LaggedAttachRot.RotateVector(FVector(-TargetArmLength, 0.0f, 0.0f));
+	const FVector SocketWorld = LaggedAttachRot.RotateVector(SocketOffset);
+	FVector ArmEndWorld = LaggedAttachLoc + ArmDirWorld + SocketWorld;
+
+	// (4b) Collision test — bDoCollisionTest 가 켜져 있으면 LaggedAttach → ArmEnd 방향으로
+	//      raycast. Hit 이 있으면 해당 거리에서 ProbeSize 만큼 안쪽에서 정지해 카메라가
+	//      벽 너머로 빠지지 않게 한다. 자기 Owner 액터는 ignore. (UE 의 sphere sweep 은 본
+	//      엔진 미지원이라 단일 ray + ProbeSize 안전 거리로 근사.)
+	if (bDoCollisionTest)
+	{
+		AActor* Owner = GetOwner();
+		UWorld* World = Owner ? Owner->GetWorld() : nullptr;
+		if (World)
+		{
+			const FVector Diff = ArmEndWorld - LaggedAttachLoc;
+			const float Distance = Diff.Length();
+			if (Distance > 1e-4f)
+			{
+				const FVector Dir = Diff / Distance;
+				FHitResult Hit;
+				if (World->PhysicsRaycast(LaggedAttachLoc, Dir, Distance, Hit, ProbeChannel, Owner))
+				{
+					const float SafeDist = std::max(Hit.Distance - ProbeSize, 0.0f);
+					ArmEndWorld = LaggedAttachLoc + Dir * SafeDist;
+				}
+			}
+		}
+	}
+
+	// (5) World transform 을 *Relative* 로 환산해서 RelativeTransform 에 set —
+	//     SceneComponent 기본 합성 (Parent × Relative) 이 우리 의도한 World 를 자식에게 전달.
+	const FQuat ParentInvRot = ParentWorldRot.Inverse();
+	const FVector RelLoc = ParentInvRot.RotateVector(ArmEndWorld - ParentWorldLoc);
+	const FQuat RelRot = (ParentInvRot * LaggedAttachRot).GetNormalized();
+
+	SetRelativeLocation(RelLoc);
+	SetRelativeRotation(RelRot);
+}
+
+void USpringArmComponent::SetFixedWorldYaw(float YawDegrees)
+{
+	SetFixedWorldRotation(0.0f, YawDegrees);
+}
+
+void USpringArmComponent::SetFixedWorldRotation(float PitchDegrees, float YawDegrees)
+{
+	FixedWorldRot = FRotator(PitchDegrees, YawDegrees, 0.0f).ToQuaternion().GetNormalized();
+	bHasFixedWorldRot = true;
+}
+
+

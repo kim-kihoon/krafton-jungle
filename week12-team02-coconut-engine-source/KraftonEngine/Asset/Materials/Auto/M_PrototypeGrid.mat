@@ -1,0 +1,19 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "Origin" : "Procedural",
+  "Parameters" : {
+    "GridScale" : 1.000000,
+    "MajorLineColor" : [0.020000, 0.020000, 0.020000, 1.000000],
+    "MajorLineInterval" : 5.000000,
+    "MajorLineWidth" : 0.035000,
+    "MinorLineColor" : [0.120000, 0.120000, 0.120000, 1.000000],
+    "MinorLineWidth" : 0.015000,
+    "SideColor" : [0.480000, 0.480000, 0.480000, 1.000000],
+    "TopColor" : [0.620000, 0.620000, 0.620000, 1.000000]
+  },
+  "PathFileName" : "Asset/Materials/Auto/M_PrototypeGrid.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/Geometry/PrototypeGrid.hlsl"
+}

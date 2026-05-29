@@ -1,0 +1,17 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "Origin" : "ObjImport",
+  "Parameters" : {
+    "HasNormalMap" : 0.000000,
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000],
+    "_pad" : [0.000000, 0.000000, 0.000000]
+  },
+  "PathFileName" : "Asset/Mesh/Apple/apple_mid_MatID_1.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/Geometry/UberLit.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Mesh/Apple/Freshly_Bitten_Apple_tgzpdhlpa_Mid_2K_BaseColor.jpg"
+  }
+}

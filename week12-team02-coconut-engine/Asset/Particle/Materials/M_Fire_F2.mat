@@ -1,0 +1,29 @@
+{
+  "BlendState" : "Additive",
+  "DepthStencilState" : "DepthReadOnly",
+  "Origin" : "Particle",
+  "Parameters" : {
+    "AlphaPower" : 1.000000,
+    "AlphaSource" : 1.000000,
+    "AlphaThreshold" : 0.200000,
+    "ColorIntensity" : 1.600000,
+    "EmitterOrigin" : [0.000000, 0.000000, 0.000000],
+    "ScreenAlignment" : 0.000000,
+    "SubUVCols" : 0.000000,
+    "SubUVRows" : 0.000000,
+    "_Pad" : 0.000000,
+    "_Pad1" : 0.000000
+  },
+  "Particle" : {
+    "SubUVColumns" : 6,
+    "SubUVRows" : 6,
+    "UseSubUV" : true
+  },
+  "PathFileName" : "Asset/Particle/Materials/M_Fire_F2.mat",
+  "RasterizerState" : "SolidNoCull",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Particle/ParticleSprite.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Particle/Textures/T_Fire_F2.PNG"
+  }
+}

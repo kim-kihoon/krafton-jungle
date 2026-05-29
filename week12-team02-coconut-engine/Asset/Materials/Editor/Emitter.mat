@@ -1,0 +1,9 @@
+{
+  "PathFileName": "Asset/Materials/Editor/Emitter.mat",
+  "ShaderPath": "Shaders/UI/Billboard.hlsl",
+  "RenderPass": "AlphaBlend",
+  "Textures": {
+    "DiffuseTexture": "Asset/Editor/Icons/Emitter_64.png"
+  },
+  "Origin": "Editor"
+}

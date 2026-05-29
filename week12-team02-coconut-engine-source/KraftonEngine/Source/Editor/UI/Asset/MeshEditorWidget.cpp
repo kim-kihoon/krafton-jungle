@@ -1,0 +1,500 @@
+﻿#include "MeshEditorWidget.h"
+
+#include "Mesh/SkeletalMesh.h"
+#include "Mesh/SkeletalMeshAsset.h"
+#include "Runtime/Engine.h"
+#include "Component/SkeletalMeshComponent.h"
+#include "Component/Light/DirectionalLightComponent.h"
+#include "Viewport/Viewport.h"
+#include "GameFramework/Light/DirectionalLightActor.h"
+#include "GameFramework/StaticMeshActor.h"
+#include "Settings/EditorSettings.h"
+#include "UI/Toolbar/ViewportToolbar.h"
+#include "Slate/SlateApplication.h"
+
+#include <imgui.h>
+
+namespace
+{
+	FString FormatMeshStatCount(size_t Value)
+	{
+		FString Result = std::to_string(Value);
+		for (int32 InsertPos = static_cast<int32>(Result.length()) - 3; InsertPos > 0; InsertPos -= 3)
+		{
+			Result.insert(static_cast<size_t>(InsertPos), ",");
+		}
+		return Result;
+	}
+}
+
+static uint32 GNextMeshEditorInstanceId = 0;
+
+FMeshEditorWidget::FMeshEditorWidget()
+	: InstanceId(GNextMeshEditorInstanceId++)
+{
+	const FString Id = std::to_string(InstanceId);
+	PreviewWorldHandle = FName("MeshEditorPreview_" + Id);
+	WindowIdSuffix = "###MeshEditor_" + Id;
+}
+
+bool FMeshEditorWidget::CanEdit(UObject* Object) const
+{
+	return Object && Object->IsA<USkeletalMesh>();
+}
+
+bool FMeshEditorWidget::IsEditingObject(UObject* Object) const
+{
+	if (FAssetEditorWidget::IsEditingObject(Object))
+	{
+		return true;
+	}
+
+	const USkeletalMesh* CurrentMesh = Cast<USkeletalMesh>(EditedObject);
+	const USkeletalMesh* RequestedMesh = Cast<USkeletalMesh>(Object);
+	if (!IsOpen() || !CurrentMesh || !RequestedMesh)
+	{
+		return false;
+	}
+
+	const FString& CurrentPath = CurrentMesh->GetAssetPathFileName();
+	return !CurrentPath.empty()
+		&& CurrentPath != "None"
+		&& CurrentPath == RequestedMesh->GetAssetPathFileName();
+}
+
+void FMeshEditorWidget::Open(UObject* Object)
+{
+	FAssetEditorWidget::Open(Object);
+
+	FWorldContext& WorldContext = GEngine->CreateWorldContext(EWorldType::EditorPreview, PreviewWorldHandle);
+	WorldContext.World->SetWorldType(EWorldType::EditorPreview);
+	WorldContext.World->InitWorld();
+
+	AActor* Actor = WorldContext.World->SpawnActor<AActor>();
+	if (USkeletalMesh* Mesh = Cast<USkeletalMesh>(EditedObject))
+	{
+		USkeletalMeshComponent* Comp = Actor->AddComponent<USkeletalMeshComponent>();
+		Comp->SetSkeletalMesh(Mesh);
+		Actor->SetRootComponent(Comp);
+	}
+	Actor->SetActorLocation(FVector(0.0f, 0.0f, 0.0f));
+
+	ADirectionalLightActor* LightActor = WorldContext.World->SpawnActor<ADirectionalLightActor>();
+	LightActor->InitDefaultComponents();
+	LightActor->SetActorRotation(FVector(0.0f, 45.0f, -45.0f));
+	UDirectionalLightComponent* LightComp = LightActor->GetComponentByClass<UDirectionalLightComponent>();
+	LightComp->SetShadowBias(0.0f);
+	LightComp->PushToScene();
+
+	AStaticMeshActor* FloorActor = WorldContext.World->SpawnActor<AStaticMeshActor>();
+	FloorActor->InitDefaultComponents("Asset/Mesh/BasicShape/Cube_StaticMesh.uasset");
+	FloorActor->SetActorLocation(FVector(0.0f, 0.0f, -0.05f));
+	FloorActor->SetActorScale(FVector(10.0f, 10.0f, 0.02f));
+
+	ImVec2 ViewportSize = ImGui::GetContentRegionAvail();
+
+	ViewportClient.Initialize(GEngine->GetRenderer().GetFD3DDevice().GetDevice(), ViewportSize.x, ViewportSize.y);
+	ViewportClient.SetPreviewWorld(WorldContext.World);
+	ViewportClient.SetPreviewActor(Actor);
+	ViewportClient.SetPreviewMeshComponent(Actor->GetComponentByClass<USkeletalMeshComponent>());
+
+	ViewportClient.CreatePreviewGizmo();
+	ViewportClient.CreateBoneDebugComponent();
+	ViewportClient.ResetCameraToPreviousBounds();
+
+	WorldContext.World->SetEditorPOVProvider(&ViewportClient);
+
+	ViewportClient.SetSelectedBone(Cast<USkeletalMesh>(EditedObject), -1);
+
+	FSlateApplication::Get().RegisterViewport(&MeshViewportWindow, &ViewportClient);
+}
+
+void FMeshEditorWidget::Close()
+{
+	FAssetEditorWidget::Close();
+
+	if (UWorld* PreviewWorld = ViewportClient.GetPreviewWorld())
+	{
+		FScene& PreviewScene = PreviewWorld->GetScene();
+		GEngine->GetRenderer().GetResources().ReleaseShadowResourcesForScene(&PreviewScene);
+
+		if (PreviewWorldHandle.IsValid())
+		{
+			GEngine->DestroyWorldContext(PreviewWorldHandle);
+		}
+	}
+
+
+	FSlateApplication::Get().UnregisterViewport(&ViewportClient);
+
+	ViewportClient.Release();
+}
+
+void FMeshEditorWidget::Tick(float DeltaTime)
+{
+	if (ViewportClient.IsRenderable())
+	{
+		ViewportClient.Tick(DeltaTime);
+	}
+}
+
+void FMeshEditorWidget::CollectPreviewViewports(TArray<IEditorPreviewViewportClient*>& OutClients) const
+{
+	if (IsOpen())
+	{
+		OutClients.push_back(const_cast<FMeshEditorViewportClient*>(&ViewportClient));
+	}
+}
+
+void FMeshEditorWidget::Render(float DeltaTime)
+{
+	// Imgui::Image에 들고있는 SRV가 렌더링 전에 close가 되어 viewport에 있는 자원이 해제되는
+	// lifetime issue가 매우 간헐적으로 발생함. 따라서 1프레임 뒤에 해제한다.
+	if (bPendingClose)
+	{
+		Close();
+		bPendingClose = false;
+		return;
+	}
+	if (!IsOpen() || !EditedObject)
+	{
+		return;
+	}
+
+	static float HierarchyWidth = 250.0f;
+	static float DetailsWidth = 300.0f;
+
+	USkeletalMesh* SkeletalMesh = Cast<USkeletalMesh>(EditedObject);
+
+	bool bWindowOpen = true;
+	FString VisibleTitle = "Mesh Editor";
+	const FString AssetPath = SkeletalMesh ? SkeletalMesh->GetAssetPathFileName() : FString();
+	if (!AssetPath.empty())
+	{
+		VisibleTitle += " - ";
+		VisibleTitle += AssetPath;
+	}
+	if (IsDirty())
+	{
+		VisibleTitle += " *";
+	}
+
+	ImGuiWindowFlags WindowFlags = ImGuiWindowFlags_None;
+	if (ViewportClient.IsMouseOverViewport())
+	{
+		WindowFlags |= ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse;
+	}
+
+	FString WindowTitle = VisibleTitle + WindowIdSuffix;
+	if (ConsumeFocusRequest())
+	{
+		ImGui::SetNextWindowFocus();
+	}
+
+	if (!ImGui::Begin(WindowTitle.c_str(), &bWindowOpen, WindowFlags))
+	{
+		ImGui::End();
+		if (!bWindowOpen)
+		{
+			Close();
+		}
+		return;
+	}
+
+	if (ImGui::IsWindowFocused(ImGuiFocusedFlags_RootAndChildWindows))
+	{
+		FSlateApplication::Get().BringViewportToFront(&ViewportClient);
+	}
+
+	ImGui::BeginChild("BoneHierarchy", ImVec2(HierarchyWidth, 0), true);
+	ImGui::Text("Bone Hierarchy");
+	ImGui::Separator();
+
+	if (SkeletalMesh)
+	{
+		const FSkeletonAsset* SkeletonAsset = SkeletalMesh->GetSkeletonAsset();
+
+		if (SkeletonAsset)
+		{
+			for (int32 i = 0; i < static_cast<int32>(SkeletonAsset->Bones.size()); ++i)
+			{
+				if (SkeletonAsset->Bones[i].ParentIndex == -1)
+				{
+					RenderBoneTree(SkeletonAsset, i);
+				}
+			}
+		}
+	}
+	ImGui::EndChild();
+
+	ImGui::SameLine();
+
+	ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0, 0, 0, 0));
+	ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.4f, 0.4, 0.4f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.4f, 0.4f, 0.4f, 1.0f));
+
+	ImGui::Button("##splitter", ImVec2(4.0f, -1.0f));
+
+	if (ImGui::IsItemActive())
+	{
+		HierarchyWidth += ImGui::GetIO().MouseDelta.x;
+
+		if (HierarchyWidth < 100.0f) HierarchyWidth = 100.0f;
+		if (HierarchyWidth > ImGui::GetWindowWidth() - 100.0f) HierarchyWidth = ImGui::GetWindowWidth() - 100.0f;
+	}
+
+	if (ImGui::IsItemHovered() || ImGui::IsItemActive())
+	{
+		ImGui::SetMouseCursor(ImGuiMouseCursor_ResizeEW);
+	}
+
+	ImGui::PopStyleColor(3);
+	ImGui::SameLine();
+
+	ImGui::BeginGroup();
+	{
+		float AvailableWidth = ImGui::GetContentRegionAvail().x - DetailsWidth - ImGui::GetStyle().ItemSpacing.x;
+		ImVec2 Size = ImVec2(AvailableWidth, ImGui::GetContentRegionAvail().y);
+
+		ImVec2 ViewportPos = ImGui::GetCursorScreenPos();
+		ViewportClient.SetViewportRect(ViewportPos.x, ViewportPos.y, Size.x, Size.y);
+
+		FViewport* VP = ViewportClient.GetViewport();
+		if (VP && Size.x > 0 && Size.y > 0)
+		{
+			VP->RequestResize(static_cast<uint32>(Size.x), static_cast<uint32>(Size.y));
+			MeshViewportWindow.SetRect(FRect(ViewportPos.x, ViewportPos.y, Size.x, Size.y));
+
+			if (VP->GetSRV())
+			{
+				ImGui::Image((ImTextureID)VP->GetSRV(), Size);
+			}
+
+			constexpr float ToolbarHeight = 28.0f;
+
+			ImDrawList* DrawList = ImGui::GetWindowDrawList();
+			DrawList->AddRectFilled(ViewportPos,
+				ImVec2(ViewportPos.x + Size.x, ViewportPos.y + ToolbarHeight),
+				IM_COL32(40, 40, 40, 255));
+
+			FViewportToolbarContext Context;
+			Context.Renderer = &GEngine->GetRenderer();
+			Context.Gizmo = ViewportClient.GetGizmo();
+			Context.Settings = &FEditorSettings::Get().MeshEditorViewportSettings;
+			Context.RenderOptions = &ViewportClient.GetRenderOptions();
+			Context.ToolbarLeft = ViewportPos.x;
+			Context.ToolbarTop = ViewportPos.y;
+			Context.ToolbarWidth = Size.x;
+			Context.bReservePlayStopSpace = false;
+			Context.bShowAddActor = false;
+			Context.OnCoordSystemToggled = [&]()
+			{
+				FGizmoToolSettings& Settings = FEditorSettings::Get().MeshEditorViewportSettings.Gizmo;
+				Settings.CoordSystem = (Settings.CoordSystem == EEditorCoordSystem::World) ? EEditorCoordSystem::Local : EEditorCoordSystem::World;
+
+				ViewportClient.ApplyTransformSettingsToGizmo();
+			};
+			Context.OnSettingsChanged = [&]()
+			{
+				ViewportClient.ApplyTransformSettingsToGizmo();
+			};
+			Context.OnRenderViewModeExtras = [&]()
+			{
+				const EBoneDebugDrawMode CurrentBoneDrawMode = ViewportClient.GetBoneDebugDrawMode();
+				int32 BoneDrawMode = static_cast<int32>(CurrentBoneDrawMode);
+				ImGui::Text("Bone Display");
+				ImGui::RadioButton("Selected Bone", &BoneDrawMode, static_cast<int32>(EBoneDebugDrawMode::SelectedOnly));
+				ImGui::RadioButton("All Bones", &BoneDrawMode, static_cast<int32>(EBoneDebugDrawMode::AllBones));
+				if (BoneDrawMode != static_cast<int32>(CurrentBoneDrawMode))
+				{
+					ViewportClient.SetBoneDebugDrawMode(static_cast<EBoneDebugDrawMode>(BoneDrawMode));
+				}
+
+				ImGui::Separator();
+				
+				bool bHeatmap = ViewportClient.IsBoneWeightHeatmapEnabled();
+
+				if (ImGui::Checkbox("Bone Weight Heatmap", &bHeatmap))
+				{
+					ViewportClient.SetBoneWeightHeatmapEnabled(bHeatmap);
+				}
+			};
+
+			FViewportToolbar::Render(Context);
+			RenderMeshStatsOverlay(DrawList, ViewportPos);
+		}
+	}
+	ImGui::EndGroup();
+
+	ImGui::SameLine();
+
+	ImGui::BeginChild("Details", ImVec2(DetailsWidth, 0), true);
+	ImGui::Text("Bone Details");
+	ImGui::Separator();
+
+	if (SkeletalMesh && SelectedBoneIndex != -1)
+	{
+		FSkeletonAsset* SkeletonAsset = SkeletalMesh->GetSkeletonAsset();
+		if (!SkeletonAsset || SelectedBoneIndex < 0 || SelectedBoneIndex >= static_cast<int32>(SkeletonAsset->Bones.size()))
+		{
+			ImGui::TextDisabled("Select a bone to edit.");
+			ImGui::EndChild();
+			ImGui::End();
+			if (!bWindowOpen)
+			{
+				bPendingClose = true;
+			}
+			return;
+		}
+
+		FBone& Bone = SkeletonAsset->Bones[SelectedBoneIndex];
+
+		ImGui::Text("Name: %s", Bone.Name.c_str());
+		ImGui::Text("Index: %d", SelectedBoneIndex);
+		ImGui::Dummy(ImVec2(0, 10));
+
+		USkeletalMeshComponent* PreviewMeshComponent = ViewportClient.GetPreviewMeshComponent();
+		FTransform LocalTransform = PreviewMeshComponent ? PreviewMeshComponent->GetBoneLocalTransformByIndex(SelectedBoneIndex) : FTransform(Bone.LocalMatrix);
+
+		FVector Location = LocalTransform.Location;
+		if (ImGui::DragFloat3("Location", &Location.X, 0.1f))
+		{
+			LocalTransform.Location = Location;
+
+			if (PreviewMeshComponent)
+			{
+				PreviewMeshComponent->SetBoneLocalTransformByIndex(SelectedBoneIndex, LocalTransform);
+			}
+			else
+			{
+				Bone.LocalMatrix = LocalTransform.ToMatrix();
+			}
+		}
+
+		FVector Rotation = LocalTransform.GetRotator().ToVector();
+		if (ImGui::DragFloat3("Rotation", &Rotation.X, 0.1f))
+		{
+			LocalTransform.SetRotation(FRotator(Rotation));
+
+			if (PreviewMeshComponent)
+			{
+				PreviewMeshComponent->SetBoneLocalTransformByIndex(SelectedBoneIndex, LocalTransform);
+			}
+			else
+			{
+				Bone.LocalMatrix = LocalTransform.ToMatrix();
+			}
+		}
+
+		FVector Scale = LocalTransform.Scale;
+		if (ImGui::DragFloat3("Scale", &Scale.X, 0.1f, 0.01f))
+		{
+			LocalTransform.Scale = Scale;
+			if (PreviewMeshComponent)
+			{
+				PreviewMeshComponent->SetBoneLocalTransformByIndex(SelectedBoneIndex, LocalTransform);
+			}
+			else
+			{
+				Bone.LocalMatrix = LocalTransform.ToMatrix();
+			}
+		}
+	}
+	else
+	{
+		ImGui::TextDisabled("Select a bone to edit.");
+	}
+
+	ImGui::EndChild();
+
+	ImGui::End();
+
+	if (!bWindowOpen)
+	{
+		bPendingClose = true;
+	}
+}
+
+void FMeshEditorWidget::RenderMeshStatsOverlay(ImDrawList* DrawList, const ImVec2& ViewportPos) const
+{
+	if (!DrawList || !EditedObject)
+	{
+		return;
+	}
+
+	size_t VertexCount = 0;
+	size_t TriangleCount = 0;
+	size_t BoneCount = 0;
+
+	if (const USkeletalMesh* SkeletalMesh = Cast<USkeletalMesh>(EditedObject))
+	{
+		if (const FSkeletalMesh* Asset = SkeletalMesh->GetSkeletalMeshAsset())
+		{
+			VertexCount = Asset->Vertices.size();
+			TriangleCount = Asset->Indices.size() / 3;
+		}
+		if (const FSkeletonAsset* Asset = SkeletalMesh->GetSkeletonAsset())
+		{
+			BoneCount = Asset->Bones.size();
+		}
+
+	}
+
+	const FString Text =
+		"Triangles: " + FormatMeshStatCount(TriangleCount) + "\n" +
+		"Vertices: " + FormatMeshStatCount(VertexCount) + "\n" + 
+		"Bones: " + FormatMeshStatCount(BoneCount);
+
+	const ImVec2 TextPos(ViewportPos.x + 8.0f, ViewportPos.y + 36.0f);
+	DrawList->AddText(ImVec2(TextPos.x + 1.0f, TextPos.y + 1.0f), IM_COL32(0, 0, 0, 220), Text.c_str());
+	DrawList->AddText(TextPos, IM_COL32(235, 238, 242, 255), Text.c_str());
+}
+
+void FMeshEditorWidget::RenderBoneTree(const FSkeletonAsset* SkeletonAsset, int32 Index)
+{
+	const FBone& Bone = SkeletonAsset->Bones[Index];
+
+	ImGuiTreeNodeFlags Flags = ImGuiTreeNodeFlags_OpenOnArrow |
+		ImGuiTreeNodeFlags_SpanAvailWidth |
+		ImGuiTreeNodeFlags_DefaultOpen;
+
+	if (Index == SelectedBoneIndex)
+	{
+		Flags |= ImGuiTreeNodeFlags_Selected;
+	}
+
+	bool bHasChildren = false;
+	for (int32 i = Index + 1; i < static_cast<int32>(SkeletonAsset->Bones.size()); ++i)
+	{
+		if (SkeletonAsset->Bones[i].ParentIndex == Index)
+		{
+			bHasChildren = true;
+			break;
+		}
+	}
+
+	if (!bHasChildren)
+	{
+		Flags |= ImGuiTreeNodeFlags_Leaf | ImGuiTreeNodeFlags_NoTreePushOnOpen;
+	}
+	
+	bool bOpen = ImGui::TreeNodeEx(Bone.Name.c_str(), Flags);
+
+	if (ImGui::IsItemClicked())
+	{
+		SelectedBoneIndex = Index;
+		ViewportClient.SetSelectedBone(Cast<USkeletalMesh>(EditedObject), Index);
+	}
+
+	if (bOpen && bHasChildren)
+	{
+		for (int32 i = Index + 1; i < static_cast<int32>(SkeletonAsset->Bones.size()); ++i)
+		{
+			if (SkeletonAsset->Bones[i].ParentIndex == Index)
+			{
+				RenderBoneTree(SkeletonAsset, i);
+			}
+		}
+		ImGui::TreePop();
+	}
+}

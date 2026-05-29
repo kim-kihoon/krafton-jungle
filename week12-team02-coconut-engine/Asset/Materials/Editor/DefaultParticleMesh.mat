@@ -1,0 +1,11 @@
+{
+  "PathFileName": "Asset/Materials/Editor/DefaultParticleMesh.mat",
+  "ShaderPath": "Shaders/Particle/ParticleMesh.hlsl",
+  "RenderPass": "AlphaBlend",
+  "BlendState": "AlphaBlend",
+  "DepthStencilState": "DepthReadOnly",
+  "Textures": {
+    "DiffuseTexture": "Asset/Mesh/BasicShape/BasicShape.png"
+  },
+  "Origin": "Editor"
+}

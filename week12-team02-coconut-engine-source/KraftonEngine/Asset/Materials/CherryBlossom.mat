@@ -1,0 +1,28 @@
+{
+  "BlendState" : "AlphaBlend",
+  "DepthStencilState" : "",
+  "Parameters" : {
+    "AlphaPower" : 1.000000,
+    "AlphaSource" : 0.000000,
+    "AlphaThreshold" : 0.000000,
+    "ColorIntensity" : 3.000000,
+    "EmitterOrigin" : [0.000000, 0.000000, 0.000000],
+    "ScreenAlignment" : 0.000000,
+    "SubUVCols" : 0.000000,
+    "SubUVRows" : 0.000000,
+    "_Pad" : 0.000000,
+    "_Pad1" : 0.000000
+  },
+  "Particle" : {
+    "SubUVColumns" : 4,
+    "SubUVRows" : 3,
+    "UseSubUV" : true
+  },
+  "PathFileName" : "Asset/Materials/CherryBlossom.mat",
+  "RasterizerState" : "SolidNone",
+  "RenderPass" : "Translucent",
+  "ShaderPath" : "Shaders/Particle/ParticleSprite.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Textures/CherryBlossom_Atlas.png"
+  }
+}

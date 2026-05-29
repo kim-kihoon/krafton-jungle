@@ -1,0 +1,17 @@
+{
+  "BlendState" : "AlphaBlend",
+  "DepthStencilState" : "DepthReadOnly",
+  "Origin" : "Editor",
+  "Parameters" : {
+    "HasDiffuseTexture" : 0.000000,
+    "ParticleMaterialColor" : [0.000000, 0.000000, 0.000000, 0.000000],
+    "_ParticleMaterialPad" : [0.000000, 0.000000, 0.000000]
+  },
+  "PathFileName" : "Asset/Materials/Editor/DefaultParticleRibbon.mat",
+  "RasterizerState" : "SolidNoCull",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Particle/ParticleRibbon.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Particle/Textures/beacon_beam.png"
+  }
+}
