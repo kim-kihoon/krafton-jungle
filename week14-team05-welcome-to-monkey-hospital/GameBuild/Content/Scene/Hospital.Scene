@@ -28202,33 +28202,33 @@
         }
       }
     }, {
-      "ClassName" : "AParticleSystemActor",
-      "Name" : "AParticleSystemActor_0",
+      "ClassName" : "AStaticMeshActor",
+      "Name" : "HospitalMapCeiling_Copy_Copy",
       "NonSceneComponents" : [],
       "ObjectId" : 832,
       "Properties" : {
-        "ObjectName" : "AParticleSystemActor_0",
-        "PendingActorLocation" : [5.020933, 2.216060, 5.579033],
-        "PendingActorRotation" : [-0.000000, 0.000000, 0.000000],
+        "ObjectName" : "HospitalMapCeiling_Copy_Copy",
+        "PendingActorLocation" : [14.741501, -5.298864, 0.200000],
+        "PendingActorRotation" : [-0.000005, 69.627396, 89.999947],
         "PendingActorScale" : [1.000000, 1.000000, 1.000000],
         "PendingActorVisible" : true,
-        "PendingTagsString" : "AnomalyHitEffect",
+        "PendingTagsString" : "",
         "bNeedsTick" : true
       },
       "RootComponent" : {
         "Children" : [],
-        "ClassName" : "UParticleSystemComponent",
+        "ClassName" : "UStaticMeshComponent",
         "ObjectId" : 833,
         "Properties" : {
           "AttachSocketName" : "Name_None",
-          "CachedEditRotator" : [-0.000000, 0.000000, 0.000000],
+          "CachedEditRotator" : [-0.000005, 69.627396, 89.999947],
           "CenterOfMassOffset" : [0.000000, 0.000000, 0.000000],
-          "CollisionEnabled" : 0,
-          "CurrentLODIndex" : 0,
+          "CollisionEnabled" : 3,
           "Mass" : 1.000000,
-          "ObjectName" : "UParticleSystemComponent_0",
+          "MaterialSlots" : ["Content/Material/Auto/hospital-map-ceiling/Material.007.uasset"],
+          "ObjectName" : "UStaticMeshComponent_47",
           "ObjectType" : 0,
-          "RelativeTransform.Location" : [5.020933, 2.216060, 5.579033],
+          "RelativeTransform.Location" : [14.741501, -5.298864, 0.200000],
           "RelativeTransform.Scale" : [1.000000, 1.000000, 1.000000],
           "ResponseContainer" : {
             "Responses[0]" : 2,
@@ -28237,9 +28237,8 @@
             "Responses[3]" : 2,
             "Responses[4]" : 2
           },
-          "TemplatePath" : "Content/Particle System/HitParticle.uasset",
-          "TickInterval" : 0.000000,
-          "bAutoActivate" : false,
+          "StaticMeshPath" : "Content/Data/hospital-map-data/hospital-map-ceiling_StaticMesh.uasset",
+          "bAutoActivate" : true,
           "bCastShadow" : true,
           "bCastShadowAsTwoSided" : false,
           "bEditorOnly" : false,
@@ -28249,7 +28248,6 @@
           "bIsActive" : true,
           "bIsVisible" : true,
           "bKinematic" : false,
-          "bResetOnActivate" : false,
           "bSimulatePhysics" : false,
           "bTickEnable" : true
         }
@@ -28263,9 +28261,9 @@
   "PerspectiveCamera" : {
     "FOV" : 1.047198,
     "FarClip" : 1000.000000,
-    "Location" : [14.997815, 9.882896, 11.237545],
+    "Location" : [4.433541, -5.209634, 1.521315],
     "NearClip" : 0.100000,
-    "Rotation" : [0.000000, 13.099459, -482.205505]
+    "Rotation" : [0.000000, 3.649303, -178.614395]
   },
   "Version" : 2,
   "WorldSettings" : {

@@ -73,7 +73,6 @@ local ClearEncounterCamera = nil
 local ClearEncounterSavedPostProcess = nil
 local bClearEncounterNoiseAudioLoaded = false
 local is_current_animation_finished = nil
-local is_trace_clear_to_actor = nil
 
 local function clamp(value, minimum, maximum)
     value = tonumber(value) or minimum
@@ -643,13 +642,7 @@ local function is_player_near_monkey()
     local playerLocation = get_player_location_for_clear_encounter()
     local monkeyLocation = get_actor_location(obj)
     local distance = distance_between(playerLocation, monkeyLocation)
-    if distance == nil or distance > CLEAR_ENCOUNTER_NEAR_RADIUS then
-        return false
-    end
-
-    local player = get_player_pawn()
-    local traceStart = get_trace_location(player) or playerLocation
-    return is_trace_clear_to_actor(traceStart, obj, player)
+    return distance ~= nil and distance <= CLEAR_ENCOUNTER_NEAR_RADIUS
 end
 
 local function start_clear_encounter_strike()
@@ -753,7 +746,7 @@ local function is_location_in_player_view_frustum(location)
         math.abs(diff:Dot(right)) <= horizontalExtent
 end
 
-is_trace_clear_to_actor = function(startLocation, targetActor, ignoreActor)
+local function is_trace_clear_to_actor(startLocation, targetActor, ignoreActor)
     if World == nil or World.LineTraceObjects == nil then
         return false
     end

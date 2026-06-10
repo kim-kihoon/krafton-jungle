@@ -676,7 +676,7 @@
               },
               "AnimInstanceClass" : "ULuaAnimInstance",
               "AnimationData" : {
-                "AnimToPlayPath" : "Content/Data/human/source/Armpist_Armature_FPS_Pistol_Idle.uasset",
+                "AnimToPlayPath" : "Content/Data/human/Pistol Idle_Armature_mixamo_com.uasset",
                 "PlayRate" : 1.000000,
                 "bLooping" : true,
                 "bPlaying" : true
