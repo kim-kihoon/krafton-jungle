@@ -1,0 +1,37 @@
+{
+  "Actor" : {
+    "ClassName" : "AActor",
+    "Name" : "MonkeyPosition",
+    "NonSceneComponents" : [],
+    "ObjectId" : 1,
+    "Properties" : {
+      "ObjectName" : "MonkeyPosition",
+      "PendingActorLocation" : [2.129586, 2.027393, 0.779437],
+      "PendingActorRotation" : [-0.000000, -124.699989, 0.000000],
+      "PendingActorScale" : [1.000000, 1.000000, 1.000000],
+      "PendingActorVisible" : true,
+      "PendingTagsString" : "CymbalsMonkeyPositionCandidate",
+      "bNeedsTick" : true
+    },
+    "RootComponent" : {
+      "Children" : [],
+      "ClassName" : "USceneComponent",
+      "ObjectId" : 2,
+      "Properties" : {
+        "AttachSocketName" : "Name_None",
+        "CachedEditRotator" : [-0.000000, -124.699989, 0.000000],
+        "ObjectName" : "USceneComponent_5",
+        "RelativeTransform.Location" : [2.129586, 2.027393, 0.779437],
+        "RelativeTransform.Scale" : [1.000000, 1.000000, 1.000000],
+        "bAutoActivate" : true,
+        "bEditorOnly" : false,
+        "bHiddenInComponentTree" : false,
+        "bIsActive" : true,
+        "bTickEnable" : true
+      }
+    }
+  },
+  "Name" : "MonkeyPosition",
+  "Type" : "ActorTemplate",
+  "Version" : 1
+}

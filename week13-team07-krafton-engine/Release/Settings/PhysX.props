@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="PhysX">
+    <PhysXPackageVersion Condition="'$(PhysXPackageVersion)'==''">4.1.2</PhysXPackageVersion>
+    <PhysXPackageRoot>$(MSBuildProjectDirectory)\packages\NVIDIA.PhysX.$(PhysXPackageVersion)\installed</PhysXPackageRoot>
+    <PhysXPlatformTriplet Condition="'$(Platform)'=='x64'">x64-windows</PhysXPlatformTriplet>
+    <PhysXPlatformTriplet Condition="'$(Platform)'=='Win32'">x86-windows</PhysXPlatformTriplet>
+    <PhysXArchSuffix Condition="'$(Platform)'=='x64'">64</PhysXArchSuffix>
+    <PhysXArchSuffix Condition="'$(Platform)'=='Win32'">32</PhysXArchSuffix>
+    <PhysXConfigLibDir Condition="'$(Configuration)'=='Debug'">debug\lib</PhysXConfigLibDir>
+    <PhysXConfigLibDir Condition="'$(PhysXConfigLibDir)'==''">lib</PhysXConfigLibDir>
+    <PhysXRoot>$(PhysXPackageRoot)\$(PhysXPlatformTriplet)</PhysXRoot>
+    <PhysXIncludeDir>$(PhysXRoot)\include</PhysXIncludeDir>
+    <PhysXLibDir>$(PhysXRoot)\$(PhysXConfigLibDir)</PhysXLibDir>
+    <PhysXCoreLibraries>PhysX_$(PhysXArchSuffix).lib;PhysXCommon_$(PhysXArchSuffix).lib;PhysXFoundation_$(PhysXArchSuffix).lib;PhysXExtensions_static_$(PhysXArchSuffix).lib;PhysXCooking_$(PhysXArchSuffix).lib;PhysXPvdSDK_static_$(PhysXArchSuffix).lib</PhysXCoreLibraries>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup Condition="'$(PhysXPlatformTriplet)'!=''">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(PhysXIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(PhysXLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(PhysXCoreLibraries);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,138 @@
+[DirectoryWatcher] Watching: C:/Users/jungle/Desktop/W14_5팀_김기훈조현석박상혁/GameBuild/Content/Script/ (prefix="", id=2)
+[PhysX] Initialized successfully (Scene=000002AD3B9B4900)
+StaticMesh package is stale. Package=Content/Data/BasicShape/Cube_StaticMesh.uasset MissingSource=true
+SkeletalMesh package is stale. Package=Content/Data/CymbalMonkey/CymbalMonkey_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/CymbalMonkey/CymbalMonkey_Skeleton.uasset Version=7 SocketCount=0
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/hospital-map_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/hospital-map-ceiling_StaticMesh.uasset MissingSource=true
+SkeletalMesh package is stale. Package=Content/Data/human/source/Armpist_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/human/source/Armpist_Skeleton.uasset Version=7 SocketCount=2
+Animation load failed: could not open file. Path=Content/Data/human/Pistol Idle_Armature_mixamo_com.uasset
+[LuaAnimInstance] ScriptFile not set.
+StaticMesh package is stale. Package=Content/Data/camera/camera_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/single-door_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/double-door-left-transparent_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/double-door-right-transparent_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/double-door-left-opaque_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-map-data/double-door-right-opaque_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/chair-hospital_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/curtain-emergency_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-bed-0_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-bed-1_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-bed-2_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-bin_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-direction-sign_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-hanging-signage_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-medical-trolley_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-nursing-bed_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-stretcher_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/hospital-trolley_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/mannequin-leg-highpoly_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/mannequin_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/medicine-wall-cupboard-hospital_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/hospital-objects/Mannequin/Mannequin_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/ending-hospital-map-data/ending-hospital_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/ending-hospital-map-data/blood-decal-0_StaticMesh.uasset MissingSource=true
+StaticMesh package is stale. Package=Content/Data/ending-hospital-map-data/blood-decal-1_StaticMesh.uasset MissingSource=true
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=65521 Triangles=72281
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_47 Vertices=128 Triangles=60
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_136 Vertices=3748 Triangles=3992
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_4 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_5 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_27 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_28 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_5 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_27 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_28 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_14 Vertices=6101 Triangles=8542
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_15 Vertices=6108 Triangles=8544
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_20 Vertices=6101 Triangles=8542
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_21 Vertices=6108 Triangles=8544
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_25 Vertices=54 Triangles=48
+SkeletalMesh package is stale. Package=Content/Data/slendytubbies-po/po_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/slendytubbies-po/po_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/CartoonCat/CartoonCat_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/CartoonCat/CartoonCat_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/halfMannequin/halfmannequin_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/halfMannequin/halfmannequin_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/slendyTubbie/tubbie_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/slendyTubbie/tubbie_Skeleton.uasset Version=7 SocketCount=0
+[Lua] [AnomalyManager] Random seed=192655977
+[Lua] [AnomalyManager] Setup begin source=Random candidates=10 rules=6
+[Lua] [AnomalyManager] Random selected targetIndex=6 ruleIndex=4 drawCount=2
+[Lua] [AnomalyManager] Setup try source=Random rule=BlackPhoto target=cat3 uuid=1288
+[Lua] [AnomalyManager] Setup success source=Random rule=BlackPhoto target=cat3 uuid=1288
+[Lua] [CymbalMonkey] InitializeFromGameManager waiting for exit-door open trigger
+[Lua] [GameManagerActor] CymbalMonkey initialized
+[Lua] [GameManagerActor] BeginPlay
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_51 Vertices=73432 Triangles=134842
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_51 Vertices=73432 Triangles=134842
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_68 Vertices=5560 Triangles=5489
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_71 Vertices=4370 Triangles=3058
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_74 Vertices=1226 Triangles=1320
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_79 Vertices=232 Triangles=148
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_82 Vertices=1124 Triangles=616
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_89 Vertices=170342 Triangles=280428
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_94 Vertices=3758 Triangles=3600
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_97 Vertices=11718 Triangles=9592
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_74 Vertices=1226 Triangles=1320
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_101 Vertices=243054 Triangles=404040
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_68 Vertices=5560 Triangles=5489
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_94 Vertices=3758 Triangles=3600
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_118 Vertices=5864 Triangles=4878
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_EndingHospital Vertices=1137994 Triangles=1021478
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_47 Vertices=128 Triangles=60
+[GameMode] Auto-possessed Pawn: Player
+========== Startup Profile ==========
+  WindowsApplication::Init       :     33.8 ms
+    D3DDevice::CreateHW          :    171.1 ms
+    ShaderManager::Init          :     61.4 ms
+    SystemResources::Create      :      0.2 ms
+    TileCulling::Init            :     79.3 ms
+    ClusteredCuller::Init        :     95.1 ms
+    RenderPassPipeline::Init     :      0.0 ms
+    DrawCommandBuilder::Create   :      0.3 ms
+  Renderer::Create               :    408.2 ms
+  MeshBufferManager::Init        :      0.8 ms
+  ResourceManager::LoadFromFile  :     10.8 ms
+  RenderPipeline::Create         :      0.0 ms
+  Engine::Init                   :   3006.2 ms
+  Engine::BeginPlay              :    474.6 ms
+  Total                          :   3480.8 ms
+======================================
+Failed to load texture: Content/Data/Samba Dancing/textures/b0.png
+[PlayerMoveHit] hitActor=HospitalMap hitComponent=UStaticMeshComponent_3 start=(8.866, -4.980, 1.436) end=(8.866, -4.980, -244.791) hit=(8.866, -4.980, 0.000) normal=(0.000, 0.000, 1.000) dist=0.6856 safe=0.6756 radius=0.213 half=0.750
+[Lua] [AnomalyManager] Despawn reason=Reset rule=BlackPhoto target=cat3 uuid=1288
+[Lua] [AnomalyManager] Setup begin source=Random candidates=15 rules=6
+[Lua] [AnomalyManager] Random selected targetIndex=11 ruleIndex=5 drawCount=4
+[Lua] [AnomalyManager] Setup try source=Random rule=PhotoGhostReplacement target=ppo1 uuid=1442
+StaticMesh package is stale. Package=Content/Data/Ghost/Ghost.uasset MissingSource=true
+[Lua] [AnomalyManager] Setup success source=Random rule=PhotoGhostReplacement target=ppo1 uuid=1442
+[Lua] [AnomalyManager] Despawn reason=Reset rule=PhotoGhostReplacement target=ppo1 uuid=1442
+[Lua] [GameManagerActor] EndPlay

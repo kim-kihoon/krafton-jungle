@@ -1,0 +1,98 @@
+[DirectoryWatcher] Watching: C:/Users/jungle/Desktop/W13_7팀_김지수이호진김기홍김기훈/Release/Content/Script/ (prefix="", id=2)
+[PhysX] Connected to PVD (127.0.0.1:5425)
+[PhysXVehicle] Initialized PhysX vehicle SDK
+[PhysX] Initialized successfully (Scene=00000277B08F1950)
+[PhysX] Connected to PVD (127.0.0.1:5425)
+[PhysXVehicle] Initialized PhysX vehicle SDK
+[PhysX] Initialized successfully (Scene=00000277B088EA20)
+[LuaAnimInstance] ScriptFile not set.
+StaticMesh package is stale. Package=Content/Data/BasicShape/Cube_StaticMesh.uasset MissingSource=false
+Failed to load texture: G:/Drives compartilhados/Nobre Lobo - Interno/THARLIS/UV mapping Coin.png
+StaticMesh package is stale. Package=Content/Data/BasicShape/Sphere_StaticMesh.uasset MissingSource=false
+SkeletalMesh package is stale. Package=Content/Data/Samba Dancing/Yeoul_SkeletalMesh.uasset MissingSource=false
+Skeleton load failed: corrupted package. Path=Content/Data/Samba Dancing/Yeoul_Skeleton.uasset
+StaticMesh package is stale. Package=Content/Data/BasicShape/Cylinder_StaticMesh.uasset MissingSource=false
+========== Startup Profile ==========
+  WindowsApplication::Init       :     19.0 ms
+    D3DDevice::CreateHW          :    139.3 ms
+    ShaderManager::Init          :     48.1 ms
+    SystemResources::Create      :      0.3 ms
+    TileCulling::Init            :     78.6 ms
+    ClusteredCuller::Init        :     92.8 ms
+    RenderPassPipeline::Init     :      0.0 ms
+    DrawCommandBuilder::Create   :      0.4 ms
+  Renderer::Create               :    360.5 ms
+  MeshBufferManager::Init        :      0.5 ms
+  ResourceManager::LoadFromFile  :     16.0 ms
+  RenderPipeline::Create         :      0.0 ms
+  MeshManager::ScanMeshAssets    :      4.1 ms
+  MeshManager::ScanFbxSourceFiles :      0.2 ms
+  MaterialManager::ScanAssets    :      0.3 ms
+  EditorMainPanel::Create        :     10.9 ms
+  Editor::LoadStartLevel         :     65.3 ms
+  EditorRenderPipeline::Create   :      0.0 ms
+  Engine::Init                   :    475.9 ms
+  Engine::BeginPlay              :      0.0 ms
+  Total                          :    475.9 ms
+======================================
+[PhysX] Initialized successfully (Scene=00000277B0A77670)
+StaticMesh package is stale. Package=Content/Mesh/Katana/source/red cyber katana_StaticMesh.uasset MissingSource=false
+[Lua] [BeginPlay] 521
+[GameMode] Auto-possessed Pawn: ALuaCharacter_1
+SphereComponent blocked with Actor: AStaticMeshActor_20
+SphereComponent blocked with Actor: AStaticMeshActor_24
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_19
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_22
+SphereComponent blocked with Actor: AStaticMeshActor_23
+SphereComponent blocked with Actor: AStaticMeshActor_24
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_27
+SphereComponent blocked with Actor: AStaticMeshActor_29
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_23
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_27
+SphereComponent blocked with Actor: AStaticMeshActor_29
+SphereComponent blocked with Actor: AStaticMeshActor_22
+SphereComponent blocked with Actor: AStaticMeshActor_28
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_26
+SphereComponent blocked with Actor: AStaticMeshActor_24
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_26
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_25
+SphereComponent blocked with Actor: AStaticMeshActor_26
+SphereComponent blocked with Actor: AStaticMeshActor_21
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_22
+SphereComponent blocked with Actor: AStaticMeshActor_23
+SphereComponent blocked with Actor: AStaticMeshActor_28
+SphereComponent blocked with Actor: AStaticMeshActor_29
+SphereComponent blocked with Actor: AStaticMeshActor_19
+SphereComponent blocked with Actor: AStaticMeshActor_23
+SphereComponent blocked with Actor: AStaticMeshActor_26
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_23
+SphereComponent blocked with Actor: AStaticMeshActor_26
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+SphereComponent blocked with Actor: AStaticMeshActor_18
+[Lua] [EndPlay] 521
+[PhysX] Initialized successfully (Scene=00000277D0618040)

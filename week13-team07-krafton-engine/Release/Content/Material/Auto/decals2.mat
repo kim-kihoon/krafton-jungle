@@ -1,0 +1,19 @@
+{
+  "BlendState" : "AlphaBlend",
+  "DepthStencilState" : "DepthReadOnly",
+  "GraphShaderMode" : "Generated",
+  "Origin" : "FbxImport",
+  "Parameters" : {
+    "HasDiffuseTexture" : 1.000000,
+    "HasNormalMap" : 0.000000,
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000],
+    "_pad" : null
+  },
+  "PathFileName" : "Content/Material/Auto/decals2.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Geometry/UberLit.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Texture/Auto/mcl39-chassis/Image_4"
+  }
+}

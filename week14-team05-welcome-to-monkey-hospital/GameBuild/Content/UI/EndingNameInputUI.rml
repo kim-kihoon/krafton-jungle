@@ -1,0 +1,82 @@
+<rml>
+<head>
+	<title>Ending Name Input</title>
+	<style>
+		body {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			font-family: OCRAStd;
+			color: #FFFFFF;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		#overlay {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+			background-color: #000000;
+		}
+		#panel_title {
+			position: absolute;
+			left: 120px;
+			top: 280px;
+			font-size: 56px;
+			color: rgb(71, 255, 105);
+		}
+		#name_prompt {
+			position: absolute;
+			left: 120px;
+			top: 400px;
+			width: 1680px;
+			font-size: 32px;
+			color: #FFFFFF;
+		}
+		#name_display {
+			position: absolute;
+			left: 120px;
+			top: 500px;
+			width: 760px;
+			height: 72px;
+			font-size: 40px;
+			color: rgb(71, 255, 105);
+			background-color: rgba(255, 255, 255, 0.08);
+			padding-left: 16px;
+			padding-top: 12px;
+		}
+		#name_hint {
+			position: absolute;
+			left: 120px;
+			top: 600px;
+			width: 1680px;
+			font-size: 24px;
+			color: rgba(255, 255, 255, 0.72);
+		}
+		.title-button {
+			position: absolute;
+			display: block;
+			font-family: OCRAStd;
+			font-size: 40px;
+			font-weight: normal;
+			text-align: left;
+			color: #FFFFFF;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		.title-button:hover,
+		.ui-nav-selected {
+			color: rgb(71, 255, 105);
+			background-color: rgba(255, 255, 255, 0.12);
+		}
+	</style>
+</head>
+<body data-rml-ui-document="1" data-ui-layout="scaled" data-canvas-width="1920" data-canvas-height="1080" data-preview-scale="1">
+	<div id="overlay">
+		<div id="panel_title">Enter Your Name</div>
+		<div id="name_prompt">Register your clear time on the Ranking board.</div>
+		<div id="name_display">PLAYER</div>
+		<div id="name_hint">Type your name, then press Enter or Confirm.</div>
+		<div id="name_confirm_button" class="title-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="700.000000" data-width="320.000000" data-height="56.000000" data-z="0" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Confirm" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="SubmitEndingPlayerName" style="position: absolute; left: 120.00px; top: 700.00px; width: 320.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left;">Confirm</div>
+	</div>
+</body>
+</rml>

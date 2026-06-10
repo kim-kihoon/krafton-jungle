@@ -1,0 +1,69 @@
+{
+  "Actor" : {
+    "ClassName" : "AStaticMeshActor",
+    "Name" : "GmaeManager",
+    "NonSceneComponents" : [{
+        "ClassName" : "ULuaScriptComponent",
+        "ObjectId" : 3,
+        "Properties" : {
+          "ObjectName" : "ULuaScriptComponent_2",
+          "ScriptFile" : "GameManagerActor.lua",
+          "bAutoActivate" : true,
+          "bEditorOnly" : false,
+          "bHiddenInComponentTree" : false,
+          "bIsActive" : true,
+          "bTickEnable" : true
+        }
+      }],
+    "ObjectId" : 1,
+    "Properties" : {
+      "ObjectName" : "GmaeManager",
+      "PendingActorLocation" : [-0.243526, 3.752984, 3.160306],
+      "PendingActorRotation" : [-0.000000, 0.000000, 0.000000],
+      "PendingActorScale" : [1.000000, 1.000000, 1.000000],
+      "PendingActorVisible" : true,
+      "PendingTagsString" : "",
+      "bNeedsTick" : true
+    },
+    "RootComponent" : {
+      "Children" : [],
+      "ClassName" : "UStaticMeshComponent",
+      "ObjectId" : 2,
+      "Properties" : {
+        "AttachSocketName" : "Name_None",
+        "CachedEditRotator" : [-0.000000, 0.000000, 0.000000],
+        "CenterOfMassOffset" : [0.000000, 0.000000, 0.000000],
+        "CollisionEnabled" : 0,
+        "Mass" : 1.000000,
+        "MaterialSlots" : ["Content/Material/Auto/BasicShapeMaterial.uasset"],
+        "ObjectName" : "UStaticMeshComponent_9",
+        "ObjectType" : 0,
+        "RelativeTransform.Location" : [-0.243526, 3.752984, 3.160306],
+        "RelativeTransform.Scale" : [1.000000, 1.000000, 1.000000],
+        "ResponseContainer" : {
+          "Responses[0]" : 2,
+          "Responses[1]" : 2,
+          "Responses[2]" : 2,
+          "Responses[3]" : 2,
+          "Responses[4]" : 2
+        },
+        "StaticMeshPath" : "Content/Data/BasicShape/Cube_StaticMesh.uasset",
+        "bAutoActivate" : true,
+        "bCastShadow" : true,
+        "bCastShadowAsTwoSided" : false,
+        "bEditorOnly" : false,
+        "bEnableCCD" : false,
+        "bGenerateOverlapEvents" : false,
+        "bHiddenInComponentTree" : false,
+        "bIsActive" : true,
+        "bIsVisible" : false,
+        "bKinematic" : false,
+        "bSimulatePhysics" : false,
+        "bTickEnable" : true
+      }
+    }
+  },
+  "Name" : "GmaeManager",
+  "Type" : "ActorTemplate",
+  "Version" : 1
+}
