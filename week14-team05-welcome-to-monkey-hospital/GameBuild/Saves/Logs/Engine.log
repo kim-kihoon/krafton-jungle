@@ -1,0 +1,105 @@
+[DirectoryWatcher] Watching: C:/krafton-jungle/week14-team05-welcome-to-monkey-hospital/GameBuild/Content/Script/ (prefix="", id=2)
+[PhysX] Initialized successfully (Scene=000001C51AA0B8D0)
+StaticMesh package is stale. Package=Content/Data/BasicShape/Cube_StaticMesh.uasset MissingSource=false
+SkeletalMesh package is stale. Package=Content/Data/CymbalMonkey/CymbalMonkey_SkeletalMesh.uasset MissingSource=false
+Skeleton loaded. Path=Content/Data/CymbalMonkey/CymbalMonkey_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/human/source/Armpist_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/human/source/Armpist_Skeleton.uasset Version=7 SocketCount=2
+[LuaAnimInstance] ScriptFile not set.
+StaticMesh package is stale. Package=Content/Data/camera/camera_StaticMesh.uasset MissingSource=true
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=65521 Triangles=72281
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_47 Vertices=128 Triangles=60
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_136 Vertices=3748 Triangles=3992
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_4 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_5 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_27 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_28 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_3 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_5 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_27 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_28 Vertices=6106 Triangles=8564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_14 Vertices=6101 Triangles=8542
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_15 Vertices=6108 Triangles=8544
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_20 Vertices=6101 Triangles=8542
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_21 Vertices=6108 Triangles=8544
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_25 Vertices=54 Triangles=48
+SkeletalMesh package is stale. Package=Content/Data/slendytubbies-po/po_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/slendytubbies-po/po_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/CartoonCat/CartoonCat_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/CartoonCat/CartoonCat_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/halfMannequin/halfmannequin_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/halfMannequin/halfmannequin_Skeleton.uasset Version=7 SocketCount=0
+SkeletalMesh package is stale. Package=Content/Data/slendyTubbie/tubbie_SkeletalMesh.uasset MissingSource=true
+Skeleton loaded. Path=Content/Data/slendyTubbie/tubbie_Skeleton.uasset Version=7 SocketCount=0
+[Lua] [AnomalyManager] Random seed=1210981803
+[Lua] [AnomalyManager] Setup begin source=Random candidates=10 rules=6
+[Lua] [AnomalyManager] Random selected targetIndex=4 ruleIndex=4 drawCount=2
+[Lua] [AnomalyManager] Setup try source=Random rule=BlackPhoto target=tubbie1 uuid=1286
+[Lua] [AnomalyManager] Setup success source=Random rule=BlackPhoto target=tubbie1 uuid=1286
+[Lua] [CymbalMonkey] InitializeFromGameManager waiting for exit-door open trigger
+[Lua] [GameManagerActor] CymbalMonkey initialized
+[Lua] [GameManagerActor] BeginPlay
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_51 Vertices=73432 Triangles=134842
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_51 Vertices=73432 Triangles=134842
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_68 Vertices=5560 Triangles=5489
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_71 Vertices=4370 Triangles=3058
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_74 Vertices=1226 Triangles=1320
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_79 Vertices=232 Triangles=148
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_82 Vertices=1124 Triangles=616
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_89 Vertices=170342 Triangles=280428
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_64 Vertices=38188 Triangles=28279
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_94 Vertices=3758 Triangles=3600
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_97 Vertices=11718 Triangles=9592
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_74 Vertices=1226 Triangles=1320
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_101 Vertices=243054 Triangles=404040
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_85 Vertices=48516 Triangles=68540
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_55 Vertices=6580 Triangles=7754
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_68 Vertices=5560 Triangles=5489
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_94 Vertices=3758 Triangles=3600
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_109 Vertices=471 Triangles=354
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_104 Vertices=13652 Triangles=18564
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_118 Vertices=5864 Triangles=4878
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_EndingHospital Vertices=1137994 Triangles=1021478
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_47 Vertices=128 Triangles=60
+Physics: Static mesh triangle collision registered. Component=UStaticMeshComponent_47 Vertices=128 Triangles=60
+[GameMode] Auto-possessed Pawn: Player
+========== Startup Profile ==========
+  WindowsApplication::Init       :     27.3 ms
+    D3DDevice::CreateHW          :    124.0 ms
+    ShaderManager::Init          :   3171.3 ms
+    SystemResources::Create      :      0.3 ms
+    TileCulling::Init            :     81.3 ms
+    ClusteredCuller::Init        :     96.6 ms
+    RenderPassPipeline::Init     :      0.0 ms
+    DrawCommandBuilder::Create   :      0.3 ms
+  Renderer::Create               :   3474.6 ms
+  MeshBufferManager::Init        :      0.6 ms
+  ResourceManager::LoadFromFile  :      8.6 ms
+  RenderPipeline::Create         :      0.0 ms
+  Engine::Init                   :   8353.9 ms
+  Engine::BeginPlay              :    595.6 ms
+  Total                          :   8949.6 ms
+======================================
+[PlayerMoveHit] hitActor=HospitalMap hitComponent=UStaticMeshComponent_3 start=(8.866, -4.980, 1.432) end=(8.866, -4.980, -260.144) hit=(8.866, -4.980, 0.000) normal=(0.000, 0.000, 1.000) dist=0.6818 safe=0.6718 radius=0.213 half=0.750
+[Lua] [AnomalyManager] Despawn reason=Reset rule=BlackPhoto target=tubbie1 uuid=1286
+[Lua] [GameManagerActor] EndPlay

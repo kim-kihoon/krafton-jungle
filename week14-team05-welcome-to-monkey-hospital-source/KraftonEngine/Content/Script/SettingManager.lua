@@ -23,9 +23,9 @@ SettingManager.DisplayModeOptions = {
     { Label = "Fullscreen", bFullscreen = true },
 }
 
-SettingManager.GammaIndex = 2
+SettingManager.GammaIndex = 1
 SettingManager.MasterVolumeIndex = 3
-SettingManager.MouseSensitivityIndex = 2
+SettingManager.MouseSensitivityIndex = 3
 SettingManager.DisplayModeIndex = 2
 SettingManager.bInvertY = false
 SettingManager.bHeadBob = true
@@ -72,7 +72,7 @@ local function format_toggle(bEnabled)
 end
 
 function SettingManager:GetGammaOption()
-    return self.GammaOptions[self.GammaIndex] or self.GammaOptions[2]
+    return self.GammaOptions[self.GammaIndex] or self.GammaOptions[1]
 end
 
 function SettingManager:GetMasterVolumeOption()
@@ -80,7 +80,7 @@ function SettingManager:GetMasterVolumeOption()
 end
 
 function SettingManager:GetMouseSensitivityOption()
-    return self.MouseSensitivityOptions[self.MouseSensitivityIndex] or self.MouseSensitivityOptions[2]
+    return self.MouseSensitivityOptions[self.MouseSensitivityIndex] or self.MouseSensitivityOptions[3]
 end
 
 function SettingManager:GetDisplayModeOption()
@@ -106,9 +106,9 @@ function SettingManager:Load()
     end
 
     if UserSettings.LoadInt ~= nil then
-        self.GammaIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_GAMMA, self.GammaIndex), #self.GammaOptions, 2)
+        self.GammaIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_GAMMA, self.GammaIndex), #self.GammaOptions, 1)
         self.MasterVolumeIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_MASTER_VOLUME, self.MasterVolumeIndex), #self.MasterVolumeOptions, 3)
-        self.MouseSensitivityIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_MOUSE_SENSITIVITY, self.MouseSensitivityIndex), #self.MouseSensitivityOptions, 2)
+        self.MouseSensitivityIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_MOUSE_SENSITIVITY, self.MouseSensitivityIndex), #self.MouseSensitivityOptions, 3)
         self.DisplayModeIndex = clamp_index(UserSettings.LoadInt(SAVE_KEY_DISPLAY_MODE, self.DisplayModeIndex), #self.DisplayModeOptions, 2)
     end
 
