@@ -291,7 +291,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-________________________________________________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_B.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -379,7 +379,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-________________________________________________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_B.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -467,7 +467,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-________________________________________________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_B.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -643,7 +643,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-_________________________________-______________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_A.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -907,7 +907,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-_________________________________-______________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_A.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -995,7 +995,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-________________________________________________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_B.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
@@ -1083,7 +1083,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-_________________________________-______________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_Anomaly_Action_001_A.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true

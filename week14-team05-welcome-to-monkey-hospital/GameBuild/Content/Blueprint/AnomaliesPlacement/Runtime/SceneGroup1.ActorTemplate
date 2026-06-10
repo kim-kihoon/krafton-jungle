@@ -1171,7 +1171,7 @@
           },
           "AnimInstanceClass" : "UCharacterAnimInstance",
           "AnimationData" : {
-            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin___________________-_________________________________-_________________________________-______________________________________________Action_001.uasset",
+            "AnimToPlayPath" : "Content/Data/halfMannequin/halfmannequin_SceneGroup_Action_001.uasset",
             "PlayRate" : 1.000000,
             "bLooping" : true,
             "bPlaying" : true
