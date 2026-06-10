@@ -1,0 +1,19 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "GraphShaderMode" : "Generated",
+  "Origin" : "FbxImport",
+  "Parameters" : {
+    "HasDiffuseTexture" : 1.000000,
+    "HasNormalMap" : 0.000000,
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000],
+    "_pad" : [0.000000, 0.000000, 0.000000]
+  },
+  "PathFileName" : "Content/Material/Auto/Grey Marble.001.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/Geometry/UberLit.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Texture/Auto/red cyber katana/greymarble_11_basecolor-2K.png"
+  }
+}

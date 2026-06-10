@@ -1,0 +1,195 @@
+{
+  "BlendState" : "AlphaBlend",
+  "Compiled" : {
+    "BlendState" : "AlphaBlend",
+    "Domain" : "ParticleSprite",
+    "GeneratorVersion" : "GeneratedMaterialPass_v4_Decal",
+    "GraphHash" : "B5383B38E87397D6",
+    "GraphShaderMode" : "Generated",
+    "Parameters" : {
+
+    },
+    "ReceiveLighting" : false,
+    "RenderPass" : "AlphaBlend",
+    "Textures" : {
+      "DiffuseTexture" : {
+        "Path" : "Content/Data/Image/RedBeam.png",
+        "Slot" : "Diffuse"
+      }
+    }
+  },
+  "DepthStencilState" : "DepthReadOnly",
+  "Domain" : "ParticleSprite",
+  "GeneratedShaderPath" : "Shaders/Generated/Materials/_5AADB2A222C48BD3_ParticleSprite.hlsl",
+  "Graph" : {
+    "Links" : [{
+        "FromPinId" : 27,
+        "LinkId" : 28,
+        "ToPinId" : 19
+      }, {
+        "FromPinId" : 16,
+        "LinkId" : 29,
+        "ToPinId" : 18
+      }, {
+        "FromPinId" : 20,
+        "LinkId" : 30,
+        "ToPinId" : 9
+      }, {
+        "FromPinId" : 24,
+        "LinkId" : 31,
+        "ToPinId" : 11
+      }],
+    "NextId" : 32,
+    "Nodes" : [{
+        "DisplayName" : "Material Output",
+        "Mask" : "RGBA",
+        "NodeId" : 8,
+        "ParameterName" : "",
+        "Pins" : [{
+            "DisplayName" : "Color",
+            "Kind" : "Input",
+            "OwningNodeId" : 8,
+            "PinId" : 9,
+            "Type" : "Float3"
+          }, {
+            "DisplayName" : "Emissive",
+            "Kind" : "Input",
+            "OwningNodeId" : 8,
+            "PinId" : 10,
+            "Type" : "Float3"
+          }, {
+            "DisplayName" : "Opacity",
+            "Kind" : "Input",
+            "OwningNodeId" : 8,
+            "PinId" : 11,
+            "Type" : "Float"
+          }, {
+            "DisplayName" : "UVOffset",
+            "Kind" : "Input",
+            "OwningNodeId" : 8,
+            "PinId" : 12,
+            "Type" : "Float2"
+          }],
+        "PosX" : 80.000000,
+        "PosY" : 80.000000,
+        "TexturePath" : "",
+        "TextureSlot" : "Diffuse",
+        "Type" : "Output",
+        "Value" : [1.000000, 1.000000, 1.000000, 1.000000]
+      }, {
+        "DisplayName" : "Texture Object",
+        "Mask" : "RGBA",
+        "NodeId" : 15,
+        "ParameterName" : "Diffuse",
+        "Pins" : [{
+            "DisplayName" : "Texture",
+            "Kind" : "Output",
+            "OwningNodeId" : 15,
+            "PinId" : 16,
+            "Type" : "Texture2D"
+          }],
+        "PosX" : -329.000000,
+        "PosY" : -2.000000,
+        "TexturePath" : "Content/Data/Image/RedBeam.png",
+        "TextureSlot" : "Diffuse",
+        "Type" : "TextureObject",
+        "Value" : [1.000000, 1.000000, 1.000000, 1.000000]
+      }, {
+        "DisplayName" : "Texture Sample",
+        "Mask" : "RGBA",
+        "NodeId" : 17,
+        "ParameterName" : "",
+        "Pins" : [{
+            "DisplayName" : "Texture",
+            "Kind" : "Input",
+            "OwningNodeId" : 17,
+            "PinId" : 18,
+            "Type" : "Texture2D"
+          }, {
+            "DisplayName" : "UV",
+            "Kind" : "Input",
+            "OwningNodeId" : 17,
+            "PinId" : 19,
+            "Type" : "Float2"
+          }, {
+            "DisplayName" : "RGB",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 20,
+            "Type" : "Float3"
+          }, {
+            "DisplayName" : "R",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 21,
+            "Type" : "Float"
+          }, {
+            "DisplayName" : "G",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 22,
+            "Type" : "Float"
+          }, {
+            "DisplayName" : "B",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 23,
+            "Type" : "Float"
+          }, {
+            "DisplayName" : "A",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 24,
+            "Type" : "Float"
+          }, {
+            "DisplayName" : "RGBA",
+            "Kind" : "Output",
+            "OwningNodeId" : 17,
+            "PinId" : 25,
+            "Type" : "Float4"
+          }],
+        "PosX" : -109.000000,
+        "PosY" : 42.000000,
+        "TexturePath" : "",
+        "TextureSlot" : "Diffuse",
+        "Type" : "TextureSample",
+        "Value" : [1.000000, 1.000000, 1.000000, 1.000000]
+      }, {
+        "DisplayName" : "TexCoord",
+        "Mask" : "RGBA",
+        "NodeId" : 26,
+        "ParameterName" : "",
+        "Pins" : [{
+            "DisplayName" : "UV",
+            "Kind" : "Output",
+            "OwningNodeId" : 26,
+            "PinId" : 27,
+            "Type" : "Float2"
+          }],
+        "PosX" : -288.000000,
+        "PosY" : 216.000000,
+        "TexturePath" : "",
+        "TextureSlot" : "Diffuse",
+        "Type" : "TexCoord",
+        "Value" : [0.000000, 0.000000, 0.000000, 0.000000]
+      }]
+  },
+  "GraphShaderMode" : "Generated",
+  "MaterialGuid" : "5AADB2A222C48BD3",
+  "Origin" : "ParticleEmitter",
+  "Parameters" : {
+    "HasNormalMap" : 0.000000,
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000],
+    "_pad" : [0.000000, 0.000000, 0.000000]
+  },
+  "PathFileName" : "Content/Material/Auto/RedBeam.mat",
+  "RasterizerState" : "SolidNoCull",
+  "ReceiveLighting" : false,
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/Generated/Materials/_5AADB2A222C48BD3_ParticleSprite.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Data/Image/RedBeam.png",
+    "EmissiveTexture" : "Content/Data/Image/RedBeam.png"
+  },
+  "Version" : 2
+}

@@ -1,0 +1,86 @@
+#pragma once
+
+#include "Object/Object.h"
+#include "Animation/Skeleton/SkeletonTypes.h"
+
+#include "Source/Engine/Animation/Skeleton/Skeleton.generated.h"
+
+UCLASS()
+class USkeleton : public UObject
+{
+public:
+	GENERATED_BODY()
+    USkeleton()           = default;
+    ~USkeleton() override = default;
+
+    void Serialize(FArchive& Ar) override;
+
+    const FString& GetAssetPathFileName() const
+    {
+        return AssetPathFileName;
+    }
+
+    void SetAssetPathFileName(const FString& InPath)
+    {
+        AssetPathFileName = InPath;
+    }
+
+    const FString& GetSkeletonAssetGuid() const
+    {
+        return SkeletonAssetGuid;
+    }
+
+    void SetSkeletonAssetGuid(const FString& InGuid)
+    {
+        SkeletonAssetGuid = InGuid;
+    }
+
+    const FString& GetCompatibilitySignature() const
+    {
+        return CompatibilitySignature;
+    }
+
+    void SetCompatibilitySignature(const FString& InSignature)
+    {
+        CompatibilitySignature = InSignature;
+    }
+
+    FSkeletonBinding GetSkeletonBinding() const
+    {
+        FSkeletonBinding Binding;
+        Binding.SkeletonPath = AssetPathFileName;
+        Binding.SkeletonAssetGuid = SkeletonAssetGuid;
+        Binding.CompatibilitySignature = CompatibilitySignature;
+        return Binding;
+    }
+
+    const FReferenceSkeleton& GetReferenceSkeleton() const
+    {
+        return ReferenceSkeleton;
+    }
+
+    FReferenceSkeleton& GetMutableReferenceSkeleton()
+    {
+        return ReferenceSkeleton;
+    }
+
+    void RebuildBoneNameCache();
+
+    int32 FindBoneIndex(const FString& BoneName) const;
+
+    const TArray<FSkeletonSocket>& GetSockets() const { return Sockets; }
+    TArray<FSkeletonSocket>& GetMutableSockets() { return Sockets; }
+    int32 FindSocketIndex(const FName& SocketName) const;
+    const FSkeletonSocket* FindSocket(const FName& SocketName) const;
+    FSkeletonSocket* FindSocket(const FName& SocketName);
+    bool HasSocket(const FName& SocketName) const;
+    int32 ResolveSocketBoneIndex(const FSkeletonSocket& Socket) const;
+
+private:
+    FString            AssetPathFileName = "None";
+    FString            SkeletonAssetGuid;
+    FString            CompatibilitySignature;
+    FReferenceSkeleton ReferenceSkeleton;
+    TArray<FSkeletonSocket> Sockets;
+    TMap<FString, int32> BoneNameToIndex;
+};

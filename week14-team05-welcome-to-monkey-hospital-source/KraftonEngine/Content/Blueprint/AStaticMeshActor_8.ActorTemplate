@@ -1,0 +1,75 @@
+{
+  "Actor" : {
+    "ClassName" : "AStaticMeshActor",
+    "Name" : "AStaticMeshActor_8",
+    "NonSceneComponents" : [{
+        "ClassName" : "UProjectileMovementComponent",
+        "ObjectId" : 3,
+        "Properties" : {
+          "InitialSpeed" : 10.000000,
+          "MaxSpeed" : 100.000000,
+          "ObjectName" : "UProjectileMovementComponent_9",
+          "ProjectileGravityScale" : 1.000000,
+          "SweepPullbackDistance" : 0.010000,
+          "Velocity" : [0.000000, 0.000000, 0.000000],
+          "bAutoActivate" : true,
+          "bAutoRegisterUpdatedComponent" : true,
+          "bEditorOnly" : false,
+          "bHiddenInComponentTree" : false,
+          "bIsActive" : true,
+          "bSweepCollision" : true,
+          "bTickEnable" : true
+        }
+      }],
+    "ObjectId" : 1,
+    "Properties" : {
+      "ObjectName" : "AStaticMeshActor_8",
+      "PendingActorLocation" : [17.915340, -2.151186, 5.087889],
+      "PendingActorRotation" : [-0.000000, 0.000000, 0.000000],
+      "PendingActorScale" : [0.010000, 0.010000, 0.010000],
+      "PendingActorVisible" : true,
+      "PendingTagsString" : "",
+      "bNeedsTick" : true
+    },
+    "RootComponent" : {
+      "Children" : [],
+      "ClassName" : "UStaticMeshComponent",
+      "ObjectId" : 2,
+      "Properties" : {
+        "AttachSocketName" : "Name_None",
+        "CachedEditRotator" : [-0.000000, 0.000000, 0.000000],
+        "CenterOfMassOffset" : [0.000000, 0.000000, 0.000000],
+        "CollisionEnabled" : 0,
+        "Mass" : 1.000000,
+        "MaterialSlots" : ["Content/Material/Auto/plastic.uasset"],
+        "ObjectName" : "UStaticMeshComponent_46",
+        "ObjectType" : 0,
+        "RelativeTransform.Location" : [17.915340, -2.151186, 5.087889],
+        "RelativeTransform.Scale" : [0.010000, 0.010000, 0.010000],
+        "ResponseContainer" : {
+          "Responses[0]" : 2,
+          "Responses[1]" : 2,
+          "Responses[2]" : 2,
+          "Responses[3]" : 2,
+          "Responses[4]" : 2
+        },
+        "StaticMeshPath" : "Content/Data/toy-pistol/projectile_StaticMesh.uasset",
+        "bAutoActivate" : true,
+        "bCastShadow" : true,
+        "bCastShadowAsTwoSided" : false,
+        "bEditorOnly" : false,
+        "bEnableCCD" : false,
+        "bGenerateOverlapEvents" : false,
+        "bHiddenInComponentTree" : false,
+        "bIsActive" : true,
+        "bIsVisible" : true,
+        "bKinematic" : false,
+        "bSimulatePhysics" : false,
+        "bTickEnable" : true
+      }
+    }
+  },
+  "Name" : "AStaticMeshActor_8",
+  "Type" : "ActorTemplate",
+  "Version" : 1
+}

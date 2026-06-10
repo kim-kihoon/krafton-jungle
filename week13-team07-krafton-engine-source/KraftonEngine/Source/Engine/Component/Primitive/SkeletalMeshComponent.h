@@ -1,0 +1,176 @@
+﻿#pragma once
+
+#include "Component/Primitive/SkinnedMeshComponent.h"
+#include "Animation/AnimationMode.h"
+#include "Object/Ptr/SubclassOf.h"
+#include "Animation/AnimInstance.h"
+#include "Animation/Instance/AnimSingleNodeInstance.h"
+#include "Animation/Sequence/AnimSequenceBase.h"
+#include "Object/Ptr/ObjectPtr.h"
+#include "Source/Engine/Component/Primitive/SkeletalMeshComponent.generated.h"
+
+class UPhysicsAsset;
+struct FBodyInstance;
+struct FConstraintInstance;
+class UAnimInstance;
+class UAnimSingleNodeInstance;
+class UAnimSequenceBase;
+class UClass;
+class ULuaAnimInstance;
+
+// SkeletalMesh 전용 render proxy만 제공하는 얇은 wrapper.
+// Skinning/bone/material/bounds 상태는 모두 USkinnedMeshComponent가 소유한다.
+UCLASS()
+class USkeletalMeshComponent : public USkinnedMeshComponent
+{
+public:
+	GENERATED_BODY()
+	USkeletalMeshComponent() = default;
+	~USkeletalMeshComponent() override;
+
+	void BeginPlay() override;
+	void EndPlay() override;
+	void PostLoad() override;
+
+    // Render access 섹션: SceneProxy
+    FPrimitiveSceneProxy* CreateSceneProxy() override;
+
+    // Mesh 가 바뀌면 AnimInstance 도 새 SkeletalMesh 기준으로 재구성해야 하므로 override.
+    UFUNCTION(Callable, Category="Mesh")
+    void SetSkeletalMesh(USkeletalMesh* InMesh) override;
+
+    // SingleNode 재생 편의 API.
+    UFUNCTION(Callable, Category="Animation")
+    void PlayAnimation(UAnimSequenceBase* NewAnimToPlay, bool bLooping);
+    UFUNCTION(Callable, Category="Animation")
+    void StopAnimation();
+
+    // Animation 섹션: Mode 에 따라 AnimInstance 의 생성/파기를 컴포넌트가 책임진다.
+    //   - None              : AnimInstance 미생성. BoneEdit 만 적용.
+    //   - AnimationSingleNode: UAnimSingleNodeInstance 자동 생성, AnimationData 로 구동.
+    //   - AnimationCustom   : AnimInstanceClass 가 가리키는 자식 클래스를 FObjectFactory 로 인스턴스화.
+    UFUNCTION(Callable, Exec, Category="Animation")
+    void SetAnimationMode(EAnimationMode InMode);
+    UFUNCTION(Pure, Category="Animation")
+    EAnimationMode GetAnimationMode() const { return AnimationMode; }
+
+    // SingleNode 모드용 헬퍼. Custom 모드에선 무시 (자체 인스턴스가 자체 시퀀스를 관리).
+    UFUNCTION(Callable, Category="Animation")
+    void SetAnimation(UAnimSequenceBase* InAsset);
+    UFUNCTION(Pure, Category="Animation")
+    bool CanUseAnimation(UAnimSequenceBase* InAsset) const;
+    UFUNCTION(Pure, Category="Animation")
+    UAnimSequenceBase* GetAnimation() const { return AnimationData.AnimToPlay.Get(); }
+    UFUNCTION(Callable, Exec, Category="Animation")
+    void SetPlayRate(float InRate);
+    UFUNCTION(Callable, Exec, Category="Animation")
+    void SetLooping(bool bInLoop);
+    UFUNCTION(Callable, Exec, Category="Animation")
+    void SetPlaying(bool bInPlay);
+    const FSingleAnimationPlayData& GetAnimationData() const { return AnimationData; }
+
+    // Custom 모드용. 클래스 변경 시 다음 InitializeAnimation 에서 재인스턴스화.
+    // 슬롯은 TSubclassOf<UAnimInstance> — 잘못된 클래스 대입은 nullptr 로 흡수.
+    UFUNCTION(Callable, Category="Animation")
+    void SetAnimInstanceClass(UClass* InClass);
+    UFUNCTION(Pure, Category="Animation")
+    UClass* GetAnimInstanceClass() const { return AnimInstanceClass.Get(); }
+
+    // 외부에서 직접 만든 인스턴스 주입 (테스트 / 특수 케이스). Mode 와 무관하게 즉시 교체.
+    UFUNCTION(Callable, Category="Animation")
+    void SetAnimInstance(UAnimInstance* InInstance);
+    UFUNCTION(Pure, Category="Animation")
+    UAnimInstance* GetAnimInstance() const { return AnimInstance.Get(); }
+
+    // SingleNode 모드에서 현재 자동 생성된 노드를 반환한다. NodeName 은 현재 단일 노드 구조에서는 무시한다.
+    UFUNCTION(Pure, Category="Animation")
+    UAnimSingleNodeInstance* GetAnimNodeInstance(FName NodeName) const;
+
+    // Mode/Class/SkeletalMesh 변경 후 일관성 재정렬. SetSkeletalMesh override 안에서 자동 호출됨.
+    void InitializeAnimation();
+    void ClearAnimInstance();
+
+    // Editor / 직렬화 통합.
+    void GetEditableProperties(TArray<FPropertyValue>& OutProps) override;
+    void PostEditProperty(const char* PropertyName) override;
+    void PostDuplicate() override;
+    void PreSave() override;
+    void Serialize(FArchive& Ar) override;
+
+	// Physics
+	UPhysicsAsset* GetPhysicsAsset() const;
+	UPhysicsAsset* GetPhysicsAssetOverride() const { return PhysicsAssetOverride.Get(); }
+	const FString& GetPhysicsAssetOverridePath() const { return PhysicsAssetOverridePath; }
+	void SetPhysicsAsset(UPhysicsAsset* InPhysicsAsset);
+	void ClearPhysicsAssetOverride() { SetPhysicsAsset(nullptr); }
+	// PhysicsAsset -> Bodies / Constraints 생성
+	void InstantiatePhysicsAsset();
+
+	// Bodies / Constraints 제거
+	void TermPhysicsAsset();
+
+	// Ragdoll
+	void StartRagdoll();
+	void EndRagdoll();
+
+	// Pose sync
+	void SyncBodiesFromAnimationPose();
+	void SyncSkeletonPoseFromBodies();
+
+	// Lookup
+	FBodyInstance* GetBodyInstance(FName BoneName) const;
+	FBodyInstance* GetBodyInstance(int32 BodyIndex) const;
+
+	FConstraintInstance* GetConstraintInstance(int32 ConstraintIndex) const;
+
+	void UpdateWorldAABB() const override;
+	
+	ECollisionPropertyExposure GetCollisionPropertyExposure() const override;
+
+protected:
+    // 매 프레임 AnimInstance 평가 → 결과 포즈를 SetBoneLocalTransforms 로 푸시.
+    // 이 경로가 CPU skinning 과 bounds dirty 를 한 번에 처리한다.
+    void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction& ThisTickFunction) override;
+
+    bool EvaluateAnimInstance(float DeltaTime);
+
+    void AddReferencedObjects(FReferenceCollector& Collector) override;
+private:
+    void LoadAnimationFromPath();
+    void CapturePersistentAnimInstanceSettings();
+    void ApplyPersistentAnimInstanceSettings(UAnimInstance* Instance);
+    bool ShouldInstantiatePhysicsAsset() const;
+	void CreateBodiesFromPhysicsAsset();
+	void CreateConstraintInstancesFromPhysicsAsset();
+	void UpdateConstraintFrames();
+	void InitConstraints();
+
+protected:
+	TArray<FBodyInstance*> Bodies;
+	TArray<FConstraintInstance*> Constraints;
+
+	UPROPERTY(EditAnywhere, Save, Category = "Physics")
+	bool bStartRagdollOnBeginPlay = false;
+	bool bRagdollActive = false; 
+	
+	bool bSimulatePhysicsBeforeRagdoll = false;
+
+	UPROPERTY(Transient, Category="Physics")
+	TObjectPtr<UPhysicsAsset> PhysicsAssetOverride = nullptr;
+	UPROPERTY(Save, Category="Physics", DisplayName="Physics Asset Override", AssetType="PhysicsAsset")
+	FString PhysicsAssetOverridePath = "None";
+
+    // Animation 런타임 상태.
+    UPROPERTY(Edit, Save, Category="Animation", DisplayName="Animation Mode", Enum=EAnimationMode)
+    EAnimationMode             AnimationMode = EAnimationMode::None;
+    UPROPERTY(Edit, Save, Category="Animation", DisplayName="Animation Data", Type=Struct)
+    FSingleAnimationPlayData   AnimationData;
+    UPROPERTY(Edit, Save, Category="Animation", DisplayName="Anim Instance Class", Type=ClassRef, AllowedClass=UAnimInstance)
+    TSubclassOf<UAnimInstance> AnimInstanceClass;
+    // AnimInstance 는 runtime-owned transient 이므로 PIE duplicate/scene save 에서 LuaAnimInstance.ScriptFile 을 컴포넌트가 영속 보관한다.
+    UPROPERTY(Save, Category="Animation|Lua", DisplayName="Lua Anim Script", AssetType="LuaAnimScript")
+    FString LuaAnimScriptFile;
+    // Runtime-owned instance. AnimInstanceClass is the persistent/editor-facing identity.
+    UPROPERTY(Transient, Instanced, Category="Animation", DisplayName="Anim Instance", Type=ObjectRef, AllowedClass=UAnimInstance)
+    TObjectPtr<UAnimInstance>  AnimInstance  = nullptr;
+};

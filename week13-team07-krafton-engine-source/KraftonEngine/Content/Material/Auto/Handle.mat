@@ -1,0 +1,19 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "GraphShaderMode" : "Generated",
+  "Origin" : "ObjImport",
+  "Parameters" : {
+    "HasNormalMap" : 1.000000,
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000],
+    "_pad" : [0.000000, 0.000000, 0.000000]
+  },
+  "PathFileName" : "Content/Material/Auto/Handle.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/Geometry/UberLit.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Mesh/Katana/Handle.png",
+    "NormalTexture" : "Content/Mesh/Katana/normalMap1.png"
+  }
+}

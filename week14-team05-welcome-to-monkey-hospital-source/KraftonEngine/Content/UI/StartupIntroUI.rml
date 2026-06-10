@@ -1,0 +1,77 @@
+<rml>
+<head>
+	<title>Startup Intro</title>
+	<style>
+		body {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			font-family: OCRAStd;
+			color: #FFFFFF;
+			background-color: #000000;
+		}
+		#overlay {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+			background-color: #000000;
+		}
+		#logo_panel {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+		}
+		#studio_logo {
+			position: absolute;
+			left: 640px;
+			top: 220px;
+			width: 640px;
+			height: 640px;
+			opacity: 0;
+		}
+		#warning_panel {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+			display: none;
+		}
+		.warning-line {
+			position: absolute;
+			left: 0px;
+			width: 1920px;
+			font-size: 26px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		#warning_title {
+			position: absolute;
+			left: 0px;
+			top: 300px;
+			width: 1920px;
+			font-size: 56px;
+			text-align: center;
+			color: rgb(71, 255, 105);
+		}
+	</style>
+</head>
+<body data-rml-ui-document="1" data-ui-layout="scaled" data-canvas-width="1920" data-canvas-height="1080" data-preview-scale="1">
+	<div id="overlay">
+		<div id="logo_panel">
+			<img id="studio_logo" src="../Data/code-monkey-studio/code-monkey-studio.png" width="640" height="640" />
+		</div>
+		<div id="warning_panel">
+			<div id="warning_title">Warning</div>
+			<div id="warning_line_1" class="warning-line" style="top: 420px;">A very small percentage of individuals may experience epileptic seizures</div>
+			<div id="warning_line_2" class="warning-line" style="top: 460px;">or blackouts when exposed to certain light patterns or flashing lights.</div>
+			<div id="warning_line_3" class="warning-line" style="top: 540px;">If you or anyone in your family has an epileptic condition,</div>
+			<div id="warning_line_4" class="warning-line" style="top: 580px;">consult a physician before playing or viewing.</div>
+		</div>
+	</div>
+</body>
+</rml>

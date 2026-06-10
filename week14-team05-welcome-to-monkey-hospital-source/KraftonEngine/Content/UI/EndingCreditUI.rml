@@ -1,0 +1,57 @@
+<rml>
+<head>
+	<title>Ending Credit</title>
+	<style>
+		body {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			font-family: OCRAStd;
+			color: #FFFFFF;
+			background-color: #000000;
+		}
+		#overlay {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+			background-color: #000000;
+		}
+		.credit-name-col {
+			position: absolute;
+			top: 430px;
+			width: 33.33%;
+			font-size: 26px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		.credit-line {
+			position: absolute;
+			left: 0px;
+			width: 1920px;
+			font-size: 26px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		.credit-line-highlight {
+			position: absolute;
+			left: 0px;
+			width: 1920px;
+			font-size: 24px;
+			text-align: center;
+			color: rgb(71, 255, 105);
+		}
+	</style>
+</head>
+<body data-rml-ui-document="1" data-ui-layout="scaled" data-canvas-width="1920" data-canvas-height="1080" data-preview-scale="1">
+	<div id="overlay">
+		<div id="credit_studio_name" class="credit-line-highlight" style="top: 350px;">CODE MONKEY STUDIO</div>
+		<div id="credit_name_1" class="credit-name-col" style="left: 0%;">Kihoon Kim</div>
+		<div id="credit_name_2" class="credit-name-col" style="left: 33.33%;">Hyeonseok Cho</div>
+		<div id="credit_name_3" class="credit-name-col" style="left: 66.66%;">Park Sanghyeok</div>
+		<div id="credit_special_thanks" class="credit-line-highlight" style="top: 560px;">SPECIAL THANKS TO</div>
+		<div id="credit_thanks_line" class="credit-line" style="top: 610px;">Krafton Jungle Game Tech Lab</div>
+	</div>
+</body>
+</rml>

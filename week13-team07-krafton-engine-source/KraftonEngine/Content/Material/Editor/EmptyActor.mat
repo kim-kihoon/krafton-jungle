@@ -1,0 +1,9 @@
+{
+  "PathFileName": "Content/Material/Editor/EmptyActor.mat",
+  "ShaderPath": "Shaders/UI/Billboard.hlsl",
+  "RenderPass": "AlphaBlend",
+  "Textures": {
+    "DiffuseTexture": "Content/Editor/Icons/EmptyActor_256x.png"
+  },
+  "Origin": "Editor"
+}

@@ -1,0 +1,776 @@
+diff --git a/KraftonEngine/Content/Mesh/UE4/SK_Mannequin_SkeletalMesh.uasset b/KraftonEngine/Content/Mesh/UE4/SK_Mannequin_SkeletalMesh.uasset
+index 6c2cf647..bea642bd 100644
+Binary files a/KraftonEngine/Content/Mesh/UE4/SK_Mannequin_SkeletalMesh.uasset and b/KraftonEngine/Content/Mesh/UE4/SK_Mannequin_SkeletalMesh.uasset differ
+diff --git a/KraftonEngine/NodeEditor.json b/KraftonEngine/NodeEditor.json
+index 8a9d6159..1c317540 100644
+--- a/KraftonEngine/NodeEditor.json
++++ b/KraftonEngine/NodeEditor.json
+@@ -1 +1 @@
+-{"nodes":{"node:100000":{"location":{"x":20,"y":30}}},"selection":null,"view":{"scroll":{"x":-15.1589164733886719,"y":-51.91302490234375},"visible_rect":{"max":{"x":489.584320068359375,"y":297.666595458984375},"min":{"x":-24.917877197265625,"y":-85.3334274291992188}},"zoom":0.608355045318603516}}
+\ No newline at end of file
++{"nodes":{"node:100000":{"location":{"x":20,"y":30}},"node:100001":{"location":{"x":476,"y":32}},"node:200000":{"location":{"x":212,"y":32}}},"selection":["node:100001"],"view":{"scroll":{"x":272.078887939453125,"y":-149.995376586914062},"visible_rect":{"max":{"x":720.10516357421875,"y":428.006195068359375},"min":{"x":362.7718505859375,"y":-199.99383544921875}},"zoom":0.75}}
+\ No newline at end of file
+diff --git a/KraftonEngine/Settings/Editor.ini b/KraftonEngine/Settings/Editor.ini
+index 559d5933..8716c796 100644
+--- a/KraftonEngine/Settings/Editor.ini
++++ b/KraftonEngine/Settings/Editor.ini
+@@ -88,9 +88,9 @@
+   "PerspectiveCamera" : {
+     "FOV" : 60.000027,
+     "FarClip" : 1000.000000,
+-    "Location" : [10.871368, -3.495076, 6.835025],
++    "Location" : [0.562358, 14.251024, 8.610107],
+     "NearClip" : 0.100000,
+-    "Rotation" : [0.000000, 20.115093, 521.996033]
++    "Rotation" : [0.000000, 26.415003, 240.297577]
+   },
+   "SkinningMode" : 1,
+   "TransformTools" : {
+diff --git a/KraftonEngine/Settings/imgui.ini b/KraftonEngine/Settings/imgui.ini
+index 53e402e6..67f1226b 100644
+--- a/KraftonEngine/Settings/imgui.ini
++++ b/KraftonEngine/Settings/imgui.ini
+@@ -561,9 +561,10 @@ Size=1180,780
+ Collapsed=0
+ 
+ [Window][PhysicsAssetEditor_0]
+-Pos=60,60
+-Size=826,518
++Pos=0,22
++Size=1493,1077
+ Collapsed=0
++DockId=0x0000001E,1
+ 
+ [Window][Material Editor - Content/Material/Auto/M_UE4Man_Body.mat##000002100A9B11F0]
+ Pos=58,60
+diff --git a/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.cpp b/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.cpp
+index b275ef48..19b604f7 100644
+--- a/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.cpp
++++ b/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.cpp
+@@ -68,11 +68,21 @@ namespace
+ 		return PxVec3(V.X, V.Y, V.Z);
+ 	}
+ 
++	FVector ToFVector(const PxVec3& V)
++	{
++		return FVector(V.x, V.y, V.z);
++	}
++
+ 	PxQuat ToPxQuat(const FQuat& Q)
+ 	{
+ 		return PxQuat(Q.X, Q.Y, Q.Z, Q.W);
+ 	}
+ 
++	FQuat ToFQuat(const PxQuat& Q)
++	{
++		return FQuat(Q.x, Q.y, Q.z, Q.w);
++	}
++
+ 	PxTransform ToPxTransform(const FTransform& Transform)
+ 	{
+ 		return PxTransform(ToPxVec3(Transform.Location), ToPxQuat(Transform.Rotation));
+@@ -109,10 +119,16 @@ namespace
+ 
+ USkeletalMeshComponent::~USkeletalMeshComponent()
+ {
+-	TermPhysicsAsset();
+     ClearAnimInstance();
+ }
+ 
++void USkeletalMeshComponent::EndPlay()
++{
++	TermPhysicsAsset();
++	Super::EndPlay();
++
++}
++
+ FPrimitiveSceneProxy* USkeletalMeshComponent::CreateSceneProxy()
+ {
+     return new FSkeletalMeshSceneProxy(this);
+@@ -418,6 +434,13 @@ void USkeletalMeshComponent::ClearAnimInstance()
+ 
+ void USkeletalMeshComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction& ThisTickFunction)
+ {
++	if (bRagdollActive)
++	{
++		Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
++		SyncSkeletonPoseFromBodies();
++		return;
++	}
++
+     if (EvaluateAnimInstance(DeltaTime))
+     {
+         UMeshComponent::TickComponent(DeltaTime, TickType, ThisTickFunction);
+@@ -510,6 +533,17 @@ void USkeletalMeshComponent::PostEditProperty(const char* PropertyName)
+             LuaAnim->ReloadScript();
+         }
+     }
++	else if (std::strcmp(PropertyName, "bRagdollActive") == 0)
++	{
++		if (bRagdollActive)
++		{
++			StartRagdoll();
++		}
++		else
++		{
++			EndRagdoll();
++		}
++	}
+ 
+     // AnimInstance 자체 properties 는 자식이 자체 PostEdit 처리. 컴포넌트는 dispatch 만.
+     // 컴포넌트가 인식한 이름과 겹치지 않는 한 무해 (자식이 모르는 이름은 no-op).
+@@ -818,6 +852,7 @@ void USkeletalMeshComponent::TermPhysicsAsset()
+ 
+ void USkeletalMeshComponent::StartRagdoll()
+ {
++	EnsureBoneEditPose();
+ }
+ 
+ void USkeletalMeshComponent::EndRagdoll()
+@@ -866,6 +901,46 @@ void USkeletalMeshComponent::SyncBodiesFromAnimationPose()
+ 
+ void USkeletalMeshComponent::SyncSkeletonPoseFromBodies()
+ {
++	UPhysicsAsset* PhysicsAsset = GetPhysicsAsset();
++	USkeletalMesh* SkelMesh = GetSkeletalMesh();
++	FSkeletalMesh* Asset = SkelMesh ? SkelMesh->GetSkeletalMeshAsset() : nullptr;
++	if (!PhysicsAsset || !Asset)
++	{
++		return;
++	}
++
++	for (int32 BodyIndex = 0; BodyIndex < static_cast<int32>(Bodies.size()); ++BodyIndex)
++	{
++		FBodyInstance* Body = Bodies[BodyIndex];
++		USkeletalBodySetup* BodySetup = PhysicsAsset->GetBodySetup(BodyIndex);
++		if (!Body || !Body->Actor || !BodySetup)
++		{
++			continue;
++		}
++
++		const FName BoneName = BodySetup->GetBoneName();
++		for (int32 BoneIndex = 0; BoneIndex < static_cast<int32>(Asset->Bones.size()); ++BoneIndex)
++		{
++			if (FName(Asset->Bones[BoneIndex].Name) != BoneName)
++			{
++				continue;
++			}
++
++			if (BoneEditLocalMatrices.size() > BoneIndex)
++			{
++				FTransform T(BoneEditLocalMatrices[BoneIndex]);
++				T.Location = ToFVector(Body->Actor->getGlobalPose().p);
++				T.Rotation = ToFQuat(Body->Actor->getGlobalPose().q);
++
++				BoneEditLocalMatrices[BoneIndex] = T.ToMatrix();
++
++				bUseBoneEditPose = true;
++				RefreshSkinningAfterPoseChanged();
++				MarkWorldBoundsDirty();
++			}
++			break;
++		}
++	}
+ }
+ 
+ FBodyInstance* USkeletalMeshComponent::GetBodyInstance(FName BoneName) const
+diff --git a/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.h b/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.h
+index 8085e904..f5c9e9f8 100644
+--- a/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.h
++++ b/KraftonEngine/Source/Engine/Component/Primitive/SkeletalMeshComponent.h
+@@ -28,6 +28,8 @@ public:
+ 	USkeletalMeshComponent() = default;
+ 	~USkeletalMeshComponent() override;
+ 
++	void EndPlay() override;
++
+     // Render access 섹션: SceneProxy
+     FPrimitiveSceneProxy* CreateSceneProxy() override;
+ 
+diff --git a/KraftonEngine/Source/Engine/Component/Primitive/SkinnedMeshComponent.cpp b/KraftonEngine/Source/Engine/Component/Primitive/SkinnedMeshComponent.cpp
+index 8196b91b..80770c55 100644
+--- a/KraftonEngine/Source/Engine/Component/Primitive/SkinnedMeshComponent.cpp
++++ b/KraftonEngine/Source/Engine/Component/Primitive/SkinnedMeshComponent.cpp
+@@ -1,4 +1,4 @@
+-#include "SkinnedMeshComponent.h"
++﻿#include "SkinnedMeshComponent.h"
+ #include "Mesh/Skeletal/SkeletalMesh.h"
+ #include "Serialization/Archive.h"
+ #include "Runtime/Engine.h"
+diff --git a/material_domain_mode_support_root_paths.patch b/material_domain_mode_support_root_paths.patch
+deleted file mode 100644
+index f9886a2e..00000000
+--- a/material_domain_mode_support_root_paths.patch
++++ /dev/null
+@@ -1,571 +0,0 @@
+-diff --git a/KraftonEngine/Source/Editor/UI/Asset/Material/MaterialEditorWidget.cpp b/KraftonEngine/Source/Editor/UI/Asset/Material/MaterialEditorWidget.cpp
+-index 4dadc0a..2166171 100644
+---- a/KraftonEngine/Source/Editor/UI/Asset/Material/MaterialEditorWidget.cpp
+-+++ b/KraftonEngine/Source/Editor/UI/Asset/Material/MaterialEditorWidget.cpp
+-@@ -100,23 +100,64 @@ namespace
+- 		}
+- 	}
+- 
+--    void ApplyDefaultBlendModeForDomain(UMaterial* Material, EMaterialDomain Domain)
+--    {
+--        if (!Material)
+--        {
+--            return;
+--        }
+-+	bool IsSupportedMaterialDomain(EMaterialDomain Domain)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::Surface:
+-+		case EMaterialDomain::ParticleSprite:
+-+		case EMaterialDomain::ParticleMesh:
+-+			return true;
+-+		case EMaterialDomain::Decal:
+-+		case EMaterialDomain::PostProcess:
+-+		default:
+-+			return false;
+-+		}
+-+	}
+- 
+--        switch (Domain)
+--        {
+--        case EMaterialDomain::ParticleMesh:
+--            ApplyMaterialEditorBlendMode(Material, EMaterialEditorBlendMode::Opaque);
+--            break;
+--        case EMaterialDomain::ParticleSprite:
+--        default:
+--            break;
+--        }
+--    }
+-+	bool IsSupportedBlendModeForDomain(EMaterialDomain Domain, EMaterialEditorBlendMode Mode)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::Surface:
+-+			return Mode == EMaterialEditorBlendMode::Opaque
+-+				|| Mode == EMaterialEditorBlendMode::Translucent;
+-+		case EMaterialDomain::ParticleSprite:
+-+			return Mode == EMaterialEditorBlendMode::Translucent
+-+				|| Mode == EMaterialEditorBlendMode::Additive;
+-+		case EMaterialDomain::ParticleMesh:
+-+			return Mode == EMaterialEditorBlendMode::Opaque
+-+				|| Mode == EMaterialEditorBlendMode::Translucent
+-+				|| Mode == EMaterialEditorBlendMode::Additive;
+-+		case EMaterialDomain::Decal:
+-+		case EMaterialDomain::PostProcess:
+-+		default:
+-+			return false;
+-+		}
+-+	}
+-+
+-+	EMaterialEditorBlendMode GetDefaultBlendModeForDomain(EMaterialDomain Domain)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::ParticleSprite:
+-+			return EMaterialEditorBlendMode::Translucent;
+-+		case EMaterialDomain::Surface:
+-+		case EMaterialDomain::ParticleMesh:
+-+		default:
+-+			return EMaterialEditorBlendMode::Opaque;
+-+		}
+-+	}
+-+
+-+	void ApplyDefaultBlendModeForDomain(UMaterial* Material, EMaterialDomain Domain)
+-+	{
+-+		if (!Material)
+-+		{
+-+			return;
+-+		}
+-+
+-+		ApplyMaterialEditorBlendMode(Material, GetDefaultBlendModeForDomain(Domain));
+-+	}
+- 
+- 	ImVec4 NodeColor(EMaterialGraphNodeType Type)
+- 	{
+-@@ -400,31 +441,52 @@ void FMaterialEditorWidget::RenderToolbar(UMaterial* Material)
+- 	ImGui::SetNextItemWidth(160.0f);
+- 	if (ImGui::BeginCombo("Domain", ToString(Domain)))
+- 	{
+--		for (int32 i = 0; i <= static_cast<int32>(EMaterialDomain::PostProcess); ++i)
+-+		const EMaterialDomain Domains[] =
+-+		{
+-+			EMaterialDomain::Surface,
+-+			EMaterialDomain::ParticleSprite,
+-+			EMaterialDomain::ParticleMesh
+-+		};
+-+		for (EMaterialDomain Candidate : Domains)
+- 		{
+--			const EMaterialDomain Candidate = static_cast<EMaterialDomain>(i);
+- 			const bool bSelected = (Domain == Candidate);
+--            if (ImGui::Selectable(ToString(Candidate), bSelected))
+--            {
+--                const EMaterialDomain PreviousDomain = Material->GetDomain();
+-+			if (ImGui::Selectable(ToString(Candidate), bSelected))
+-+			{
+-+				const EMaterialDomain PreviousDomain = Material->GetDomain();
+- 
+--                Material->SetDomain(Candidate);
+--                RebuildOutputPinsForDomain(Material);
+-+				Material->SetDomain(Candidate);
+-+				RebuildOutputPinsForDomain(Material);
+- 
+--                if (PreviousDomain != Candidate)
+--                {
+--                    ApplyDefaultBlendModeForDomain(Material, Candidate);
+--                }
+-+				if (PreviousDomain != Candidate)
+-+				{
+-+					ApplyDefaultBlendModeForDomain(Material, Candidate);
+-+				}
+- 
+--                MarkDirty();
+--            }
+-+				MarkDirty();
+-+			}
+- 			if (bSelected) ImGui::SetItemDefaultFocus();
+- 		}
+- 		ImGui::EndCombo();
+- 	}
+- 
+-+	if (!IsSupportedMaterialDomain(Domain))
+-+	{
+-+		Domain = EMaterialDomain::Surface;
+-+		Material->SetDomain(Domain);
+-+		RebuildOutputPinsForDomain(Material);
+-+		ApplyDefaultBlendModeForDomain(Material, Domain);
+-+		MarkDirty();
+-+	}
+-+
+- 	ImGui::SameLine();
+- 	EMaterialEditorBlendMode BlendMode = GetMaterialEditorBlendMode(Material);
+-+	if (!IsSupportedBlendModeForDomain(Domain, BlendMode))
+-+	{
+-+		BlendMode = GetDefaultBlendModeForDomain(Domain);
+-+		ApplyMaterialEditorBlendMode(Material, BlendMode);
+-+		MarkDirty();
+-+	}
+-+
+- 	ImGui::SetNextItemWidth(130.0f);
+- 	if (ImGui::BeginCombo("Mode", ToString(BlendMode)))
+- 	{
+-@@ -436,6 +498,11 @@ void FMaterialEditorWidget::RenderToolbar(UMaterial* Material)
+- 		};
+- 		for (EMaterialEditorBlendMode Candidate : Modes)
+- 		{
+-+			if (!IsSupportedBlendModeForDomain(Domain, Candidate))
+-+			{
+-+				continue;
+-+			}
+-+
+- 			const bool bSelected = (BlendMode == Candidate);
+- 			if (ImGui::Selectable(ToString(Candidate), bSelected))
+- 			{
+-diff --git a/KraftonEngine/Source/Engine/Materials/Graph/MaterialHlslGenerator.cpp b/KraftonEngine/Source/Engine/Materials/Graph/MaterialHlslGenerator.cpp
+-index 1bcea93..c552aae 100644
+---- a/KraftonEngine/Source/Engine/Materials/Graph/MaterialHlslGenerator.cpp
+-+++ b/KraftonEngine/Source/Engine/Materials/Graph/MaterialHlslGenerator.cpp
+-@@ -965,7 +965,7 @@ float4 PS(PS_Input_MaterialParticle input) : SV_TARGET
+- )";
+- 	}
+- 
+--	FString BuildParticleMeshMain(bool bReceiveLighting = false)
+-+	FString BuildParticleMeshMain(bool bReceiveLighting = false, bool bTranslucentPass = true)
+- 	{
+- 		std::stringstream SS;
+- 		SS << R"(
+-@@ -1035,9 +1035,18 @@ float4 PS(PS_Input_MaterialMeshParticle input) : SV_TARGET
+- 		SS << R"(
+-     float4 FinalColor = float4(BaseColor + Result.Emissive, Result.Opacity);
+-     clip(FinalColor.a - 0.01f);
+--    return ApplyFogTranslucent(FinalColor, input.worldPos, CameraWorldPos);
+--}
+- )";
+-+
+-+		if (bTranslucentPass)
+-+		{
+-+			SS << "    return ApplyFogTranslucent(FinalColor, input.worldPos, CameraWorldPos);\n";
+-+		}
+-+		else
+-+		{
+-+			SS << "    return FinalColor;\n";
+-+		}
+-+
+-+		SS << "}\n";
+- 		return SS.str();
+- 	}
+- 
+-@@ -1179,7 +1188,7 @@ bool FMaterialHlslGenerator::Generate(const FMaterialGraph& Graph, const FMateri
+- 		SS << BuildParticleSpriteMain();
+- 		break;
+- 	case EMaterialDomain::ParticleMesh:
+--		SS << BuildParticleMeshMain(Options.bReceiveLighting);
+-+		SS << BuildParticleMeshMain(Options.bReceiveLighting, Options.RenderPass == ERenderPass::AlphaBlend);
+- 		break;
+- 	case EMaterialDomain::PostProcess:
+- 		SS << BuildPostProcessMain();
+-diff --git a/KraftonEngine/Source/Engine/Materials/MaterialManager.cpp b/KraftonEngine/Source/Engine/Materials/MaterialManager.cpp
+-index 60309db..5d623e7 100644
+---- a/KraftonEngine/Source/Engine/Materials/MaterialManager.cpp
+-+++ b/KraftonEngine/Source/Engine/Materials/MaterialManager.cpp
+-@@ -45,7 +45,102 @@ namespace
+-         }
+-         return std::filesystem::exists(Full);
+-     }
+--    constexpr const char* MaterialGraphGeneratorVersion = "GeneratedSurfacePass_v1";
+-+
+-+	enum class ESupportedGraphMaterialMode
+-+	{
+-+		Opaque,
+-+		Translucent,
+-+		Additive
+-+	};
+-+
+-+	bool IsSupportedGraphMaterialDomain(EMaterialDomain Domain)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::Surface:
+-+		case EMaterialDomain::ParticleSprite:
+-+		case EMaterialDomain::ParticleMesh:
+-+			return true;
+-+		case EMaterialDomain::Decal:
+-+		case EMaterialDomain::PostProcess:
+-+		default:
+-+			return false;
+-+		}
+-+	}
+-+
+-+	ESupportedGraphMaterialMode GetDefaultGraphMaterialMode(EMaterialDomain Domain)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::ParticleSprite:
+-+			return ESupportedGraphMaterialMode::Translucent;
+-+		case EMaterialDomain::Surface:
+-+		case EMaterialDomain::ParticleMesh:
+-+		default:
+-+			return ESupportedGraphMaterialMode::Opaque;
+-+		}
+-+	}
+-+
+-+	ESupportedGraphMaterialMode ResolveGraphMaterialMode(ERenderPass Pass, EBlendState Blend)
+-+	{
+-+		if (Pass == ERenderPass::AlphaBlend && Blend == EBlendState::Additive)
+-+		{
+-+			return ESupportedGraphMaterialMode::Additive;
+-+		}
+-+		if (Pass == ERenderPass::AlphaBlend && Blend == EBlendState::AlphaBlend)
+-+		{
+-+			return ESupportedGraphMaterialMode::Translucent;
+-+		}
+-+		return ESupportedGraphMaterialMode::Opaque;
+-+	}
+-+
+-+	bool IsSupportedGraphMaterialMode(EMaterialDomain Domain, ESupportedGraphMaterialMode Mode)
+-+	{
+-+		switch (Domain)
+-+		{
+-+		case EMaterialDomain::Surface:
+-+			return Mode == ESupportedGraphMaterialMode::Opaque
+-+				|| Mode == ESupportedGraphMaterialMode::Translucent;
+-+		case EMaterialDomain::ParticleSprite:
+-+			return Mode == ESupportedGraphMaterialMode::Translucent
+-+				|| Mode == ESupportedGraphMaterialMode::Additive;
+-+		case EMaterialDomain::ParticleMesh:
+-+			return Mode == ESupportedGraphMaterialMode::Opaque
+-+				|| Mode == ESupportedGraphMaterialMode::Translucent
+-+				|| Mode == ESupportedGraphMaterialMode::Additive;
+-+		case EMaterialDomain::Decal:
+-+		case EMaterialDomain::PostProcess:
+-+		default:
+-+			return false;
+-+		}
+-+	}
+-+
+-+	void WriteGraphMaterialMode(json::JSON& JsonData, ESupportedGraphMaterialMode Mode)
+-+	{
+-+		switch (Mode)
+-+		{
+-+		case ESupportedGraphMaterialMode::Opaque:
+-+			JsonData[MatKeys::RenderPass] = "Opaque";
+-+			JsonData[MatKeys::BlendState] = "Opaque";
+-+			JsonData[MatKeys::DepthStencilState] = "Default";
+-+			JsonData[MatKeys::RasterizerState] = "SolidBackCull";
+-+			break;
+-+		case ESupportedGraphMaterialMode::Translucent:
+-+			JsonData[MatKeys::RenderPass] = "AlphaBlend";
+-+			JsonData[MatKeys::BlendState] = "AlphaBlend";
+-+			JsonData[MatKeys::DepthStencilState] = "DepthReadOnly";
+-+			JsonData[MatKeys::RasterizerState] = "SolidNoCull";
+-+			break;
+-+		case ESupportedGraphMaterialMode::Additive:
+-+			JsonData[MatKeys::RenderPass] = "AlphaBlend";
+-+			JsonData[MatKeys::BlendState] = "Additive";
+-+			JsonData[MatKeys::DepthStencilState] = "DepthReadOnly";
+-+			JsonData[MatKeys::RasterizerState] = "SolidNoCull";
+-+			break;
+-+		}
+-+	}
+-+
+-+    constexpr const char* MaterialGraphGeneratorVersion = "GeneratedMaterialPass_v2";
+- }
+- 
+- void FMaterialManager::ScanMaterialAssets()
+-@@ -165,7 +260,7 @@ bool FMaterialManager::LoadMaterialFromJson(
+-     UMaterial*&    OutMaterial
+-     )
+- {
+--    EnsureGraphMaterialJsonDefaults(MatFilePath, JsonData);
+-+    const bool bDefaultsChanged = EnsureGraphMaterialJsonDefaults(MatFilePath, JsonData);
+- 
+-     const bool bGraphMaterial = JsonData.hasKey(MatKeys::Graph);
+-     if (bGraphMaterial)
+-@@ -263,7 +358,7 @@ bool FMaterialManager::LoadMaterialFromJson(
+- 	JsonData[MatKeys::RasterizerState] = RasterStr.empty() ? "" : RasterStr.c_str();
+- 	JsonData[MatKeys::GraphShaderMode] = ToString(GraphShaderMode);
+- 
+--	if (bInjected || bPurged)
+-+	if (bDefaultsChanged || bInjected || bPurged)
+- 	{
+-         SaveToJSON(JsonData, MatFilePath);
+-     }
+-@@ -582,6 +677,8 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-         return true;
+-     }
+- 
+-+	EnsureGraphMaterialJsonDefaults(MatFilePath, InOutJson);
+-+
+-     FMaterialGraph Graph;
+-     if (!MaterialGraphAsset::LoadFromJson(InOutJson[MatKeys::Graph], Graph))
+-     {
+-@@ -596,6 +693,33 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-     hasKey(MatKeys::GeneratorVersion) ? InOutJson[MatKeys::Compiled][MatKeys::GeneratorVersion].ToString() : FString();
+-     const FString ExistingGeneratedPath = InOutJson.hasKey(MatKeys::GeneratedShaderPath)
+-     ? InOutJson[MatKeys::GeneratedShaderPath].ToString() : FString();
+-+	const EMaterialDomain CurrentDomain = StringToDomain(
+-+		InOutJson.hasKey(MatKeys::Domain) ? InOutJson[MatKeys::Domain].ToString() : FString()
+-+	);
+-+	const EMaterialDomain CompiledDomain = MaterialDomainFromString(
+-+		InOutJson.hasKey(MatKeys::Compiled) && InOutJson[MatKeys::Compiled].hasKey(MatKeys::Domain)
+-+			? InOutJson[MatKeys::Compiled][MatKeys::Domain].ToString()
+-+			: FString(),
+-+		EMaterialDomain::PostProcess
+-+	);
+-+	const ERenderPass CurrentRenderPass = StringToRenderPass(
+-+		InOutJson.hasKey(MatKeys::RenderPass) ? InOutJson[MatKeys::RenderPass].ToString() : FString()
+-+	);
+-+	const ERenderPass CompiledRenderPass = StringToRenderPass(
+-+		InOutJson.hasKey(MatKeys::Compiled) && InOutJson[MatKeys::Compiled].hasKey(MatKeys::RenderPass)
+-+			? InOutJson[MatKeys::Compiled][MatKeys::RenderPass].ToString()
+-+			: FString()
+-+	);
+-+	const EBlendState CurrentBlendState = StringToBlendState(
+-+		InOutJson.hasKey(MatKeys::BlendState) ? InOutJson[MatKeys::BlendState].ToString() : FString(),
+-+		CurrentRenderPass
+-+	);
+-+	const EBlendState CompiledBlendState = StringToBlendState(
+-+		InOutJson.hasKey(MatKeys::Compiled) && InOutJson[MatKeys::Compiled].hasKey(MatKeys::BlendState)
+-+			? InOutJson[MatKeys::Compiled][MatKeys::BlendState].ToString()
+-+			: FString(),
+-+		CompiledRenderPass
+-+	);
+-     const EMaterialGraphShaderMode CurrentShaderMode = MaterialGraphShaderModeFromString(
+-         InOutJson.hasKey(MatKeys::GraphShaderMode) ? InOutJson[MatKeys::GraphShaderMode].ToString() : FString(),
+-         EMaterialGraphShaderMode::Generated
+-@@ -616,6 +740,9 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-     const bool bNeedsCompile =
+-         GraphHash != OldHash
+-         || OldGeneratorVersion != MaterialGraphGeneratorVersion
+-+        || CurrentDomain != CompiledDomain
+-+		|| CurrentRenderPass != CompiledRenderPass
+-+		|| CurrentBlendState != CompiledBlendState
+-         || CurrentShaderMode != CompiledShaderMode
+-         || ExistingGeneratedPath.empty()
+-         || !ProjectFileExists(ExistingGeneratedPath)
+-@@ -628,14 +755,9 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-     FMaterialCompileOptions Options;
+-     Options.MaterialPath = MatFilePath;
+-     Options.MaterialGuid = InOutJson.hasKey(MatKeys::MaterialGuid) ? InOutJson[MatKeys::MaterialGuid].ToString() : "";
+--    Options.Domain = StringToDomain(InOutJson.hasKey(MatKeys::Domain) ? InOutJson[MatKeys::Domain].ToString() : "");
+--    Options.RenderPass = StringToRenderPass(
+--        InOutJson.hasKey(MatKeys::RenderPass) ? InOutJson[MatKeys::RenderPass].ToString() : ""
+--    );
+--    Options.BlendState = StringToBlendState(
+--        InOutJson.hasKey(MatKeys::BlendState) ? InOutJson[MatKeys::BlendState].ToString() : "",
+--        Options.RenderPass
+--    );
+-+    Options.Domain = CurrentDomain;
+-+    Options.RenderPass = CurrentRenderPass;
+-+    Options.BlendState = CurrentBlendState;
+-     Options.DepthStencilState = StringToDepthStencilState(
+-         InOutJson.hasKey(MatKeys::DepthStencilState) ? InOutJson[MatKeys::DepthStencilState].ToString() : "",
+-         Options.RenderPass
+-@@ -675,6 +797,9 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-     InOutJson[MatKeys::Compiled]                                  = json::JSON::Make(json::JSON::Class::Object);
+-     InOutJson[MatKeys::Compiled][MatKeys::GraphHash]              = GraphHash;
+-     InOutJson[MatKeys::Compiled][MatKeys::GeneratorVersion]       = MaterialGraphGeneratorVersion;
+-+    InOutJson[MatKeys::Compiled][MatKeys::Domain]                 = ToString(Options.Domain);
+-+    InOutJson[MatKeys::Compiled][MatKeys::RenderPass]             = RenderStateStrings::ToString(RenderStateStrings::RenderPassMap, Options.RenderPass);
+-+    InOutJson[MatKeys::Compiled][MatKeys::BlendState]             = RenderStateStrings::ToString(RenderStateStrings::BlendStateMap, Options.BlendState);
+-     InOutJson[MatKeys::Compiled][MatKeys::GraphShaderMode]        = ToString(CurrentShaderMode);
+-     InOutJson[MatKeys::Compiled][MatKeys::ReceiveLighting]        = bCurrentReceiveLighting;
+-     InOutJson[MatKeys::Compiled][MatKeys::Parameters]             = json::JSON::Make(json::JSON::Class::Object);
+-@@ -700,6 +825,10 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-         InOutJson[MatKeys::Compiled][MatKeys::Textures][Name] = std::move(TexJson);
+-     }
+- 
+-+	if (!ExistingGeneratedPath.empty() && ExistingGeneratedPath != Result.GeneratedShaderPath)
+-+	{
+-+		FShaderManager::Get().InvalidatePath(ExistingGeneratedPath);
+-+	}
+-     FShaderManager::Get().InvalidatePath(Result.GeneratedShaderPath);
+-     auto DropTemplate = [this](const FString& CacheKey)
+-     {
+-@@ -723,14 +852,28 @@ bool FMaterialManager::CompileMaterialGraph(const FString& MatFilePath, json::JS
+-     return true;
+- }
+- 
+--void FMaterialManager::EnsureGraphMaterialJsonDefaults(const FString& MatFilePath, json::JSON& JsonData)
+-+bool FMaterialManager::EnsureGraphMaterialJsonDefaults(const FString& MatFilePath, json::JSON& JsonData)
+- {
+-     if (!JsonData.hasKey(MatKeys::Graph))
+-     {
+--        return;
+-+        return false;
+-     }
+-+	bool bChanged = false;
+- 
+--    if (!JsonData.hasKey(MatKeys::Version)) JsonData[MatKeys::Version] = 2;
+-+	auto SetStringIfMissing = [&JsonData, &bChanged](const char* Key, const char* Value)
+-+	{
+-+		if (!JsonData.hasKey(Key))
+-+		{
+-+			JsonData[Key] = Value;
+-+			bChanged = true;
+-+		}
+-+	};
+-+
+-+	if (!JsonData.hasKey(MatKeys::Version))
+-+	{
+-+		JsonData[MatKeys::Version] = 2;
+-+		bChanged = true;
+-+	}
+-     if (!JsonData.hasKey(MatKeys::MaterialGuid) || JsonData[MatKeys::MaterialGuid].ToString().empty())
+-     {
+-         char Buffer[32];
+-@@ -741,21 +884,56 @@ void FMaterialManager::EnsureGraphMaterialJsonDefaults(const FString& MatFilePat
+-             static_cast<unsigned long long>(std::hash<FString> {}(MatFilePath))
+-         );
+-         JsonData[MatKeys::MaterialGuid] = Buffer;
+-+		bChanged = true;
+-     }
+--    if (!JsonData.hasKey(MatKeys::PathFileName)) JsonData[MatKeys::PathFileName] = MatFilePath;
+--    if (!JsonData.hasKey(MatKeys::Domain)) JsonData[MatKeys::Domain] = "ParticleSprite";
+--    if (!JsonData.hasKey(MatKeys::RenderPass)) JsonData[MatKeys::RenderPass] = "AlphaBlend";
+--    if (!JsonData.hasKey(MatKeys::BlendState)) JsonData[MatKeys::BlendState] = "AlphaBlend";
+--    if (!JsonData.hasKey(MatKeys::DepthStencilState)) JsonData[MatKeys::DepthStencilState] = "DepthReadOnly";
+--    if (!JsonData.hasKey(MatKeys::RasterizerState)) JsonData[MatKeys::RasterizerState] = "SolidNoCull";
+--    if (!JsonData.hasKey(MatKeys::GraphShaderMode)) JsonData[MatKeys::GraphShaderMode] = ToString(EMaterialGraphShaderMode::Generated);
+--    if (!JsonData.hasKey(MatKeys::GeneratedShaderPath)) JsonData[MatKeys::GeneratedShaderPath] = "";
+-+	if (!JsonData.hasKey(MatKeys::PathFileName))
+-+	{
+-+		JsonData[MatKeys::PathFileName] = MatFilePath;
+-+		bChanged = true;
+-+	}
+-+	SetStringIfMissing(MatKeys::Domain, "ParticleSprite");
+-+	SetStringIfMissing(MatKeys::RenderPass, "AlphaBlend");
+-+	SetStringIfMissing(MatKeys::BlendState, "AlphaBlend");
+-+	SetStringIfMissing(MatKeys::DepthStencilState, "DepthReadOnly");
+-+	SetStringIfMissing(MatKeys::RasterizerState, "SolidNoCull");
+-+	if (!JsonData.hasKey(MatKeys::GraphShaderMode))
+-+	{
+-+		JsonData[MatKeys::GraphShaderMode] = ToString(EMaterialGraphShaderMode::Generated);
+-+		bChanged = true;
+-+	}
+-+	SetStringIfMissing(MatKeys::GeneratedShaderPath, "");
+-+
+-+	EMaterialDomain Domain = MaterialDomainFromString(JsonData[MatKeys::Domain].ToString(), EMaterialDomain::Surface);
+-+	if (!IsSupportedGraphMaterialDomain(Domain))
+-+	{
+-+		Domain = EMaterialDomain::Surface;
+-+		JsonData[MatKeys::Domain] = ToString(Domain);
+-+		bChanged = true;
+-+	}
+-+
+-+	const ERenderPass RenderPass = StringToRenderPass(JsonData[MatKeys::RenderPass].ToString());
+-+	const EBlendState BlendState = StringToBlendState(JsonData[MatKeys::BlendState].ToString(), RenderPass);
+-+	ESupportedGraphMaterialMode Mode = ResolveGraphMaterialMode(RenderPass, BlendState);
+-+	if (!IsSupportedGraphMaterialMode(Domain, Mode))
+-+	{
+-+		Mode = GetDefaultGraphMaterialMode(Domain);
+-+		WriteGraphMaterialMode(JsonData, Mode);
+-+		bChanged = true;
+-+	}
+-+	else
+-+	{
+-+		WriteGraphMaterialMode(JsonData, Mode);
+-+	}
+-+
+-     if (!JsonData.hasKey(MatKeys::Compiled))
+-     {
+-         JsonData[MatKeys::Compiled]                      = json::JSON::Make(json::JSON::Class::Object);
+-         JsonData[MatKeys::Compiled][MatKeys::Parameters] = json::JSON::Make(json::JSON::Class::Object);
+-         JsonData[MatKeys::Compiled][MatKeys::Textures]   = json::JSON::Make(json::JSON::Class::Object);
+-+		bChanged = true;
+-     }
+-+
+-+	return bChanged;
+- }
+- 
+- bool FMaterialManager::InjectDefaultParameters(json::JSON& JsonData, FMaterialTemplate* Template, UMaterial* Material)
+-diff --git a/KraftonEngine/Source/Engine/Materials/MaterialManager.h b/KraftonEngine/Source/Engine/Materials/MaterialManager.h
+-index 99a2217..bed6321 100644
+---- a/KraftonEngine/Source/Engine/Materials/MaterialManager.h
+-+++ b/KraftonEngine/Source/Engine/Materials/MaterialManager.h
+-@@ -109,7 +109,7 @@ private:
+- 	
+- 	bool InjectDefaultParameters(json::JSON& JsonData, FMaterialTemplate* Template, UMaterial* Material);
+- 	bool PurgeStaleParameters(json::JSON& JsonData, FMaterialTemplate* Template);
+--	void EnsureGraphMaterialJsonDefaults(const FString& MatFilePath, json::JSON& JsonData);
+-+	bool EnsureGraphMaterialJsonDefaults(const FString& MatFilePath, json::JSON& JsonData);
+- 	
+- 	const FString DefaultShaderPath = "Shaders/Geometry/UberLit.hlsl";
+- 
+-diff --git a/KraftonEngine/Source/Engine/Render/Command/DrawCommandBuilder.cpp b/KraftonEngine/Source/Engine/Render/Command/DrawCommandBuilder.cpp
+-index 3f161be..00d393c 100644
+---- a/KraftonEngine/Source/Engine/Render/Command/DrawCommandBuilder.cpp
+-+++ b/KraftonEngine/Source/Engine/Render/Command/DrawCommandBuilder.cpp
+-@@ -210,12 +210,11 @@ void FDrawCommandBuilder::BuildCommandForProxy(FScene& Scene, const FPrimitiveSc
+- 			? Section.Material->GetShader()
+- 			: Proxy.GetShader();
+- 
+--		// Generated Surface/Opaque material emits EvaluateMaterial() only.
+--		// Select the common Static/Skeletal entry point to match the vertex buffer.
+-+		// Generated Surface material emits EvaluateMaterial() only.
+-+		// Mode decides pass/render state; domain decides the Static/Skeletal entry point.
+- 		if (Section.Material
+- 			&& Section.Material->GetGraphShaderMode() == EMaterialGraphShaderMode::Generated
+- 			&& Section.Material->GetDomain() == EMaterialDomain::Surface
+--			&& Section.Material->GetRenderPass() == ERenderPass::Opaque
+- 			&& !Section.Material->GetGeneratedShaderPath().empty())
+- 		{
+- 			FShaderKey GeneratedSurfaceKey(Section.Material->GetGeneratedShaderPath());
+-diff --git a/KraftonEngine/Source/Engine/Render/Proxy/ParticleSystemSceneProxy.cpp b/KraftonEngine/Source/Engine/Render/Proxy/ParticleSystemSceneProxy.cpp
+-index e62b22d..b52258e 100644
+---- a/KraftonEngine/Source/Engine/Render/Proxy/ParticleSystemSceneProxy.cpp
+-+++ b/KraftonEngine/Source/Engine/Render/Proxy/ParticleSystemSceneProxy.cpp
+-@@ -475,8 +475,11 @@ void FParticleSystemSceneProxy::SubmitSpriteEmitter(
+- 	FrameCB.CameraUp    = Frame.CameraUp;    FrameCB._pad1 = 0.0f;
+- 	Buffer.ParticleFrameCB.Update(Context, &FrameCB, sizeof(FParticleFrameConstants));
+- 
+--    FShader* Shader = Buffer.Material && Buffer.Material->GetShader() ? Buffer.Material->GetShader()
+--    : FShaderManager::Get().GetOrCreate(EShaderPath::ParticleSprite);
+-+    FShader* Shader = Buffer.Material
+-+        && Buffer.Material->GetDomain() == EMaterialDomain::ParticleSprite
+-+        && Buffer.Material->GetShader()
+-+        ? Buffer.Material->GetShader()
+-+        : FShaderManager::Get().GetOrCreate(EShaderPath::ParticleSprite);
+- 	if (!Shader)
+- 	{
+- 		UE_LOG("[ParticleProxy] SubmitSpriteEmitter: ParticleSprite shader not found (%s)", EShaderPath::ParticleSprite);

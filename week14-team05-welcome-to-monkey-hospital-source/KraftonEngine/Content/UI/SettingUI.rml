@@ -1,0 +1,55 @@
+<rml>
+<head>
+	<title>Settings</title>
+	<style>
+		body {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			font-family: OCRAStd;
+			color: #FFFFFF;
+			background-color: rgba(0, 0, 0, 0.70);
+		}
+		#overlay {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 1920px;
+			height: 1080px;
+			background-color: rgba(0, 0, 0, 0.70);
+		}
+		#panel_title {
+			position: absolute;
+			left: 120px;
+			top: 190px;
+			font-size: 56px;
+			color: rgb(71, 255, 105);
+		}
+		.text-button {
+			position: absolute;
+			left: 120px;
+			font-size: 40px;
+			color: #FFFFFF;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		.text-button:hover,
+		.ui-nav-selected {
+			color: rgb(71, 255, 105);
+			background-color: rgba(255, 255, 255, 0.12);
+		}
+	</style>
+</head>
+<body data-rml-ui-document="1" data-ui-layout="scaled" data-canvas-width="1920" data-canvas-height="1080" data-preview-scale="1">
+	<div id="overlay">
+		<div id="panel_title">Settings</div>
+		<div id="setting_gamma_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="310.000000" data-width="720.000000" data-height="56.000000" data-z="0" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Gamma: Default" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="CycleSettingGamma" style="position: absolute; left: 120.00px; top: 310.00px; width: 720.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Gamma: Default</div>
+		<div id="setting_volume_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="390.000000" data-width="720.000000" data-height="56.000000" data-z="1" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Master Volume: 100" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="CycleSettingMasterVolume" style="position: absolute; left: 120.00px; top: 390.00px; width: 720.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Master Volume: 100</div>
+		<div id="setting_mouse_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="470.000000" data-width="840.000000" data-height="56.000000" data-z="2" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Mouse Sensitivity: Normal" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="CycleSettingMouseSensitivity" style="position: absolute; left: 120.00px; top: 470.00px; width: 840.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Mouse Sensitivity: Normal</div>
+		<div id="setting_invert_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="550.000000" data-width="720.000000" data-height="56.000000" data-z="3" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Invert Y: Off" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ToggleSettingInvertY" style="position: absolute; left: 120.00px; top: 550.00px; width: 720.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Invert Y: Off</div>
+		<div id="setting_headbob_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="630.000000" data-width="720.000000" data-height="56.000000" data-z="4" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Head Bob: On" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ToggleSettingHeadBob" style="position: absolute; left: 120.00px; top: 630.00px; width: 720.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Head Bob: On</div>
+		<div id="setting_control_prompt_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="710.000000" data-width="840.000000" data-height="56.000000" data-z="5" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Control Prompt: On" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ToggleSettingControlPrompt" style="position: absolute; left: 120.00px; top: 710.00px; width: 840.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Control Prompt: On</div>
+		<div id="setting_display_mode_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="790.000000" data-width="840.000000" data-height="56.000000" data-z="6" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Display Mode: Fullscreen" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="CycleSettingDisplayMode" style="position: absolute; left: 120.00px; top: 790.00px; width: 840.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Display Mode: Fullscreen</div>
+		<div id="setting_back_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="870.000000" data-width="240.000000" data-height="56.000000" data-z="7" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Back" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ClosePopup" style="position: absolute; left: 120.00px; top: 870.00px; width: 240.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Back</div>
+	</div>
+</body>
+</rml>
