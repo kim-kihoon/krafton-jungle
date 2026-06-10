@@ -27,12 +27,27 @@
 		}
 		.text-button {
 			position: absolute;
+			display: block;
 			left: 120px;
+			font-family: OCRAStd;
 			font-size: 40px;
+			font-weight: normal;
+			text-align: left;
+			color: #FFFFFF;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		.title-button {
+			position: absolute;
+			display: block;
+			font-family: OCRAStd;
+			font-size: 40px;
+			font-weight: normal;
+			text-align: left;
 			color: #FFFFFF;
 			background-color: rgba(0, 0, 0, 0);
 		}
 		.text-button:hover,
+		.title-button:hover,
 		.ui-nav-selected {
 			color: rgb(71, 255, 105);
 			background-color: rgba(255, 255, 255, 0.12);
@@ -49,7 +64,7 @@
 		<div id="setting_headbob_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="630.000000" data-width="720.000000" data-height="56.000000" data-z="4" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Head Bob: On" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ToggleSettingHeadBob" style="position: absolute; left: 120.00px; top: 630.00px; width: 720.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Head Bob: On</div>
 		<div id="setting_control_prompt_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="710.000000" data-width="840.000000" data-height="56.000000" data-z="5" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Control Prompt: On" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ToggleSettingControlPrompt" style="position: absolute; left: 120.00px; top: 710.00px; width: 840.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Control Prompt: On</div>
 		<div id="setting_display_mode_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="790.000000" data-width="840.000000" data-height="56.000000" data-z="6" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Display Mode: Fullscreen" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="CycleSettingDisplayMode" style="position: absolute; left: 120.00px; top: 790.00px; width: 840.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Display Mode: Fullscreen</div>
-		<div id="setting_back_button" class="text-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="870.000000" data-width="240.000000" data-height="56.000000" data-z="7" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Back" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ClosePopup" style="position: absolute; left: 120.00px; top: 870.00px; width: 240.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left; color: #FFFFFF;">Back</div>
+		<div id="setting_back_button" class="title-button" data-rml-editor="1" data-type="Button" data-x="120.000000" data-y="870.000000" data-width="240.000000" data-height="56.000000" data-z="7" data-visible="true" data-locked="false" data-opacity="1.000000" data-bg="#00000000" data-text="Back" data-text-color="#FFFFFFFF" data-font-size="40.000000" data-font-family="OCRAStd" data-bold="false" data-image="" data-target-tag="Player" data-on-click="ClosePopup" style="position: absolute; left: 120.00px; top: 870.00px; width: 240.00px; height: 56.00px; font-size: 40.00px; font-weight: normal; text-align: left;">Back</div>
 	</div>
 </body>
 </rml>
